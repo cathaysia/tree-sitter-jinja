@@ -1,4 +1,6 @@
 const { anySep1, commaSep, commaSep1, anySep } = require('./common/common')
+const literal = require('./common/literal')
+const expression = require('./common/expression')
 
 const PREC = {
   LOGICAL_OR: 1,
@@ -21,6 +23,8 @@ module.exports = grammar({
 
   rules: {
     source: $ => repeat($.definition),
+    ...literal.rules,
+    ...expression.rules,
     definition: $ => choice($.control, $.render_expression, $._word),
     control: $ => seq(choice('{%', '{%-'), $.statement, choice('-%}', '%}')),
     render_expression: $ =>
@@ -106,119 +110,11 @@ module.exports = grammar({
       seq('for', $.identifier, 'in', $.expression, optional('recursive')),
     if_expression: $ => seq('if', $.expression),
 
-    expression: $ => $.binary_expr,
-    binary_expr: $ =>
-      choice($.unary_expr, seq($.binary_expr, $.binary_operator, $.unary_expr)),
-    assignment_expression: $ => seq($.identifier, '=', $.expression),
-    binary_operator: $ =>
-      choice(
-        '+',
-        '-',
-        '*',
-        '/',
-        '//',
-        '%',
-        '**',
-        '==',
-        '!=',
-        '>',
-        '>=',
-        '<',
-        '<=',
-        'and',
-        'or',
-        'is',
-        '|',
-        '~',
-        'in',
-      ),
-    unary_expr: $ =>
-      choice($.primary_expr, seq($.unary_operator, $.unary_expr)),
-    unary_operator: $ => choice('not', '!'),
-    primary_expr: $ =>
-      choice(
-        $.field_expression,
-        $.loop_expression,
-        $.function_call,
-        $.literal,
-        $.inline_trans,
-        seq('(', $.expression, ')'),
-      ),
-    literal: $ =>
-      choice(
-        $.boolean_literal,
-        $.null_literal,
-        $.number_literal,
-        $.float_literal,
-        $.list_literal,
-        $.string_literal,
-        $.dict_literal,
-      ),
-    boolean_literal: $ => choice('true', 'false'),
-    null_literal: $ => choice('null', 'none'),
-    number_literal: $ =>
-      seq(
-        optional(choice('-', '+')),
-        choice(
-          $.dec_literal,
-          $.oct_literal,
-          $.bin_literal,
-          $.hex_literal,
-          $.big_dec_literal,
-        ),
-      ),
-    dec_literal: $ => choice('0', /[1-9][\d_]*/),
-    big_dec_literal: $ =>
-      seq($.dec_literal, choice('e', 'e+', 'e-'), optional('_'), $.dec_literal),
-    oct_literal: $ => seq('0', 'o', $.dec_literal),
-    bin_literal: $ => seq('0', 'b', $.dec_literal),
-    hex_literal: $ => seq('0', 'x', /[\da-fA-F][\da-fA-F_]*/),
-    float_literal: $ => seq($.dec_literal, '.', $.dec_literal),
-    list_literal: $ => seq('[', commaSep($.literal), ']'),
-    dict_literal: $ =>
-      seq('{', commaSep(seq($.string_literal, ':', $.literal)), '}'),
-    string_literal: $ =>
-      choice(
-        seq('"', repeat(choice('\\"', /[^\"]/)), '"'),
-        seq("'", repeat(choice(/[^']/, "\\'")), "'"),
-      ),
-
     inline_trans: $ => seq('_', '(', $.expression, ')'),
 
     function_call: $ => seq($.field_expression, '(', commaSep($.arg), ')'),
     arg: $ => seq(optional(seq($.identifier, '=')), $.expression),
 
-    loop_expression: $ =>
-      seq(
-        'loop',
-        '.',
-        choice(
-          'index',
-          'index0',
-          'revindex',
-          'revindex0',
-          'first',
-          'last',
-          'length',
-          'cycle',
-          'depth',
-          'depth0',
-          'previtem',
-          'nextitem',
-          seq('changed', '(', $.field_expression, ')'),
-        ),
-      ),
-
-    field_expression: $ =>
-      prec.left(
-        choice(
-          $.identifier,
-          $.dict_literal,
-          $.list_literal,
-          seq($.field_expression, '.', $.field_expression),
-          seq($.field_expression, '[', $.field_expression, ']'),
-        ),
-      ),
     _word: _ => /./,
     identifier: $ => /\w[\w\d]*/,
     comment: $ =>
