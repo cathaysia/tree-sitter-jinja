@@ -25,7 +25,7 @@ module.exports = grammar({
     source: $ => repeat($.definition),
     ...literal.rules,
     ...expression.rules,
-    definition: $ => choice($.control, $.render_expression, $._word),
+    definition: $ => choice($.control, $.render_expression, $._words),
     control: $ => seq(choice('{%', '{%-'), $.statement, choice('-%}', '%}')),
     render_expression: $ =>
       seq(
@@ -115,7 +115,7 @@ module.exports = grammar({
     function_call: $ => seq($.field_expression, '(', commaSep($.arg), ')'),
     arg: $ => seq(optional(seq($.identifier, '=')), $.expression),
 
-    _word: _ => /./,
+    _words: _ => prec.right(repeat1(choice(/[^\{]/, /\{[^\#\%]/))),
     identifier: $ => /\w[\w\d]*/,
     comment: $ =>
       choice(

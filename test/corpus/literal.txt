@@ -10,6 +10,7 @@ string
 --------
 
 (source
+  (definition)
   (definition
     (control
       (statement
@@ -22,6 +23,7 @@ string
                 (primary_expr
                   (literal
                     (string_literal))))))))))
+  (definition)
   (definition
     (control
       (statement
@@ -34,6 +36,7 @@ string
                 (primary_expr
                   (literal
                     (string_literal))))))))))
+  (definition)
   (definition
     (control
       (statement
@@ -46,6 +49,7 @@ string
                 (primary_expr
                   (literal
                     (string_literal))))))))))
+  (definition)
   (definition
     (control
       (statement
@@ -57,4 +61,5 @@ string
               (unary_expr
                 (primary_expr
                   (literal
-                    (string_literal)))))))))))
+                    (string_literal))))))))))
+  (definition))

@@ -17,6 +17,7 @@ with
 ----
 
 (source
+  (definition)
   (definition
     (control
       (statement
@@ -30,9 +31,11 @@ with
                     (literal
                       (number_literal
                         (dec_literal))))))))))))
+  (definition)
   (definition
     (control
       (statement)))
+  (definition)
   (definition
     (control
       (statement
@@ -46,6 +49,7 @@ with
                     (literal
                       (number_literal
                         (dec_literal))))))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -54,13 +58,16 @@ with
             (primary_expr
               (field_expression
                 (identifier))))))))
+  (definition)
   (definition
     (control
       (statement)))
+  (definition)
   (definition
     (control
       (statement
         (with_statement))))
+  (definition)
   (definition
     (control
       (statement
@@ -74,6 +81,7 @@ with
                   (literal
                     (number_literal
                       (dec_literal)))))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -82,6 +90,8 @@ with
             (primary_expr
               (field_expression
                 (identifier))))))))
+  (definition)
   (definition
     (control
-      (statement))))
+      (statement)))
+  (definition))

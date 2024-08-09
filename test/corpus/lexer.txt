@@ -8,10 +8,6 @@ Hello {{ name }}!
 
 (source
   (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
   (definition
     (render_expression
       (expression
@@ -36,9 +32,6 @@ loop
 
 (source
   (definition)
-  (definition)
-  (definition)
-  (definition)
   (definition
     (control
       (statement
@@ -51,9 +44,6 @@ loop
                   (field_expression
                     (identifier))))))))))
   (definition)
-  (definition)
-  (definition)
-  (definition)
   (definition
     (render_expression
       (expression
@@ -63,17 +53,9 @@ loop
               (field_expression
                 (identifier))))))))
   (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
   (definition
     (control
       (statement)))
-  (definition)
-  (definition)
-  (definition)
-  (definition)
   (definition))
 
 ============
@@ -85,6 +67,7 @@ operator
 ----
 
 (source
+  (definition)
   (definition
     (render_expression
       (expression
@@ -144,7 +127,8 @@ operator
           (unary_expr
             (primary_expr
               (field_expression
-                (identifier)))))))))
+                (identifier))))))))
+  (definition))
 
 ===========
 whitespace
@@ -157,8 +141,6 @@ foo {#- comment -#} baz {# blah #} blub
 
 (source
   (definition)
-  (definition)
-  (definition)
   (definition
     (render_expression
       (expression
@@ -168,8 +150,6 @@ foo {#- comment -#} baz {# blah #} blub
               (field_expression
                 (identifier))))))))
   (definition)
-  (definition)
-  (definition)
   (definition
     (render_expression
       (expression
@@ -178,22 +158,9 @@ foo {#- comment -#} baz {# blah #} blub
             (primary_expr
               (field_expression
                 (identifier))))))))
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (comment)
-  (definition)
-  (definition)
-  (definition)
-  (comment)
-  (definition)
-  (definition)
-  (definition)
-  (definition))
+  (definition
+    (comment)
+    (comment)))
 
 ================
 single bracket
@@ -204,18 +171,6 @@ single bracket
 ----
 
 (source
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
   (definition))
 
 ==========
@@ -252,6 +207,7 @@ literals
 ----
 
 (source
+  (definition)
   (definition
     (render_expression
       (expression
@@ -260,6 +216,7 @@ literals
             (primary_expr
               (literal
                 (boolean_literal))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -268,6 +225,7 @@ literals
             (primary_expr
               (literal
                 (boolean_literal))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -276,6 +234,7 @@ literals
             (primary_expr
               (literal
                 (null_literal))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -286,6 +245,7 @@ literals
                 (float_literal
                   (dec_literal)
                   (dec_literal)))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -296,6 +256,7 @@ literals
                 (float_literal
                   (dec_literal)
                   (dec_literal)))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -305,6 +266,7 @@ literals
               (literal
                 (number_literal
                   (dec_literal)))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -314,6 +276,7 @@ literals
               (literal
                 (number_literal
                   (dec_literal)))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -331,6 +294,7 @@ literals
                   (literal
                     (number_literal
                       (dec_literal)))))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -342,6 +306,7 @@ literals
                   (string_literal)
                   (literal
                     (string_literal))))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -351,6 +316,7 @@ literals
               (literal
                 (number_literal
                   (dec_literal)))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -360,6 +326,7 @@ literals
               (literal
                 (number_literal
                   (dec_literal)))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -369,6 +336,7 @@ literals
               (literal
                 (number_literal
                   (dec_literal)))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -378,6 +346,7 @@ literals
               (literal
                 (number_literal
                   (dec_literal)))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -387,6 +356,7 @@ literals
               (literal
                 (number_literal
                   (dec_literal)))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -395,6 +365,7 @@ literals
             (primary_expr
               (field_expression
                 (identifier))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -403,6 +374,7 @@ literals
             (primary_expr
               (field_expression
                 (identifier))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -411,6 +383,7 @@ literals
             (primary_expr
               (field_expression
                 (identifier))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -419,6 +392,7 @@ literals
             (primary_expr
               (field_expression
                 (identifier))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -427,6 +401,7 @@ literals
             (primary_expr
               (field_expression
                 (identifier))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -435,6 +410,7 @@ literals
             (primary_expr
               (field_expression
                 (identifier))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -443,6 +419,7 @@ literals
             (primary_expr
               (field_expression
                 (identifier))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -451,6 +428,7 @@ literals
             (primary_expr
               (field_expression
                 (identifier))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -459,6 +437,7 @@ literals
             (primary_expr
               (field_expression
                 (identifier))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -467,6 +446,7 @@ literals
             (primary_expr
               (field_expression
                 (identifier))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -481,6 +461,7 @@ literals
             (primary_expr
               (field_expression
                 (identifier))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -494,7 +475,8 @@ literals
           (unary_expr
             (primary_expr
               (field_expression
-                (identifier)))))))))
+                (identifier))))))))
+  (definition))
 
 =======
 attrs
@@ -508,7 +490,8 @@ attrs
 ----
 
 (source
-  (comment)
+  (definition
+    (comment))
   (definition
     (render_expression
       (expression
@@ -526,6 +509,7 @@ attrs
                     (identifier)))
                 (field_expression
                   (identifier)))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -540,6 +524,7 @@ attrs
                       (string_literal))))
                 (field_expression
                   (identifier)))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -559,7 +544,8 @@ attrs
                       (number_literal
                         (dec_literal)))))
                 (field_expression
-                  (identifier))))))))))
+                  (identifier)))))))))
+  (definition))
 
 =============
 block filter
@@ -571,6 +557,7 @@ block filter
 ------
 
 (source
+  (definition)
   (definition
     (control
       (statement
@@ -582,6 +569,7 @@ block filter
                 (primary_expr
                   (field_expression
                     (identifier))))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -592,7 +580,8 @@ block filter
                 (identifier))))))))
   (definition
     (control
-      (statement))))
+      (statement)))
+  (definition))
 
 =======================
 autoescape
@@ -609,91 +598,24 @@ autoescape
 ----------
 
 (source
+  (definition)
   (definition
     (control
       (statement
         (autoescape_statement
           (boolean_literal)))))
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
   (definition)
   (definition
     (control
       (statement)))
+  (definition)
   (definition
     (control
       (statement
         (autoescape_statement
           (boolean_literal)))))
   (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
   (definition
     (control
-      (statement))))
+      (statement)))
+  (definition))

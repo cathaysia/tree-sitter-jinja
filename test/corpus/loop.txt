@@ -10,6 +10,7 @@ continue
 ----------
 
 (source
+  (definition)
   (definition
     (control
       (statement
@@ -21,6 +22,7 @@ continue
                 (primary_expr
                   (field_expression
                     (identifier))))))))))
+  (definition)
   (definition
     (control
       (statement
@@ -43,11 +45,10 @@ continue
     (control
       (statement)))
   (definition)
-  (definition)
-  (definition)
   (definition
     (control
-      (statement))))
+      (statement)))
+  (definition))
 
 =========================
 break
@@ -61,6 +62,7 @@ break
 --------------
 
 (source
+  (definition)
   (definition
     (control
       (statement
@@ -72,6 +74,7 @@ break
                 (primary_expr
                   (field_expression
                     (identifier))))))))))
+  (definition)
   (definition
     (control
       (statement
@@ -94,6 +97,8 @@ break
   (definition
     (control
       (statement)))
+  (definition)
   (definition
     (control
-      (statement))))
+      (statement)))
+  (definition))

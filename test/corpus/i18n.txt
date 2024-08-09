@@ -8,15 +8,11 @@ trans
 ---
 
 (source
+  (definition)
   (definition
     (control
       (statement
         (trans_statement))))
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
   (definition)
   (definition
     (render_expression
@@ -30,6 +26,7 @@ trans
   (definition
     (control
       (statement)))
+  (definition)
   (definition
     (control
       (statement
@@ -46,11 +43,6 @@ trans
                       (field_expression
                         (identifier))))))))))))
   (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
   (definition
     (render_expression
       (expression
@@ -62,7 +54,8 @@ trans
   (definition)
   (definition
     (control
-      (statement))))
+      (statement)))
+  (definition))
 
 ==============
 block
@@ -75,6 +68,7 @@ This is {{ book_title }} by {{ author }}
 ----
 
 (source
+  (definition)
   (definition
     (control
       (statement
@@ -102,10 +96,14 @@ This is {{ book_title }} by {{ author }}
                       (field_expression
                         (identifier))))))))))))
   (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
+  (definition
+    (render_expression
+      (expression
+        (binary_expr
+          (unary_expr
+            (primary_expr
+              (field_expression
+                (identifier))))))))
   (definition)
   (definition
     (render_expression
@@ -116,18 +114,10 @@ This is {{ book_title }} by {{ author }}
               (field_expression
                 (identifier))))))))
   (definition)
-  (definition)
-  (definition
-    (render_expression
-      (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
   (definition
     (control
-      (statement))))
+      (statement)))
+  (definition))
 
 ==================
 pluralize
@@ -142,6 +132,7 @@ There are {{ count }} {{ name }} objects.
 ----
 
 (source
+  (definition)
   (definition
     (control
       (statement
@@ -161,20 +152,6 @@ There are {{ count }} {{ name }} objects.
                     (field_expression
                       (identifier)))))))))))
   (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition
-    (render_expression
-      (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
   (definition
     (render_expression
       (expression
@@ -184,32 +161,20 @@ There are {{ count }} {{ name }} objects.
               (field_expression
                 (identifier))))))))
   (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
+  (definition
+    (render_expression
+      (expression
+        (binary_expr
+          (unary_expr
+            (primary_expr
+              (field_expression
+                (identifier))))))))
   (definition)
   (definition
     (control
       (statement
         (pluralize_statement))))
   (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition
-    (render_expression
-      (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
   (definition
     (render_expression
       (expression
@@ -219,16 +184,19 @@ There are {{ count }} {{ name }} objects.
               (field_expression
                 (identifier))))))))
   (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
-  (definition)
+  (definition
+    (render_expression
+      (expression
+        (binary_expr
+          (unary_expr
+            (primary_expr
+              (field_expression
+                (identifier))))))))
   (definition)
   (definition
     (control
-      (statement))))
+      (statement)))
+  (definition))
 
 =================
 inline
@@ -241,6 +209,7 @@ inline
 ----
 
 (source
+  (definition)
   (definition
     (render_expression
       (expression
@@ -254,6 +223,7 @@ inline
                       (primary_expr
                         (literal
                           (string_literal)))))))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -284,7 +254,8 @@ inline
                             (field_expression
                               (identifier))
                             (field_expression
-                              (identifier))))))))))))))))
+                              (identifier)))))))))))))))
+  (definition))
 
 =================
 gettext
@@ -297,6 +268,7 @@ gettext
 ---------
 
 (source
+  (definition)
   (definition
     (render_expression
       (expression
@@ -313,6 +285,7 @@ gettext
                         (primary_expr
                           (literal
                             (string_literal))))))))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -337,6 +310,7 @@ gettext
                         (primary_expr
                           (literal
                             (string_literal))))))))))))))
+  (definition)
   (definition
     (render_expression
       (expression
@@ -372,4 +346,5 @@ gettext
                       (unary_expr
                         (primary_expr
                           (field_expression
-                            (identifier)))))))))))))))
+                            (identifier))))))))))))))
+  (definition))

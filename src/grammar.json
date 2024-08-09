@@ -786,7 +786,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_word"
+          "name": "_words"
         }
       ]
     },
@@ -1630,9 +1630,25 @@
         }
       ]
     },
-    "_word": {
-      "type": "PATTERN",
-      "value": "."
+    "_words": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "REPEAT1",
+        "content": {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "PATTERN",
+              "value": "[^\\{]"
+            },
+            {
+              "type": "PATTERN",
+              "value": "\\{[^\\#\\%]"
+            }
+          ]
+        }
+      }
     },
     "identifier": {
       "type": "PATTERN",
