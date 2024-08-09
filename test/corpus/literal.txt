@@ -1,0 +1,60 @@
+==================
+string
+==================
+
+{% set a = "aaaaa" %}
+{% set a = "aaaaa\"" %}
+{% set a = 'aaaaa' %}
+{% set a = 'aaaaa\'' %}
+
+--------
+
+(source
+  (definition
+    (control
+      (statement
+        (set_statement
+          (field_expression
+            (identifier))
+          (expression
+            (binary_expr
+              (unary_expr
+                (primary_expr
+                  (literal
+                    (string_literal))))))))))
+  (definition
+    (control
+      (statement
+        (set_statement
+          (field_expression
+            (identifier))
+          (expression
+            (binary_expr
+              (unary_expr
+                (primary_expr
+                  (literal
+                    (string_literal))))))))))
+  (definition
+    (control
+      (statement
+        (set_statement
+          (field_expression
+            (identifier))
+          (expression
+            (binary_expr
+              (unary_expr
+                (primary_expr
+                  (literal
+                    (string_literal))))))))))
+  (definition
+    (control
+      (statement
+        (set_statement
+          (field_expression
+            (identifier))
+          (expression
+            (binary_expr
+              (unary_expr
+                (primary_expr
+                  (literal
+                    (string_literal)))))))))))

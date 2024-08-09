@@ -1,0 +1,99 @@
+==================
+continue
+==================
+
+{% for user in users %}
+    {%- if loop.index is even %}{% continue %}{% endif %}
+    ...
+{% endfor %}
+
+----------
+
+(source
+  (definition
+    (control
+      (statement
+        (for_expression
+          (identifier)
+          (expression
+            (binary_expr
+              (unary_expr
+                (primary_expr
+                  (field_expression
+                    (identifier))))))))))
+  (definition
+    (control
+      (statement
+        (if_expression
+          (expression
+            (binary_expr
+              (binary_expr
+                (unary_expr
+                  (primary_expr
+                    (loop_expression))))
+              (binary_operator)
+              (unary_expr
+                (primary_expr
+                  (field_expression
+                    (identifier))))))))))
+  (definition
+    (control
+      (statement)))
+  (definition
+    (control
+      (statement)))
+  (definition)
+  (definition)
+  (definition)
+  (definition
+    (control
+      (statement))))
+
+=========================
+break
+=========================
+
+
+{% for user in users %}
+    {%- if loop.index >= 10 %}{% break %}{% endif %}
+{%- endfor %}
+
+--------------
+
+(source
+  (definition
+    (control
+      (statement
+        (for_expression
+          (identifier)
+          (expression
+            (binary_expr
+              (unary_expr
+                (primary_expr
+                  (field_expression
+                    (identifier))))))))))
+  (definition
+    (control
+      (statement
+        (if_expression
+          (expression
+            (binary_expr
+              (binary_expr
+                (unary_expr
+                  (primary_expr
+                    (loop_expression))))
+              (binary_operator)
+              (unary_expr
+                (primary_expr
+                  (literal
+                    (number_literal
+                      (dec_literal)))))))))))
+  (definition
+    (control
+      (statement)))
+  (definition
+    (control
+      (statement)))
+  (definition
+    (control
+      (statement))))

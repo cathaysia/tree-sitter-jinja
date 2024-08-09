@@ -1,0 +1,375 @@
+=================
+trans
+=================
+
+{% trans %}Hello, {{ user }}!{% endtrans %}
+{% trans user=user.username %}Hello, {{ user }}!{% endtrans %}
+
+---
+
+(source
+  (definition
+    (control
+      (statement
+        (trans_statement))))
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition
+    (render_expression
+      (expression
+        (binary_expr
+          (unary_expr
+            (primary_expr
+              (field_expression
+                (identifier))))))))
+  (definition)
+  (definition
+    (control
+      (statement)))
+  (definition
+    (control
+      (statement
+        (trans_statement
+          (assignment_expression
+            (identifier)
+            (expression
+              (binary_expr
+                (unary_expr
+                  (primary_expr
+                    (field_expression
+                      (field_expression
+                        (identifier))
+                      (field_expression
+                        (identifier))))))))))))
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition
+    (render_expression
+      (expression
+        (binary_expr
+          (unary_expr
+            (primary_expr
+              (field_expression
+                (identifier))))))))
+  (definition)
+  (definition
+    (control
+      (statement))))
+
+==============
+block
+==============
+
+{% trans book_title=book.title, author=author.name %}
+This is {{ book_title }} by {{ author }}
+{% endtrans %}
+
+----
+
+(source
+  (definition
+    (control
+      (statement
+        (trans_statement
+          (assignment_expression
+            (identifier)
+            (expression
+              (binary_expr
+                (unary_expr
+                  (primary_expr
+                    (field_expression
+                      (field_expression
+                        (identifier))
+                      (field_expression
+                        (identifier))))))))
+          (assignment_expression
+            (identifier)
+            (expression
+              (binary_expr
+                (unary_expr
+                  (primary_expr
+                    (field_expression
+                      (field_expression
+                        (identifier))
+                      (field_expression
+                        (identifier))))))))))))
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition
+    (render_expression
+      (expression
+        (binary_expr
+          (unary_expr
+            (primary_expr
+              (field_expression
+                (identifier))))))))
+  (definition)
+  (definition)
+  (definition
+    (render_expression
+      (expression
+        (binary_expr
+          (unary_expr
+            (primary_expr
+              (field_expression
+                (identifier))))))))
+  (definition
+    (control
+      (statement))))
+
+==================
+pluralize
+==================
+
+{% trans count=list|length %}
+There is {{ count }} {{ name }} object.
+{% pluralize %}
+There are {{ count }} {{ name }} objects.
+{% endtrans %}
+
+----
+
+(source
+  (definition
+    (control
+      (statement
+        (trans_statement
+          (assignment_expression
+            (identifier)
+            (expression
+              (binary_expr
+                (binary_expr
+                  (unary_expr
+                    (primary_expr
+                      (field_expression
+                        (identifier)))))
+                (binary_operator)
+                (unary_expr
+                  (primary_expr
+                    (field_expression
+                      (identifier)))))))))))
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition
+    (render_expression
+      (expression
+        (binary_expr
+          (unary_expr
+            (primary_expr
+              (field_expression
+                (identifier))))))))
+  (definition
+    (render_expression
+      (expression
+        (binary_expr
+          (unary_expr
+            (primary_expr
+              (field_expression
+                (identifier))))))))
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition
+    (control
+      (statement
+        (pluralize_statement))))
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition
+    (render_expression
+      (expression
+        (binary_expr
+          (unary_expr
+            (primary_expr
+              (field_expression
+                (identifier))))))))
+  (definition
+    (render_expression
+      (expression
+        (binary_expr
+          (unary_expr
+            (primary_expr
+              (field_expression
+                (identifier))))))))
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition)
+  (definition
+    (control
+      (statement))))
+
+=================
+inline
+=================
+
+{{ _("Hello, World!") }}
+
+{{ _("Hello, %(user)s!")|format(user=user.username) }}
+
+----
+
+(source
+  (definition
+    (render_expression
+      (expression
+        (binary_expr
+          (unary_expr
+            (primary_expr
+              (inline_trans
+                (expression
+                  (binary_expr
+                    (unary_expr
+                      (primary_expr
+                        (literal
+                          (string_literal)))))))))))))
+  (definition
+    (render_expression
+      (expression
+        (binary_expr
+          (binary_expr
+            (unary_expr
+              (primary_expr
+                (inline_trans
+                  (expression
+                    (binary_expr
+                      (unary_expr
+                        (primary_expr
+                          (literal
+                            (string_literal))))))))))
+          (binary_operator)
+          (unary_expr
+            (primary_expr
+              (function_call
+                (field_expression
+                  (identifier))
+                (arg
+                  (identifier)
+                  (expression
+                    (binary_expr
+                      (unary_expr
+                        (primary_expr
+                          (field_expression
+                            (field_expression
+                              (identifier))
+                            (field_expression
+                              (identifier))))))))))))))))
+
+=================
+gettext
+=================
+
+{{ gettext('Hello World!') }}
+{{ gettext('Hello %(name)s!', name='World') }}
+{{ ngettext('%(num)d apple', '%(num)d apples', apples|count) }}
+
+---------
+
+(source
+  (definition
+    (render_expression
+      (expression
+        (binary_expr
+          (unary_expr
+            (primary_expr
+              (function_call
+                (field_expression
+                  (identifier))
+                (arg
+                  (expression
+                    (binary_expr
+                      (unary_expr
+                        (primary_expr
+                          (literal
+                            (string_literal))))))))))))))
+  (definition
+    (render_expression
+      (expression
+        (binary_expr
+          (unary_expr
+            (primary_expr
+              (function_call
+                (field_expression
+                  (identifier))
+                (arg
+                  (expression
+                    (binary_expr
+                      (unary_expr
+                        (primary_expr
+                          (literal
+                            (string_literal)))))))
+                (arg
+                  (identifier)
+                  (expression
+                    (binary_expr
+                      (unary_expr
+                        (primary_expr
+                          (literal
+                            (string_literal))))))))))))))
+  (definition
+    (render_expression
+      (expression
+        (binary_expr
+          (unary_expr
+            (primary_expr
+              (function_call
+                (field_expression
+                  (identifier))
+                (arg
+                  (expression
+                    (binary_expr
+                      (unary_expr
+                        (primary_expr
+                          (literal
+                            (string_literal)))))))
+                (arg
+                  (expression
+                    (binary_expr
+                      (unary_expr
+                        (primary_expr
+                          (literal
+                            (string_literal)))))))
+                (arg
+                  (expression
+                    (binary_expr
+                      (binary_expr
+                        (unary_expr
+                          (primary_expr
+                            (field_expression
+                              (identifier)))))
+                      (binary_operator)
+                      (unary_expr
+                        (primary_expr
+                          (field_expression
+                            (identifier)))))))))))))))
