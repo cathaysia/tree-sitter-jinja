@@ -11,11 +11,10 @@ Hello {{ name }}!
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier)))))))
   (definition))
 
 =============
@@ -36,22 +35,21 @@ loop
     (control
       (statement
         (for_expression
-          (identifier)
-          (expression
-            (binary_expr
-              (unary_expr
-                (primary_expr
-                  (field_expression
+          (in_expression
+            (identifier)
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
                     (identifier))))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier)))))))
   (definition)
   (definition
     (control
@@ -71,63 +69,55 @@ operator
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (binary_expr
-            (binary_expr
-              (binary_expr
-                (binary_expr
-                  (binary_expr
-                    (unary_expr
-                      (primary_expr
+        (binary_expression
+          (binary_expression
+            (binary_expression
+              (binary_expression
+                (binary_expression
+                  (binary_expression
+                    (unary_expression
+                      (primary_expression
                         (expression
-                          (binary_expr
-                            (binary_expr
-                              (unary_expr
+                          (binary_expression
+                            (binary_expression
+                              (unary_expression
                                 (unary_operator)
-                                (unary_expr
-                                  (primary_expr
-                                    (field_expression
-                                      (identifier))))))
+                                (unary_expression
+                                  (primary_expression
+                                    (identifier)))))
                             (binary_operator)
-                            (unary_expr
-                              (primary_expr
-                                (field_expression
-                                  (identifier)))))))))
+                            (unary_expression
+                              (primary_expression
+                                (identifier))))))))
                   (binary_operator)
-                  (unary_expr
-                    (primary_expr
+                  (unary_expression
+                    (primary_expression
                       (expression
-                        (binary_expr
-                          (binary_expr
-                            (unary_expr
-                              (primary_expr
-                                (field_expression
-                                  (identifier)))))
+                        (binary_expression
+                          (binary_expression
+                            (unary_expression
+                              (primary_expression
+                                (identifier))))
                           (binary_operator)
-                          (unary_expr
-                            (primary_expr
-                              (field_expression
-                                (identifier)))))))))
+                          (unary_expression
+                            (primary_expression
+                              (identifier))))))))
                 (binary_operator)
-                (unary_expr
-                  (primary_expr
-                    (field_expression
-                      (identifier)))))
+                (unary_expression
+                  (primary_expression
+                    (identifier))))
               (binary_operator)
-              (unary_expr
-                (primary_expr
-                  (field_expression
-                    (identifier)))))
+              (unary_expression
+                (primary_expression
+                  (identifier))))
             (binary_operator)
-            (unary_expr
-              (primary_expr
-                (field_expression
-                  (identifier)))))
+            (unary_expression
+              (primary_expression
+                (identifier))))
           (binary_operator)
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+          (unary_expression
+            (primary_expression
+              (identifier)))))))
   (definition))
 
 ===========
@@ -144,20 +134,18 @@ foo {#- comment -#} baz {# blah #} blub
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier)))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier)))))))
   (definition
     (comment)
     (comment)))
@@ -211,36 +199,36 @@ literals
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (literal
                 (boolean_literal))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (literal
                 (boolean_literal))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (literal
                 (null_literal))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (literal
                 (float_literal
                   (dec_literal)
@@ -249,9 +237,9 @@ literals
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (literal
                 (float_literal
                   (dec_literal)
@@ -260,9 +248,9 @@ literals
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (literal
                 (number_literal
                   (dec_literal)))))))))
@@ -270,9 +258,9 @@ literals
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (literal
                 (number_literal
                   (dec_literal)))))))))
@@ -280,29 +268,29 @@ literals
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
                 (list_literal
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (number_literal
                               (dec_literal)))))))
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (number_literal
                               (dec_literal)))))))
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (number_literal
                               (dec_literal)))))))))))))))
@@ -310,30 +298,30 @@ literals
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
                 (dict_literal
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (string_literal))))))
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (string_literal))))))))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (literal
                 (number_literal
                   (dec_literal)))))))))
@@ -341,9 +329,9 @@ literals
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (literal
                 (number_literal
                   (dec_literal)))))))))
@@ -351,9 +339,9 @@ literals
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (literal
                 (number_literal
                   (dec_literal)))))))))
@@ -361,9 +349,9 @@ literals
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (literal
                 (number_literal
                   (dec_literal)))))))))
@@ -371,9 +359,9 @@ literals
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (literal
                 (number_literal
                   (dec_literal)))))))))
@@ -381,122 +369,130 @@ literals
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (bin_literal)))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (bin_literal)))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (oct_literal)))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (oct_literal)))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (oct_literal)))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (hex_literal)))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (hex_literal)))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (hex_literal)))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (big_dec_literal
+                    (dec_literal)
+                    (dec_literal))))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (big_dec_literal
+                    (dec_literal)
+                    (dec_literal))))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (binary_expr
-            (unary_expr
-              (primary_expr
-                (field_expression
-                  (identifier)))))
-          (binary_operator)
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (big_dec_literal
+                    (dec_literal)
+                    (dec_literal))))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (binary_expr
-            (unary_expr
-              (primary_expr
-                (field_expression
-                  (identifier)))))
-          (binary_operator)
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (big_dec_literal
+                    (dec_literal)
+                    (dec_literal))))))))))
   (definition))
 
 =======
@@ -516,77 +512,91 @@ attrs
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (field_expression
-                  (field_expression
-                    (field_expression
-                      (identifier))
-                    (field_expression
-                      (identifier)))
-                  (field_expression
-                    (identifier)))
-                (field_expression
-                  (identifier)))))))))
+        (expression
+          (expression
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (identifier)))))
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (identifier))))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))))
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (field_expression
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
                   (dict_literal
                     (expression
-                      (binary_expr
-                        (unary_expr
-                          (primary_expr
+                      (binary_expression
+                        (unary_expression
+                          (primary_expression
                             (literal
                               (string_literal))))))
                     (expression
-                      (binary_expr
-                        (unary_expr
-                          (primary_expr
+                      (binary_expression
+                        (unary_expression
+                          (primary_expression
                             (literal
-                              (string_literal))))))))
-                (field_expression
-                  (identifier)))))))))
+                              (string_literal))))))))))))
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (field_expression
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
                   (list_literal
                     (expression
-                      (binary_expr
-                        (unary_expr
-                          (primary_expr
+                      (binary_expression
+                        (unary_expression
+                          (primary_expression
                             (literal
                               (number_literal
                                 (dec_literal)))))))
                     (expression
-                      (binary_expr
-                        (unary_expr
-                          (primary_expr
+                      (binary_expression
+                        (unary_expression
+                          (primary_expression
                             (literal
                               (number_literal
                                 (dec_literal)))))))
                     (expression
-                      (binary_expr
-                        (unary_expr
-                          (primary_expr
+                      (binary_expression
+                        (unary_expression
+                          (primary_expression
                             (literal
                               (number_literal
-                                (dec_literal)))))))))
-                (field_expression
-                  (identifier)))))))))
+                                (dec_literal)))))))))))))
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier))))))))
   (definition))
 
 =============
@@ -604,22 +614,21 @@ block filter
     (control
       (statement
         (for_expression
-          (identifier)
-          (expression
-            (binary_expr
-              (unary_expr
-                (primary_expr
-                  (field_expression
+          (in_expression
+            (identifier)
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
                     (identifier))))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier)))))))
   (definition
     (control
       (statement)))

@@ -27,19 +27,14 @@ exports.rules = {
   dec_literal: $ => /\d[\d_]*/,
   big_dec_literal: $ =>
     seq($.dec_literal, choice('e', 'e+', 'e-'), optional('_'), $.dec_literal),
-  oct_literal: $ => /0o[0-7_]+/,
-  bin_literal: $ => /0b[01_]+/,
-  hex_literal: $ => /0x[\da-fA-F_]+/,
-  float_literal: $ => seq($.dec_literal, '.', $.dec_literal),
+  oct_literal: $ => /0[oO][0-7_]+/,
+  bin_literal: $ => /0[bB][01_]+/,
+  hex_literal: $ => /0[xX][\da-fA-F_]+/,
+  float_literal: $ => prec(2, seq($.dec_literal, '.', $.dec_literal)),
 
   list_literal: $ => seq('[', commaSep($.expression), optional(','), ']'),
   dict_literal: $ =>
-    seq(
-      '{',
-      commaSep(seq($.expression, ':', $.expression)),
-      optional(','),
-      '}',
-    ),
+    seq('{', commaSep(seq($.expression, ':', $.expression)), '}'),
 
   string_literal: $ =>
     choice(

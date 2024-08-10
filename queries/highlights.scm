@@ -63,3 +63,63 @@
     "nextitem"
     "changed"
   ]? @variable.member)
+
+[
+  "endtrans"
+  "block"
+  "endblock"
+  "with"
+  "endwith"
+  "filter"
+  "endfilter"
+  "macro"
+  "endmacro"
+  "endcall"
+  "set"
+  "endset"
+  "trans"
+  "endtrans"
+  "autoescape"
+  "endautoescape"
+  "do"
+  "pluralize"
+  "extends"
+  "is"
+] @keyword
+
+[
+  "if"
+  "else"
+  "endif"
+] @keyword.conditional
+
+[
+  "for"
+  "in"
+  "continue"
+  "break"
+  "endfor"
+] @keyword.repeat
+
+"call" @function.call
+
+(function_call
+  (identifier) @function.call)
+
+(arg
+  (identifier) @variable.parameter)
+
+(expression
+  (expression) @variable.member
+  "."
+  (expression)+ @variable.member)
+
+(assignment_expression
+  (identifier) @variable.member
+  "."
+  (identifier)+ @variable.member)
+
+(inline_trans
+  "_" @function.builtin)
+
+"debug" @function.builtin

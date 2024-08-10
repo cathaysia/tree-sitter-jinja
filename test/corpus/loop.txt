@@ -15,12 +15,12 @@ continue
     (control
       (statement
         (for_expression
-          (identifier)
-          (expression
-            (binary_expr
-              (unary_expr
-                (primary_expr
-                  (field_expression
+          (in_expression
+            (identifier)
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
                     (identifier))))))))))
   (definition)
   (definition
@@ -28,16 +28,15 @@ continue
       (statement
         (if_expression
           (expression
-            (binary_expr
-              (binary_expr
-                (unary_expr
-                  (primary_expr
+            (binary_expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
                     (loop_expression))))
               (binary_operator)
-              (unary_expr
-                (primary_expr
-                  (field_expression
-                    (identifier))))))))))
+              (unary_expression
+                (primary_expression
+                  (identifier)))))))))
   (definition
     (control
       (statement)))
@@ -67,12 +66,12 @@ break
     (control
       (statement
         (for_expression
-          (identifier)
-          (expression
-            (binary_expr
-              (unary_expr
-                (primary_expr
-                  (field_expression
+          (in_expression
+            (identifier)
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
                     (identifier))))))))))
   (definition)
   (definition
@@ -80,14 +79,14 @@ break
       (statement
         (if_expression
           (expression
-            (binary_expr
-              (binary_expr
-                (unary_expr
-                  (primary_expr
+            (binary_expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
                     (loop_expression))))
               (binary_operator)
-              (unary_expr
-                (primary_expr
+              (unary_expression
+                (primary_expression
                   (literal
                     (number_literal
                       (dec_literal)))))))))))

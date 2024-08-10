@@ -25,9 +25,9 @@ with
           (assignment_expression
             (identifier)
             (expression
-              (binary_expr
-                (unary_expr
-                  (primary_expr
+              (binary_expression
+                (unary_expression
+                  (primary_expression
                     (literal
                       (number_literal
                         (dec_literal))))))))))))
@@ -43,9 +43,9 @@ with
           (assignment_expression
             (identifier)
             (expression
-              (binary_expr
-                (unary_expr
-                  (primary_expr
+              (binary_expression
+                (unary_expression
+                  (primary_expression
                     (literal
                       (number_literal
                         (dec_literal))))))))))))
@@ -53,11 +53,10 @@ with
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier)))))))
   (definition)
   (definition
     (control
@@ -72,12 +71,15 @@ with
     (control
       (statement
         (set_statement
-          (field_expression
-            (identifier))
           (expression
-            (binary_expr
-              (unary_expr
-                (primary_expr
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
                   (literal
                     (number_literal
                       (dec_literal)))))))))))
@@ -85,11 +87,10 @@ with
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier)))))))
   (definition)
   (definition
     (control

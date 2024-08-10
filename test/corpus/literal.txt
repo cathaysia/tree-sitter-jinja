@@ -15,12 +15,15 @@ string
     (control
       (statement
         (set_statement
-          (field_expression
-            (identifier))
           (expression
-            (binary_expr
-              (unary_expr
-                (primary_expr
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
                   (literal
                     (string_literal))))))))))
   (definition)
@@ -28,12 +31,15 @@ string
     (control
       (statement
         (set_statement
-          (field_expression
-            (identifier))
           (expression
-            (binary_expr
-              (unary_expr
-                (primary_expr
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
                   (literal
                     (string_literal))))))))))
   (definition)
@@ -41,12 +47,15 @@ string
     (control
       (statement
         (set_statement
-          (field_expression
-            (identifier))
           (expression
-            (binary_expr
-              (unary_expr
-                (primary_expr
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
                   (literal
                     (string_literal))))))))))
   (definition)
@@ -54,12 +63,15 @@ string
     (control
       (statement
         (set_statement
-          (field_expression
-            (identifier))
           (expression
-            (binary_expr
-              (unary_expr
-                (primary_expr
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
                   (literal
                     (string_literal))))))))))
   (definition))
@@ -79,35 +91,35 @@ list
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
                 (list_literal
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (string_literal))))))
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (number_literal
                               (dec_literal)))))))
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (number_literal
                               (dec_literal)))))))
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (number_literal
                               (dec_literal)))))))))))))))
@@ -115,35 +127,35 @@ list
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
                 (list_literal
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (string_literal))))))
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (number_literal
                               (dec_literal)))))))
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (number_literal
                               (dec_literal)))))))
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (number_literal
                               (dec_literal)))))))))))))))
@@ -151,31 +163,28 @@ list
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
                 (list_literal
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (function_call
-                            (field_expression
-                              (identifier)))))))
+                            (identifier))))))
                   (expression
-                    (binary_expr
-                      (binary_expr
-                        (unary_expr
-                          (primary_expr
+                    (binary_expression
+                      (binary_expression
+                        (unary_expression
+                          (primary_expression
                             (function_call
-                              (field_expression
-                                (identifier))))))
+                              (identifier)))))
                       (binary_operator)
-                      (unary_expr
-                        (primary_expr
-                          (field_expression
-                            (identifier))))))))))))))
+                      (unary_expression
+                        (primary_expression
+                          (identifier)))))))))))))
   (definition))
 
 ========================
@@ -195,7 +204,7 @@ dict
         "aaa": 1,
         "bbb": 2,
         key(): value() | to_value,
-        key | to_string: value,
+        key | to_string: value
     }
 }}
 
@@ -206,30 +215,30 @@ dict
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
                 (dict_literal))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
                 (dict_literal
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (string_literal))))))
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (number_literal
                               (dec_literal)))))))))))))))
@@ -237,75 +246,69 @@ dict
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
                 (dict_literal
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (string_literal))))))
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (number_literal
                               (dec_literal)))))))
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (string_literal))))))
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (literal
                             (number_literal
                               (dec_literal)))))))
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
                           (function_call
-                            (field_expression
-                              (identifier)))))))
-                  (expression
-                    (binary_expr
-                      (binary_expr
-                        (unary_expr
-                          (primary_expr
-                            (function_call
-                              (field_expression
-                                (identifier))))))
-                      (binary_operator)
-                      (unary_expr
-                        (primary_expr
-                          (field_expression
                             (identifier))))))
                   (expression
-                    (binary_expr
-                      (binary_expr
-                        (unary_expr
-                          (primary_expr
-                            (field_expression
+                    (binary_expression
+                      (binary_expression
+                        (unary_expression
+                          (primary_expression
+                            (function_call
                               (identifier)))))
                       (binary_operator)
-                      (unary_expr
-                        (primary_expr
-                          (field_expression
-                            (identifier))))))
+                      (unary_expression
+                        (primary_expression
+                          (identifier)))))
                   (expression
-                    (binary_expr
-                      (unary_expr
-                        (primary_expr
-                          (field_expression
-                            (identifier))))))))))))))
+                    (binary_expression
+                      (binary_expression
+                        (unary_expression
+                          (primary_expression
+                            (identifier))))
+                      (binary_operator)
+                      (unary_expression
+                        (primary_expression
+                          (identifier)))))
+                  (expression
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
+                          (identifier)))))))))))))
   (definition))
 
 ===================
@@ -315,7 +318,7 @@ number
 {{ 123456 }}
 {{ 0xabcaf }}
 {{ 123.132 }}
-{{ 0b10230 }}
+{{ 0b10110 }}
 {{ 0b1001010 }}
 {{ 1e4 }}
 {{ -1e4 }}
@@ -328,9 +331,9 @@ number
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (literal
                 (number_literal
                   (dec_literal)))))))))
@@ -338,18 +341,19 @@ number
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (hex_literal)))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (literal
                 (float_literal
                   (dec_literal)
@@ -358,36 +362,29 @@ number
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (bin_literal)))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (bin_literal)))))))))
   (definition)
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (field_expression
-                (identifier))))))))
-  (definition)
-  (definition
-    (render_expression
-      (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (literal
                 (number_literal
                   (big_dec_literal
@@ -397,9 +394,21 @@ number
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (big_dec_literal
+                    (dec_literal)
+                    (dec_literal))))))))))
+  (definition)
+  (definition
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (literal
                 (number_literal
                   (dec_literal)))))))))

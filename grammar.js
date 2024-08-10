@@ -19,7 +19,6 @@ const PREC = {
 module.exports = grammar({
   name: 'jinja2',
   extras: $ => [/\s/, $.comment],
-  precedences: $ => [[$.field_expression, $.literal]],
 
   rules: {
     source: $ => repeat($.definition),
@@ -104,19 +103,12 @@ module.exports = grammar({
     include_attribute: $ =>
       seq(optional('ignore missing'), $.attribute_context),
     attribute_context: $ => seq(choice('with', 'without'), 'context'),
-    set_statement: $ =>
-      seq('set', commaSep1($.field_expression), '=', $.expression),
-    for_expression: $ =>
-      seq('for', $.identifier, 'in', $.expression, optional('recursive')),
+    set_statement: $ => seq('set', commaSep1($.expression), '=', $.expression),
+    for_expression: $ => seq('for', $.in_expression, optional('recursive')),
     if_expression: $ => seq('if', $.expression),
 
-    inline_trans: $ => seq('_', '(', $.expression, ')'),
-
-    function_call: $ => seq($.field_expression, '(', commaSep($.arg), ')'),
-    arg: $ => seq(optional(seq($.identifier, '=')), $.expression),
-
     _words: _ => prec.right(repeat1(choice(/[^\{]/, /\{[^\#\%]/))),
-    identifier: $ => /\w[\w\d]*/,
+    identifier: $ => /[a-zA-Z][\w\d]*/,
     comment: $ =>
       choice(
         seq('##', /[^\r\n]*/, /\r?\n/),

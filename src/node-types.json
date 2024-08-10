@@ -73,22 +73,7 @@
     }
   },
   {
-    "type": "bin_literal",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "dec_literal",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "binary_expr",
+    "type": "binary_expression",
     "named": true,
     "fields": {},
     "children": {
@@ -96,7 +81,7 @@
       "required": true,
       "types": [
         {
-          "type": "binary_expr",
+          "type": "binary_expression",
           "named": true
         },
         {
@@ -104,7 +89,7 @@
           "named": true
         },
         {
-          "type": "unary_expr",
+          "type": "unary_expression",
           "named": true
         }
       ]
@@ -175,11 +160,6 @@
     }
   },
   {
-    "type": "dec_literal",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "definition",
     "named": true,
     "fields": {},
@@ -218,11 +198,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "binary_expr",
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "expression",
           "named": true
         }
       ]
@@ -246,33 +230,6 @@
         },
         {
           "type": "string_literal",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "field_expression",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "dict_literal",
-          "named": true
-        },
-        {
-          "type": "field_expression",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "list_literal",
           "named": true
         }
       ]
@@ -313,15 +270,11 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
-          "type": "expression",
-          "named": true
-        },
-        {
-          "type": "identifier",
+          "type": "in_expression",
           "named": true
         }
       ]
@@ -340,16 +293,11 @@
           "named": true
         },
         {
-          "type": "field_expression",
+          "type": "identifier",
           "named": true
         }
       ]
     }
-  },
-  {
-    "type": "hex_literal",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "if_expression",
@@ -433,6 +381,25 @@
         },
         {
           "type": "import_from",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "in_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "identifier",
           "named": true
         }
       ]
@@ -565,7 +532,7 @@
       "required": false,
       "types": [
         {
-          "type": "field_expression",
+          "type": "expression",
           "named": true
         }
       ]
@@ -623,21 +590,6 @@
     }
   },
   {
-    "type": "oct_literal",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "dec_literal",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "pluralize_statement",
     "named": true,
     "fields": {},
@@ -653,7 +605,7 @@
     }
   },
   {
-    "type": "primary_expr",
+    "type": "primary_expression",
     "named": true,
     "fields": {},
     "children": {
@@ -665,11 +617,11 @@
           "named": true
         },
         {
-          "type": "field_expression",
+          "type": "function_call",
           "named": true
         },
         {
-          "type": "function_call",
+          "type": "identifier",
           "named": true
         },
         {
@@ -716,10 +668,6 @@
       "types": [
         {
           "type": "expression",
-          "named": true
-        },
-        {
-          "type": "field_expression",
           "named": true
         }
       ]
@@ -840,7 +788,7 @@
     }
   },
   {
-    "type": "unary_expr",
+    "type": "unary_expression",
     "named": true,
     "fields": {},
     "children": {
@@ -848,11 +796,11 @@
       "required": true,
       "types": [
         {
-          "type": "primary_expr",
+          "type": "primary_expression",
           "named": true
         },
         {
-          "type": "unary_expr",
+          "type": "unary_expression",
           "named": true
         },
         {
@@ -967,10 +915,6 @@
     "named": false
   },
   {
-    "type": "0",
-    "named": false
-  },
-  {
     "type": ":",
     "named": false
   },
@@ -1031,8 +975,8 @@
     "named": false
   },
   {
-    "type": "b",
-    "named": false
+    "type": "bin_literal",
+    "named": true
   },
   {
     "type": "block",
@@ -1065,6 +1009,10 @@
   {
     "type": "debug",
     "named": false
+  },
+  {
+    "type": "dec_literal",
+    "named": true
   },
   {
     "type": "depth",
@@ -1163,6 +1111,10 @@
     "named": false
   },
   {
+    "type": "hex_literal",
+    "named": true
+  },
+  {
     "type": "identifier",
     "named": true
   },
@@ -1231,8 +1183,8 @@
     "named": false
   },
   {
-    "type": "o",
-    "named": false
+    "type": "oct_literal",
+    "named": true
   },
   {
     "type": "or",
@@ -1276,10 +1228,6 @@
   },
   {
     "type": "without",
-    "named": false
-  },
-  {
-    "type": "x",
     "named": false
   },
   {

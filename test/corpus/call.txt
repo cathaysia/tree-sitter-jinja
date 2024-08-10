@@ -11,16 +11,21 @@ call
   (definition
     (render_expression
       (expression
-        (binary_expr
-          (unary_expr
-            (primary_expr
-              (function_call
-                (field_expression
-                  (field_expression
-                    (field_expression
-                      (identifier))
-                    (field_expression
-                      (identifier)))
-                  (field_expression
-                    (identifier))))))))))
+        (expression
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))))
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (function_call
+                  (identifier)))))))))
   (definition))

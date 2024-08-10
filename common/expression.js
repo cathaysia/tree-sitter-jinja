@@ -1,8 +1,22 @@
+const { commaSep, commaSep1, anySep1 } = require('./common')
+
 exports.rules = {
-  expression: $ => $.binary_expr,
-  binary_expr: $ =>
-    choice($.unary_expr, seq($.binary_expr, $.binary_operator, $.unary_expr)),
-  assignment_expression: $ => seq($.identifier, '=', $.expression),
+  expression: $ =>
+    prec.left(
+      choice(
+        $.binary_expression,
+        seq($.expression, '.', $.expression),
+        seq($.expression, '[', $.expression, ']'),
+      ),
+    ),
+  binary_expression: $ =>
+    choice(
+      $.unary_expression,
+      seq($.binary_expression, $.binary_operator, $.unary_expression),
+    ),
+  assignment_expression: $ =>
+    seq(anySep1($.identifier, '.'), '=', $.expression),
+  in_expression: $ => prec(1, seq(commaSep1($.identifier), 'in', $.expression)),
   binary_operator: $ =>
     choice(
       '+',
@@ -23,19 +37,23 @@ exports.rules = {
       'is',
       '|',
       '~',
-      'in',
     ),
-  unary_expr: $ => choice($.primary_expr, seq($.unary_operator, $.unary_expr)),
+  unary_expression: $ =>
+    choice($.primary_expression, seq($.unary_operator, $.unary_expression)),
   unary_operator: $ => choice('not', '!'),
-  primary_expr: $ =>
+  primary_expression: $ =>
     choice(
-      $.field_expression,
       $.loop_expression,
       $.function_call,
       $.literal,
       $.inline_trans,
+      $.identifier,
       seq('(', $.expression, ')'),
     ),
+
+  function_call: $ => seq($.identifier, '(', commaSep($.arg), ')'),
+  arg: $ => seq(optional(seq($.identifier, '=')), $.expression),
+  inline_trans: $ => seq('_', '(', $.expression, ')'),
 
   loop_expression: $ =>
     seq(
@@ -54,18 +72,7 @@ exports.rules = {
         'depth0',
         'previtem',
         'nextitem',
-        seq('changed', '(', $.field_expression, ')'),
-      ),
-    ),
-
-  field_expression: $ =>
-    prec.left(
-      choice(
-        $.identifier,
-        $.dict_literal,
-        $.list_literal,
-        seq($.field_expression, '.', $.field_expression),
-        seq($.field_expression, '[', $.field_expression, ']'),
+        seq('changed', '(', $.expression, ')'),
       ),
     ),
 }

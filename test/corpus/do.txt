@@ -12,20 +12,22 @@ do
     (control
       (statement
         (expression
-          (binary_expr
-            (unary_expr
-              (primary_expr
-                (function_call
-                  (field_expression
-                    (field_expression
-                      (identifier))
-                    (field_expression
-                      (identifier)))
-                  (arg
-                    (expression
-                      (binary_expr
-                        (unary_expr
-                          (primary_expr
-                            (literal
-                              (string_literal)))))))))))))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (function_call
+                    (identifier)
+                    (arg
+                      (expression
+                        (binary_expression
+                          (unary_expression
+                            (primary_expression
+                              (literal
+                                (string_literal))))))))))))))))
   (definition))
