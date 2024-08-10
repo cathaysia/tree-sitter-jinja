@@ -285,15 +285,27 @@ literals
             (primary_expr
               (field_expression
                 (list_literal
-                  (literal
-                    (number_literal
-                      (dec_literal)))
-                  (literal
-                    (number_literal
-                      (dec_literal)))
-                  (literal
-                    (number_literal
-                      (dec_literal)))))))))))
+                  (expression
+                    (binary_expr
+                      (unary_expr
+                        (primary_expr
+                          (literal
+                            (number_literal
+                              (dec_literal)))))))
+                  (expression
+                    (binary_expr
+                      (unary_expr
+                        (primary_expr
+                          (literal
+                            (number_literal
+                              (dec_literal)))))))
+                  (expression
+                    (binary_expr
+                      (unary_expr
+                        (primary_expr
+                          (literal
+                            (number_literal
+                              (dec_literal)))))))))))))))
   (definition)
   (definition
     (render_expression
@@ -303,9 +315,18 @@ literals
             (primary_expr
               (field_expression
                 (dict_literal
-                  (string_literal)
-                  (literal
-                    (string_literal))))))))))
+                  (expression
+                    (binary_expr
+                      (unary_expr
+                        (primary_expr
+                          (literal
+                            (string_literal))))))
+                  (expression
+                    (binary_expr
+                      (unary_expr
+                        (primary_expr
+                          (literal
+                            (string_literal))))))))))))))
   (definition)
   (definition
     (render_expression
@@ -519,9 +540,18 @@ attrs
               (field_expression
                 (field_expression
                   (dict_literal
-                    (string_literal)
-                    (literal
-                      (string_literal))))
+                    (expression
+                      (binary_expr
+                        (unary_expr
+                          (primary_expr
+                            (literal
+                              (string_literal))))))
+                    (expression
+                      (binary_expr
+                        (unary_expr
+                          (primary_expr
+                            (literal
+                              (string_literal))))))))
                 (field_expression
                   (identifier)))))))))
   (definition)
@@ -534,15 +564,27 @@ attrs
               (field_expression
                 (field_expression
                   (list_literal
-                    (literal
-                      (number_literal
-                        (dec_literal)))
-                    (literal
-                      (number_literal
-                        (dec_literal)))
-                    (literal
-                      (number_literal
-                        (dec_literal)))))
+                    (expression
+                      (binary_expr
+                        (unary_expr
+                          (primary_expr
+                            (literal
+                              (number_literal
+                                (dec_literal)))))))
+                    (expression
+                      (binary_expr
+                        (unary_expr
+                          (primary_expr
+                            (literal
+                              (number_literal
+                                (dec_literal)))))))
+                    (expression
+                      (binary_expr
+                        (unary_expr
+                          (primary_expr
+                            (literal
+                              (number_literal
+                                (dec_literal)))))))))
                 (field_expression
                   (identifier)))))))))
   (definition))

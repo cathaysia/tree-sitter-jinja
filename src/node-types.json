@@ -207,11 +207,7 @@
       "required": false,
       "types": [
         {
-          "type": "literal",
-          "named": true
-        },
-        {
-          "type": "string_literal",
+          "type": "expression",
           "named": true
         }
       ]
@@ -515,7 +511,7 @@
       "required": false,
       "types": [
         {
-          "type": "literal",
+          "type": "expression",
           "named": true
         }
       ]
