@@ -34,7 +34,7 @@ loop
   (definition
     (control
       (statement
-        (for_expression
+        (for_statement
           (in_expression
             (identifier)
             (expression
@@ -77,31 +77,35 @@ operator
                   (binary_expression
                     (unary_expression
                       (primary_expression
-                        (expression
-                          (binary_expression
-                            (binary_expression
-                              (unary_expression
-                                (unary_operator)
+                        (literal
+                          (tuple_literal
+                            (expression
+                              (binary_expression
+                                (binary_expression
+                                  (unary_expression
+                                    (unary_operator)
+                                    (unary_expression
+                                      (primary_expression
+                                        (identifier)))))
+                                (binary_operator)
                                 (unary_expression
                                   (primary_expression
-                                    (identifier)))))
-                            (binary_operator)
-                            (unary_expression
-                              (primary_expression
-                                (identifier))))))))
+                                    (identifier))))))))))
                   (binary_operator)
                   (unary_expression
                     (primary_expression
-                      (expression
-                        (binary_expression
-                          (binary_expression
-                            (unary_expression
-                              (primary_expression
-                                (identifier))))
-                          (binary_operator)
-                          (unary_expression
-                            (primary_expression
-                              (identifier))))))))
+                      (literal
+                        (tuple_literal
+                          (expression
+                            (binary_expression
+                              (binary_expression
+                                (unary_expression
+                                  (primary_expression
+                                    (identifier))))
+                              (binary_operator)
+                              (unary_expression
+                                (primary_expression
+                                  (identifier))))))))))
                 (binary_operator)
                 (unary_expression
                   (primary_expression
@@ -613,7 +617,7 @@ block filter
   (definition
     (control
       (statement
-        (for_expression
+        (for_statement
           (in_expression
             (identifier)
             (expression

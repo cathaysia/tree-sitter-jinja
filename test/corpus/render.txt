@@ -1,0 +1,133 @@
+===============
+render
+===============
+
+{{ "foo" if false }}
+{{ var[42].foo }}
+{{ async_func() + normal_func() }}
+{{ outer("FOO") }}
+{{ users()|selectattr("is_active")|map(attribute="name")|join("|") }}
+
+
+--------
+
+(source
+  (definition)
+  (definition
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (string_literal))))))
+      (ternary_expression
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
+                  (boolean_literal)))))))))
+  (definition)
+  (definition
+    (render_expression
+      (expression
+        (expression
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (number_literal
+                      (dec_literal))))))))
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier))))))))
+  (definition)
+  (definition
+    (render_expression
+      (expression
+        (binary_expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (function_call
+                  (identifier)))))
+          (binary_operator)
+          (unary_expression
+            (primary_expression
+              (function_call
+                (identifier))))))))
+  (definition)
+  (definition
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (function_call
+                (identifier)
+                (arg
+                  (expression
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
+                          (literal
+                            (string_literal))))))))))))))
+  (definition)
+  (definition
+    (render_expression
+      (expression
+        (binary_expression
+          (binary_expression
+            (binary_expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (function_call
+                      (identifier)))))
+              (binary_operator)
+              (unary_expression
+                (primary_expression
+                  (function_call
+                    (identifier)
+                    (arg
+                      (expression
+                        (binary_expression
+                          (unary_expression
+                            (primary_expression
+                              (literal
+                                (string_literal)))))))))))
+            (binary_operator)
+            (unary_expression
+              (primary_expression
+                (function_call
+                  (identifier)
+                  (arg
+                    (identifier)
+                    (expression
+                      (binary_expression
+                        (unary_expression
+                          (primary_expression
+                            (literal
+                              (string_literal)))))))))))
+          (binary_operator)
+          (unary_expression
+            (primary_expression
+              (function_call
+                (identifier)
+                (arg
+                  (expression
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
+                          (literal
+                            (string_literal))))))))))))))
+  (definition))

@@ -19,6 +19,8 @@
 
 (null_literal) @constant
 
+"defined" @constant
+
 (comment) @comment
 
 [
@@ -26,6 +28,12 @@
   "."
   ":"
 ] @punctuation.delimiter
+
+[
+  (attribute_ignore)
+  (attribute_context)
+  "recursive"
+] @attribute.builtin
 
 [
   "("
@@ -46,29 +54,10 @@
   "|"
 ] @operator
 
-(loop_expression
-  "loop" @variable.builtin
-  [
-    "index"
-    "index0"
-    "revindex"
-    "revindex0"
-    "first"
-    "last"
-    "length"
-    "cycle"
-    "depth"
-    "depth0"
-    "previtem"
-    "nextitem"
-    "changed"
-  ]? @variable.member)
-
 [
   "endtrans"
   "block"
   "endblock"
-  "with"
   "endwith"
   "filter"
   "endfilter"
@@ -81,11 +70,26 @@
   "endtrans"
   "autoescape"
   "endautoescape"
-  "do"
   "pluralize"
-  "extends"
   "is"
 ] @keyword
+
+(do_statement
+  "do" @keyword)
+
+[
+  "include"
+  "import"
+  "from"
+  "extends"
+  "as"
+] @keyword.import
+
+(import_statement
+  (identifier) @variable)
+
+(import_as
+  (identifier) @variable)
 
 [
   "if"

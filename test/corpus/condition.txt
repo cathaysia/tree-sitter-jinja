@@ -13,7 +13,7 @@ extends
       (statement
         (extends_statement
           (identifier)
-          (inline_if_expression
+          (ternary_expression
             (expression
               (binary_expression
                 (binary_expression
@@ -23,7 +23,8 @@ extends
                 (binary_operator)
                 (unary_expression
                   (primary_expression
-                    (identifier)))))
+                    (literal
+                      (null_literal))))))
             (expression
               (binary_expression
                 (unary_expression

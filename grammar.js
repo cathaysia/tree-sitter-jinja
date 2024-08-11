@@ -30,7 +30,7 @@ module.exports = grammar({
       seq(
         choice('{{', '{{-'),
         $.expression,
-        optional($.inline_if_expression),
+        optional($.ternary_expression),
         choice('}}', '-}}'),
       ),
     statement: $ =>
@@ -51,11 +51,11 @@ module.exports = grammar({
           'break',
           'debug',
           'endautoescape',
-          seq('do', $.expression),
+          $.do_statement,
           $.include_statement,
           $.import_statement,
           $.set_statement,
-          $.for_expression,
+          $.for_statement,
           $.if_expression,
           $.with_statement,
           $.call_statement,
@@ -68,30 +68,33 @@ module.exports = grammar({
           $.trans_statement,
           $.autoescape_statement,
         ),
-        optional($.inline_if_expression),
       ),
+    do_statement: $ => seq('do', $.expression),
     autoescape_statement: $ => seq('autoescape', optional($.boolean_literal)),
     trans_statement: $ =>
       seq('trans', commaSep(choice($.identifier, $.assignment_expression))),
     pluralize_statement: $ => seq('pluralize', optional($.identifier)),
-    inline_if_expression: $ =>
+    ternary_expression: $ =>
       seq('if', $.expression, optional(seq('else', $.expression))),
     block_statement: $ => seq('block', $.identifier),
     filter_statement: $ => seq('filter', $.expression),
     macro_statement: $ => seq('macro', $.function_call),
     extends_statement: $ =>
-      seq(
-        'extends',
-        choice($.string_literal, $.identifier),
-        $.inline_if_expression,
+      prec.right(
+        seq(
+          'extends',
+          choice($.string_literal, $.identifier),
+          optional($.ternary_expression),
+        ),
       ),
-    call_statement: $ => seq('call', '(', $.identifier, ')', $.function_call),
+    call_statement: $ =>
+      seq('call', optional(seq('(', $.identifier, ')')), $.function_call),
     with_statement: $ => seq('with', repeat($.assignment_expression)),
     import_statement: $ =>
       seq(
         optional($.import_from),
         'import',
-        $.identifier,
+        seq(choice(commaSep1($.identifier), $.string_literal)),
         optional($.import_as),
         optional($.import_attribute),
       ),
@@ -99,16 +102,26 @@ module.exports = grammar({
     import_as: $ => seq('as', commaSep1($.identifier)),
     import_attribute: $ => $.attribute_context,
     include_statement: $ =>
-      seq('include', $.string_literal, repeat($.include_attribute)),
-    include_attribute: $ =>
-      seq(optional('ignore missing'), $.attribute_context),
+      seq(
+        'include',
+        choice($.string_literal, $.identifier, $.list_literal, $.tuple_literal),
+        repeat($.include_attribute),
+      ),
+    include_attribute: $ => choice($.attribute_ignore, $.attribute_context),
+    attribute_ignore: $ => seq('ignore', 'missing'),
     attribute_context: $ => seq(choice('with', 'without'), 'context'),
     set_statement: $ => seq('set', commaSep1($.expression), '=', $.expression),
-    for_expression: $ => seq('for', $.in_expression, optional('recursive')),
+    for_statement: $ =>
+      seq(
+        'for',
+        $.in_expression,
+        optional($.ternary_expression),
+        optional('recursive'),
+      ),
     if_expression: $ => seq('if', $.expression),
 
     _words: _ => prec.right(repeat1(choice(/[^\{]/, /\{[^\#\%]/))),
-    identifier: $ => /[a-zA-Z][\w\d]*/,
+    identifier: $ => /[a-zA-Z_][\w\d_]*/,
     comment: $ =>
       choice(
         seq('##', /[^\r\n]*/, /\r?\n/),

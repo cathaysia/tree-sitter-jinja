@@ -43,7 +43,6 @@ exports.rules = {
   unary_operator: $ => choice('not', '!'),
   primary_expression: $ =>
     choice(
-      $.loop_expression,
       $.function_call,
       $.literal,
       $.inline_trans,
@@ -54,25 +53,4 @@ exports.rules = {
   function_call: $ => seq($.identifier, '(', commaSep($.arg), ')'),
   arg: $ => seq(optional(seq($.identifier, '=')), $.expression),
   inline_trans: $ => seq('_', '(', $.expression, ')'),
-
-  loop_expression: $ =>
-    seq(
-      'loop',
-      '.',
-      choice(
-        'index',
-        'index0',
-        'revindex',
-        'revindex0',
-        'first',
-        'last',
-        'length',
-        'cycle',
-        'depth',
-        'depth0',
-        'previtem',
-        'nextitem',
-        seq('changed', '(', $.expression, ')'),
-      ),
-    ),
 }

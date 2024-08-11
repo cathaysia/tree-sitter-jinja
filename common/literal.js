@@ -8,11 +8,12 @@ exports.rules = {
       $.number_literal,
       $.float_literal,
       $.list_literal,
+      $.tuple_literal,
       $.string_literal,
       $.dict_literal,
     ),
   boolean_literal: $ => choice('true', 'false'),
-  null_literal: $ => choice('null', 'none'),
+  null_literal: $ => choice('null', 'none', 'defined'),
   number_literal: $ =>
     seq(
       optional(choice('-', '+')),
@@ -33,6 +34,8 @@ exports.rules = {
   float_literal: $ => prec(2, seq($.dec_literal, '.', $.dec_literal)),
 
   list_literal: $ => seq('[', commaSep($.expression), optional(','), ']'),
+  tuple_literal: $ =>
+    prec(1, seq('(', commaSep($.expression), optional(','), ')')),
   dict_literal: $ =>
     seq('{', commaSep(seq($.expression, ':', $.expression)), '}'),
 

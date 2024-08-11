@@ -3,6 +3,8 @@ call
 ====================
 
 {{ page.title.capitalize() }}
+{%- call do_something() -%}
+{%- endcall %}
 
 ---
 
@@ -28,4 +30,15 @@ call
               (primary_expression
                 (function_call
                   (identifier)))))))))
+  (definition)
+  (definition
+    (control
+      (statement
+        (call_statement
+          (function_call
+            (identifier))))))
+  (definition)
+  (definition
+    (control
+      (statement)))
   (definition))

@@ -11,23 +11,24 @@ do
   (definition
     (control
       (statement
-        (expression
+        (do_statement
           (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (function_call
-                    (identifier)
-                    (arg
-                      (expression
-                        (binary_expression
-                          (unary_expression
-                            (primary_expression
-                              (literal
-                                (string_literal))))))))))))))))
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (identifier)))))
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (function_call
+                      (identifier)
+                      (arg
+                        (expression
+                          (binary_expression
+                            (unary_expression
+                              (primary_expression
+                                (literal
+                                  (string_literal)))))))))))))))))
   (definition))
