@@ -58,6 +58,7 @@
   "endtrans"
   "block"
   "endblock"
+  "with"
   "endwith"
   "filter"
   "endfilter"
@@ -72,7 +73,8 @@
   "endautoescape"
   "pluralize"
   "is"
-] @keyword
+  "not"
+] @keyword.builtin
 
 (do_statement
   "do" @keyword)
@@ -134,3 +136,5 @@
 (raw_end) @keyword
 
 (raw_body) @markup.raw.block @nospell
+
+(identifier) @variable.parameter
