@@ -19,12 +19,14 @@ const PREC = {
 module.exports = grammar({
   name: 'jinja2',
   extras: $ => [/\s/, $.comment],
+  externals: $ => [$.raw_start, $._raw_char, $.raw_end],
 
   rules: {
     source: $ => repeat($.definition),
     ...literal.rules,
     ...expression.rules,
-    definition: $ => choice($.control, $.render_expression, $._words),
+    definition: $ =>
+      choice($.control, $.render_expression, $._words, $.raw_block),
     control: $ => seq(choice('{%', '{%-'), $.statement, choice('-%}', '%}')),
     render_expression: $ =>
       seq(
@@ -33,6 +35,8 @@ module.exports = grammar({
         optional($.ternary_expression),
         choice('}}', '-}}'),
       ),
+    raw_block: $ =>
+      seq($.raw_start, alias(repeat($._raw_char), $.raw_body), $.raw_end),
     statement: $ =>
       seq(
         choice(

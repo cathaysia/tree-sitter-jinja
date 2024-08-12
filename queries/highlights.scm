@@ -127,3 +127,10 @@
   "_" @function.builtin)
 
 "debug" @function.builtin
+
+; TODO: only match raw
+(raw_start) @keyword
+
+(raw_end) @keyword
+
+(raw_body) @markup.raw.block @nospell

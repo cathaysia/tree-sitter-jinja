@@ -882,6 +882,10 @@
         {
           "type": "SYMBOL",
           "name": "_words"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "raw_block"
         }
       ]
     },
@@ -964,6 +968,31 @@
               "value": "-}}"
             }
           ]
+        }
+      ]
+    },
+    "raw_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "raw_start"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "REPEAT",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_raw_char"
+            }
+          },
+          "named": true,
+          "value": "raw_body"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "raw_end"
         }
       ]
     },
@@ -1790,7 +1819,20 @@
   ],
   "conflicts": [],
   "precedences": [],
-  "externals": [],
+  "externals": [
+    {
+      "type": "SYMBOL",
+      "name": "raw_start"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "_raw_char"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "raw_end"
+    }
+  ],
   "inline": [],
   "supertypes": []
 }
