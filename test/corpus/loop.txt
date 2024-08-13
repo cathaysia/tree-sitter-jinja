@@ -56,10 +56,7 @@ continue
                   (unary_expression
                     (primary_expression
                       (identifier))))
-                (binary_operator)
-                (unary_expression
-                  (primary_expression
-                    (identifier))))))))))
+                (builtin_test))))))))
   (definition
     (control
       (statement)))
@@ -353,10 +350,7 @@ continue
                   (unary_expression
                     (primary_expression
                       (identifier))))
-                (binary_operator)
-                (unary_expression
-                  (primary_expression
-                    (identifier))))))))))
+                (builtin_test))))))))
   (definition)
   (definition
     (control

@@ -138,3 +138,35 @@
 (raw_body) @markup.raw.block @nospell
 
 (identifier) @variable.parameter
+
+(builtin_test
+  [
+    "boolean"
+    "even"
+    "in"
+    "mapping"
+    "sequence"
+    "callable"
+    "integer"
+    "ne"
+    "string"
+    "defined"
+    "filter"
+    "iterable"
+    "none"
+    "test"
+    "divisibleby"
+    "float"
+    "le"
+    "number"
+    "eq"
+    "ge"
+    "lower"
+    "odd"
+    "undefined"
+    "escaped"
+    "gt"
+    "lt"
+    "sameas"
+    "upper"
+  ] @keyword.builtin)

@@ -251,11 +251,7 @@ complex
                 (unary_expression
                   (primary_expression
                     (identifier))))
-              (binary_operator)
-              (unary_expression
-                (primary_expression
-                  (literal
-                    (null_literal)))))))
+              (builtin_test))))
         (expression
           (binary_expression
             (unary_expression
@@ -309,11 +305,7 @@ complex
                 (unary_expression
                   (primary_expression
                     (identifier))))
-              (binary_operator)
-              (unary_expression
-                (primary_expression
-                  (literal
-                    (null_literal)))))))
+              (builtin_test))))
         (expression
           (binary_expression
             (unary_expression

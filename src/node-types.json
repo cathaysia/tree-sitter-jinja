@@ -94,6 +94,10 @@
           "named": true
         },
         {
+          "type": "builtin_test",
+          "named": true
+        },
+        {
           "type": "unary_expression",
           "named": true
         }
@@ -124,6 +128,25 @@
     "type": "boolean_literal",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "builtin_test",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "list_literal",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "call_statement",
@@ -1059,11 +1082,19 @@
     "named": false
   },
   {
+    "type": "boolean",
+    "named": false
+  },
+  {
     "type": "break",
     "named": false
   },
   {
     "type": "call",
+    "named": false
+  },
+  {
+    "type": "callable",
     "named": false
   },
   {
@@ -1084,6 +1115,10 @@
   },
   {
     "type": "defined",
+    "named": false
+  },
+  {
+    "type": "divisibleby",
     "named": false
   },
   {
@@ -1151,6 +1186,18 @@
     "named": false
   },
   {
+    "type": "eq",
+    "named": false
+  },
+  {
+    "type": "escaped",
+    "named": false
+  },
+  {
+    "type": "even",
+    "named": false
+  },
+  {
     "type": "extends",
     "named": false
   },
@@ -1163,11 +1210,23 @@
     "named": false
   },
   {
+    "type": "float",
+    "named": false
+  },
+  {
     "type": "for",
     "named": false
   },
   {
     "type": "from",
+    "named": false
+  },
+  {
+    "type": "ge",
+    "named": false
+  },
+  {
+    "type": "gt",
     "named": false
   },
   {
@@ -1199,7 +1258,27 @@
     "named": false
   },
   {
+    "type": "integer",
+    "named": false
+  },
+  {
     "type": "is",
+    "named": false
+  },
+  {
+    "type": "iterable",
+    "named": false
+  },
+  {
+    "type": "le",
+    "named": false
+  },
+  {
+    "type": "lower",
+    "named": false
+  },
+  {
+    "type": "lt",
     "named": false
   },
   {
@@ -1207,7 +1286,15 @@
     "named": false
   },
   {
+    "type": "mapping",
+    "named": false
+  },
+  {
     "type": "missing",
+    "named": false
+  },
+  {
+    "type": "ne",
     "named": false
   },
   {
@@ -1223,8 +1310,16 @@
     "named": false
   },
   {
+    "type": "number",
+    "named": false
+  },
+  {
     "type": "oct_literal",
     "named": true
+  },
+  {
+    "type": "odd",
+    "named": false
   },
   {
     "type": "or",
@@ -1247,7 +1342,23 @@
     "named": false
   },
   {
+    "type": "sameas",
+    "named": false
+  },
+  {
+    "type": "sequence",
+    "named": false
+  },
+  {
     "type": "set",
+    "named": false
+  },
+  {
+    "type": "string",
+    "named": false
+  },
+  {
+    "type": "test",
     "named": false
   },
   {
@@ -1256,6 +1367,14 @@
   },
   {
     "type": "true",
+    "named": false
+  },
+  {
+    "type": "undefined",
+    "named": false
+  },
+  {
+    "type": "upper",
     "named": false
   },
   {

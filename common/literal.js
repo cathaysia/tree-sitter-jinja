@@ -13,7 +13,7 @@ exports.rules = {
       $.dict_literal,
     ),
   boolean_literal: $ => choice('true', 'false'),
-  null_literal: $ => choice('null', 'none', 'defined'),
+  null_literal: $ => choice('null', 'none'),
   number_literal: $ =>
     seq(
       optional(choice('-', '+')),

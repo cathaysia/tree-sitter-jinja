@@ -15,15 +15,18 @@ before {%- raw -%} this is a {{ raw }} {% block %} {%- endraw -%} after
   (definition
     (raw_block
       (raw_start)
+      (raw_body)
       (raw_end)))
   (definition)
   (definition
     (raw_block
       (raw_start)
+      (raw_body)
       (raw_end)))
   (definition)
   (definition
     (raw_block
       (raw_start)
+      (raw_body)
       (raw_end)))
   (definition))
