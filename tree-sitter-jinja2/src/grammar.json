@@ -1924,6 +1924,10 @@
         {
           "type": "SYMBOL",
           "name": "raw_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "inline"
         }
       ]
     },
@@ -2031,6 +2035,144 @@
         {
           "type": "SYMBOL",
           "name": "raw_end"
+        }
+      ]
+    },
+    "inline": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "#"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "endfor"
+            },
+            {
+              "type": "STRING",
+              "value": "elif"
+            },
+            {
+              "type": "STRING",
+              "value": "else"
+            },
+            {
+              "type": "STRING",
+              "value": "endif"
+            },
+            {
+              "type": "STRING",
+              "value": "endblock"
+            },
+            {
+              "type": "STRING",
+              "value": "endwith"
+            },
+            {
+              "type": "STRING",
+              "value": "endfilter"
+            },
+            {
+              "type": "STRING",
+              "value": "endmacro"
+            },
+            {
+              "type": "STRING",
+              "value": "endcall"
+            },
+            {
+              "type": "STRING",
+              "value": "endset"
+            },
+            {
+              "type": "STRING",
+              "value": "endtrans"
+            },
+            {
+              "type": "STRING",
+              "value": "continue"
+            },
+            {
+              "type": "STRING",
+              "value": "break"
+            },
+            {
+              "type": "STRING",
+              "value": "debug"
+            },
+            {
+              "type": "STRING",
+              "value": "endautoescape"
+            },
+            {
+              "type": "STRING",
+              "value": "do"
+            },
+            {
+              "type": "STRING",
+              "value": "include"
+            },
+            {
+              "type": "STRING",
+              "value": "import"
+            },
+            {
+              "type": "STRING",
+              "value": "set"
+            },
+            {
+              "type": "STRING",
+              "value": "for"
+            },
+            {
+              "type": "STRING",
+              "value": "with"
+            },
+            {
+              "type": "STRING",
+              "value": "call"
+            },
+            {
+              "type": "STRING",
+              "value": "extends"
+            },
+            {
+              "type": "STRING",
+              "value": "macro"
+            },
+            {
+              "type": "STRING",
+              "value": "filter"
+            },
+            {
+              "type": "STRING",
+              "value": "block"
+            },
+            {
+              "type": "STRING",
+              "value": "pluralize"
+            },
+            {
+              "type": "STRING",
+              "value": "trans"
+            },
+            {
+              "type": "STRING",
+              "value": "autoescape"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_words"
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\r?\\n"
         }
       ]
     }

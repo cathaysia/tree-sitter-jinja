@@ -9,7 +9,14 @@ module.exports = grammar({
       repeat(choice($.line_statement, $.raw_block, $._words, $._NEWLINE)),
     ...gram.rules,
     line_statement: $ => seq('#', $.statement, $._END),
-    raw_block: $ => seq('#', 'seq', /\r?\n/, repeat($._raw_char), $.raw_end),
+    raw_block: $ =>
+      seq(
+        '#',
+        'seq',
+        /\r?\n/,
+        alias(repeat($._raw_char), $.raw_body),
+        $.raw_end,
+      ),
 
     _END: $ => choice($._NEWLINE, $._eof),
     _NEWLINE: $ => /\r?\n/,

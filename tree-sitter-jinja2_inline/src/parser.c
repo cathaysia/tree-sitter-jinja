@@ -16,12 +16,12 @@
 #define STATE_COUNT 414
 #define LARGE_STATE_COUNT 5
 #define SYMBOL_COUNT 192
-#define ALIAS_COUNT 0
+#define ALIAS_COUNT 1
 #define TOKEN_COUNT 126
 #define EXTERNAL_TOKEN_COUNT 3
 #define FIELD_COUNT 0
 #define MAX_ALIAS_SEQUENCE_LENGTH 6
-#define PRODUCTION_ID_COUNT 1
+#define PRODUCTION_ID_COUNT 2
 
 enum ts_symbol_identifiers {
     anon_sym_true = 1,
@@ -215,6 +215,7 @@ enum ts_symbol_identifiers {
     aux_sym__words_repeat1 = 189,
     aux_sym_comment_repeat1 = 190,
     aux_sym_raw_block_repeat1 = 191,
+    alias_sym_raw_body = 192,
 };
 
 static const char *const ts_symbol_names[] = {
@@ -410,6 +411,7 @@ static const char *const ts_symbol_names[] = {
     [aux_sym__words_repeat1] = "_words_repeat1",
     [aux_sym_comment_repeat1] = "comment_repeat1",
     [aux_sym_raw_block_repeat1] = "raw_block_repeat1",
+    [alias_sym_raw_body] = "raw_body",
 };
 
 static const TSSymbol ts_symbol_map[] = {
@@ -605,6 +607,7 @@ static const TSSymbol ts_symbol_map[] = {
     [aux_sym__words_repeat1] = aux_sym__words_repeat1,
     [aux_sym_comment_repeat1] = aux_sym_comment_repeat1,
     [aux_sym_raw_block_repeat1] = aux_sym_raw_block_repeat1,
+    [alias_sym_raw_body] = alias_sym_raw_body,
 };
 
 static const TSSymbolMetadata ts_symbol_metadata[] = {
@@ -1376,13 +1379,24 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
         .visible = false,
         .named = false,
     },
+    [alias_sym_raw_body] = {
+        .visible = true,
+        .named = true,
+    },
 };
 
 static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE_LENGTH] = {
     [0] = { 0 },
+    [1] = {
+        [3] = alias_sym_raw_body,
+    },
 };
 
 static const uint16_t ts_non_terminal_alias_map[] = {
+    aux_sym_raw_block_repeat1,
+    2,
+    aux_sym_raw_block_repeat1,
+    alias_sym_raw_body,
     0,
 };
 
@@ -22601,9 +22615,9 @@ static const TSParseActionEntry ts_parse_actions[] = {
     [611] = { .entry = { .count = 1, .reusable = true } },
     SHIFT(155),
     [613] = { .entry = { .count = 1, .reusable = true } },
-    REDUCE(sym_raw_block, 5, 0, 0),
+    REDUCE(sym_raw_block, 5, 0, 1),
     [615] = { .entry = { .count = 1, .reusable = false } },
-    REDUCE(sym_raw_block, 5, 0, 0),
+    REDUCE(sym_raw_block, 5, 0, 1),
     [617] = { .entry = { .count = 1, .reusable = false } },
     REDUCE(sym_attribute_ignore, 2, 0, 0),
     [619] = { .entry = { .count = 1, .reusable = true } },

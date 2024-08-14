@@ -1956,11 +1956,16 @@
           "value": "\\r?\\n"
         },
         {
-          "type": "REPEAT",
+          "type": "ALIAS",
           "content": {
-            "type": "SYMBOL",
-            "name": "_raw_char"
-          }
+            "type": "REPEAT",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_raw_char"
+            }
+          },
+          "named": true,
+          "value": "raw_body"
         },
         {
           "type": "SYMBOL",

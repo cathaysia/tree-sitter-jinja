@@ -200,6 +200,10 @@
           "named": true
         },
         {
+          "type": "inline",
+          "named": true
+        },
+        {
           "type": "raw_block",
           "named": true
         },
@@ -509,6 +513,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "inline",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "inline_trans",

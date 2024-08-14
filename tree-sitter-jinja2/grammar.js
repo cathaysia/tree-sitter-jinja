@@ -8,7 +8,7 @@ module.exports = grammar({
     source: $ => repeat($.definition),
     ...gram.rules,
     definition: $ =>
-      choice($.control, $.render_expression, $._words, $.raw_block),
+      choice($.control, $.render_expression, $._words, $.raw_block, $.inline),
     render_expression: $ =>
       seq(
         choice('{{', '{{-'),
@@ -19,5 +19,42 @@ module.exports = grammar({
     control: $ => seq(choice('{%', '{%-'), $.statement, choice('-%}', '%}')),
     raw_block: $ =>
       seq($.raw_start, alias(repeat($._raw_char), $.raw_body), $.raw_end),
+    inline: $ =>
+      seq(
+        '#',
+        choice(
+          'endfor',
+          'elif',
+          'else',
+          'endif',
+          'endblock',
+          'endwith',
+          'endfilter',
+          'endmacro',
+          'endcall',
+          'endset',
+          'endtrans',
+          'continue',
+          'break',
+          'debug',
+          'endautoescape',
+          'do',
+          'include',
+          'import',
+          'set',
+          'for',
+          'with',
+          'call',
+          'extends',
+          'macro',
+          'filter',
+          'block',
+          'pluralize',
+          'trans',
+          'autoescape',
+        ),
+        $._words,
+        /\r?\n/,
+      ),
   },
 })
