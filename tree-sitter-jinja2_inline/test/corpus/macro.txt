@@ -1,0 +1,54 @@
+==============
+macro
+==============
+
+# macro toplevel()
+# macro __private()
+# macro m(a, b, c='c', d='d')
+
+----
+
+(source
+  (line_statement
+    (statement
+      (macro_statement
+        (function_call
+          (identifier)))))
+  (line_statement
+    (statement
+      (macro_statement
+        (function_call
+          (identifier)))))
+  (line_statement
+    (statement
+      (macro_statement
+        (function_call
+          (identifier)
+          (arg
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (identifier))))))
+          (arg
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (identifier))))))
+          (arg
+            (identifier)
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (literal
+                      (string_literal)))))))
+          (arg
+            (identifier)
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (literal
+                      (string_literal))))))))))))

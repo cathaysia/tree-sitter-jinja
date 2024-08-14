@@ -1,0 +1,16 @@
+=============
+block
+=============
+
+# block foo
+# endblock
+
+---
+
+(source
+  (line_statement
+    (statement
+      (block_statement
+        (identifier))))
+  (line_statement
+    (statement)))

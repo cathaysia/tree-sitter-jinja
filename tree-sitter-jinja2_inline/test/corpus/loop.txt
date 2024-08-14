@@ -1,0 +1,134 @@
+==================
+continue
+==================
+
+# for user in users
+    # if loop.index is even
+    # continue
+    # endif
+# endfor
+
+# for item in [1, 2, 3]
+# endfor
+
+----------
+
+(source
+  (line_statement
+    (statement
+      (for_statement
+        (in_expression
+          (identifier)
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))))))
+  (line_statement
+    (statement
+      (if_expression
+        (expression
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
+          (expression
+            (binary_expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (identifier))))
+              (builtin_test)))))))
+  (line_statement
+    (statement))
+  (line_statement
+    (statement))
+  (line_statement
+    (statement))
+  (line_statement
+    (statement
+      (for_statement
+        (in_expression
+          (identifier)
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (list_literal
+                      (expression
+                        (binary_expression
+                          (unary_expression
+                            (primary_expression
+                              (literal
+                                (number_literal
+                                  (dec_literal)))))))
+                      (expression
+                        (binary_expression
+                          (unary_expression
+                            (primary_expression
+                              (literal
+                                (number_literal
+                                  (dec_literal)))))))
+                      (expression
+                        (binary_expression
+                          (unary_expression
+                            (primary_expression
+                              (literal
+                                (number_literal
+                                  (dec_literal)))))))))))))))))
+  (line_statement
+    (statement)))
+
+=========================
+break
+=========================
+
+
+# for user in users
+# if loop.index >= 10
+# break
+# endif
+# endfor
+
+--------------
+
+(source
+  (line_statement
+    (statement
+      (for_statement
+        (in_expression
+          (identifier)
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))))))
+  (line_statement
+    (statement
+      (if_expression
+        (expression
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
+          (expression
+            (binary_expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (identifier))))
+              (binary_operator)
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (number_literal
+                      (dec_literal)))))))))))
+  (line_statement
+    (statement))
+  (line_statement
+    (statement))
+  (line_statement
+    (statement)))

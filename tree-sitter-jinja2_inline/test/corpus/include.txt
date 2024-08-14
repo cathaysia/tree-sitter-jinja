@@ -1,0 +1,171 @@
+================
+include
+================
+
+# include "muh.html"
+# include helper
+# include ["foo.html", "bar.html"]
+# include ("foo.html", "bar.html")
+# include ["foo.html", "bar.html", foo]
+# include ("foo.html", "bar.html", foo)
+# include "header" with context
+# include "header" without context
+# include ["missing", "missing2"] ignore missing
+# include ["missing", "missing2"] ignore missing with context
+# include ["missing", "missing2"] ignore missing without context
+
+----
+
+(source
+  (line_statement
+    (statement
+      (include_statement
+        (string_literal))))
+  (line_statement
+    (statement
+      (include_statement
+        (identifier))))
+  (line_statement
+    (statement
+      (include_statement
+        (list_literal
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal))))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal))))))))))
+  (line_statement
+    (statement
+      (include_statement
+        (tuple_literal
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal))))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal))))))))))
+  (line_statement
+    (statement
+      (include_statement
+        (list_literal
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal))))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal))))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))))))
+  (line_statement
+    (statement
+      (include_statement
+        (tuple_literal
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal))))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal))))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))))))
+  (line_statement
+    (statement
+      (include_statement
+        (string_literal)
+        (include_attribute
+          (attribute_context)))))
+  (line_statement
+    (statement
+      (include_statement
+        (string_literal)
+        (include_attribute
+          (attribute_context)))))
+  (line_statement
+    (statement
+      (include_statement
+        (list_literal
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal))))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal)))))))
+        (include_attribute
+          (attribute_ignore)))))
+  (line_statement
+    (statement
+      (include_statement
+        (list_literal
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal))))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal)))))))
+        (include_attribute
+          (attribute_ignore))
+        (include_attribute
+          (attribute_context)))))
+  (line_statement
+    (statement
+      (include_statement
+        (list_literal
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal))))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal)))))))
+        (include_attribute
+          (attribute_ignore))
+        (include_attribute
+          (attribute_context))))))

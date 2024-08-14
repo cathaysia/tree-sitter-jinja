@@ -1,0 +1,17 @@
+====================
+call
+====================
+
+# call do_something()
+# endcall
+
+---
+
+(source
+  (line_statement
+    (statement
+      (call_statement
+        (function_call
+          (identifier)))))
+  (line_statement
+    (statement)))

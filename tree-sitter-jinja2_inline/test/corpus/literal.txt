@@ -1,0 +1,68 @@
+==================
+string
+==================
+
+# set a = "aaaaa"
+# set a = "aaaaa\""
+# set a = 'aaaaa'
+# set a = 'aaaaa\''
+
+--------
+
+(source
+  (line_statement
+    (statement
+      (set_statement
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier)))))
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
+                  (string_literal)))))))))
+  (line_statement
+    (statement
+      (set_statement
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier)))))
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
+                  (string_literal)))))))))
+  (line_statement
+    (statement
+      (set_statement
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier)))))
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
+                  (string_literal)))))))))
+  (line_statement
+    (statement
+      (set_statement
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier)))))
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
+                  (string_literal))))))))))

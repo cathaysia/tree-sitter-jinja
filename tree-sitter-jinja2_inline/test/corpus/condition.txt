@@ -1,0 +1,27 @@
+======================
+extends
+======================
+
+# extends layout_template if layout_template is defined else 'default.html'
+
+----
+
+(source
+  (line_statement
+    (statement
+      (extends_statement
+        (identifier)
+        (ternary_expression
+          (expression
+            (binary_expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (identifier))))
+              (builtin_test)))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal)))))))))))

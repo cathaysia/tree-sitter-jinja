@@ -1,0 +1,130 @@
+=================
+trans
+=================
+
+# trans
+# endtrans
+# trans user=user.username
+
+---
+
+(source
+  (line_statement
+    (statement
+      (trans_statement)))
+  (line_statement
+    (statement))
+  (line_statement
+    (statement
+      (trans_statement
+        (assignment_expression
+          (identifier)
+          (expression
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (identifier)))))
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (identifier)))))))))))
+
+==============
+block
+==============
+
+# trans book_title=book.title, author=author.name
+# endtrans
+
+----
+
+(source
+  (line_statement
+    (statement
+      (trans_statement
+        (assignment_expression
+          (identifier)
+          (expression
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (identifier)))))
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (identifier)))))))
+        (assignment_expression
+          (identifier)
+          (expression
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (identifier)))))
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (identifier))))))))))
+  (line_statement
+    (statement)))
+
+==================
+pluralize
+==================
+
+# trans count=list|length
+# pluralize
+# endtrans
+
+----
+
+(source
+  (line_statement
+    (statement
+      (trans_statement
+        (assignment_expression
+          (identifier)
+          (expression
+            (binary_expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (identifier))))
+              (binary_operator)
+              (unary_expression
+                (primary_expression
+                  (identifier)))))))))
+  (line_statement
+    (statement
+      (pluralize_statement)))
+  (line_statement
+    (statement)))
+
+=================
+inline
+=================
+
+{{ _("Hello, World!") }}
+
+{{ _("Hello, %(user)s!")|format(user=user.username) }}
+
+----
+
+(source)
+
+=================
+gettext
+=================
+
+{{ gettext('Hello World!') }}
+{{ gettext('Hello %(name)s!', name='World') }}
+{{ ngettext('%(num)d apple', '%(num)d apples', apples|count) }}
+
+---------
+
+(source)
