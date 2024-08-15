@@ -4,24 +4,44 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  node-addon-api:
-    specifier: ^8.0.0
-    version: 8.1.0
-  node-gyp-build:
-    specifier: ^4.8.0
-    version: 4.8.1
-  tree-sitter:
-    specifier: ^0.21.1
-    version: 0.21.1
+importers:
+  .:
+    devDependencies:
+      tree-sitter-cli:
+        specifier: ^0.22.6
+        version: 0.22.6
 
-devDependencies:
-  prebuildify:
-    specifier: ^6.0.0
-    version: 6.0.1
-  tree-sitter-cli:
-    specifier: ^0.22.2
-    version: 0.22.6
+  tree-sitter-jinja2:
+    dependencies:
+      node-addon-api:
+        specifier: ^8.0.0
+        version: 8.1.0
+      node-gyp-build:
+        specifier: ^4.8.0
+        version: 4.8.1
+      tree-sitter:
+        specifier: ^0.21.1
+        version: 0.21.1
+    devDependencies:
+      prebuildify:
+        specifier: ^6.0.0
+        version: 6.0.1
+
+  tree-sitter-jinja2_inline:
+    dependencies:
+      node-addon-api:
+        specifier: ^8.0.0
+        version: 8.1.0
+      node-gyp-build:
+        specifier: ^4.8.0
+        version: 4.8.1
+      tree-sitter:
+        specifier: ^0.21.1
+        version: 0.21.1
+    devDependencies:
+      prebuildify:
+        specifier: ^6.0.0
+        version: 6.0.1
 
 packages:
   /base64-js@1.5.1:

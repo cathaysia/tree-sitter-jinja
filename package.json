@@ -1,0 +1,17 @@
+{
+  "name": "tree-sitter-jinja2",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@8.15.5",
+  "workspaces": [
+    "./tree-sitter-jinja2",
+    "./tree-sitter-jinja2_inline"
+  ],
+  "engines": {
+    "node": ">=v20.12.2"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.22.6"
+  }
+}
