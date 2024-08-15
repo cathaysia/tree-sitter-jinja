@@ -692,6 +692,10 @@
         {
           "type": "expression",
           "named": true
+        },
+        {
+          "type": "ternary_expression",
+          "named": true
         }
       ]
     }

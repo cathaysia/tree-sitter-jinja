@@ -8,6 +8,14 @@
     "./tree-sitter-jinja2",
     "./tree-sitter-jinja2_inline"
   ],
+  "scripts": {
+    "build": "pnpm build_jinja2 && pnpm build_jinja2_inline",
+    "build_jinja2": "cd tree-sitter-jinja2 && pnpm build",
+    "build_jinja2_inline": "cd tree-sitter-jinja2_inline && pnpm build",
+    "compile": "pnpm compile_jinja2 && pnpm compile_jinja2_inline",
+    "compile_jinja2": "cd tree-sitter-jinja2 && pnpm compile",
+    "compile_jinja2_inline": "cd tree-sitter-jinja2_inline && pnpm compile"
+  },
   "engines": {
     "node": ">=v20.12.2"
   },

@@ -99,7 +99,14 @@ module.exports = {
     include_attribute: $ => choice($.attribute_ignore, $.attribute_context),
     attribute_ignore: $ => seq('ignore', 'missing'),
     attribute_context: $ => seq(choice('with', 'without'), 'context'),
-    set_statement: $ => seq('set', commaSep1($.expression), '=', $.expression),
+    set_statement: $ =>
+      seq(
+        'set',
+        commaSep1($.expression),
+        '=',
+        $.expression,
+        optional($.ternary_expression),
+      ),
     for_statement: $ =>
       seq(
         'for',
