@@ -2179,8 +2179,8 @@
           ]
         },
         {
-          "type": "SYMBOL",
-          "name": "_words"
+          "type": "PATTERN",
+          "value": "[^\\r\\n]*"
         },
         {
           "type": "PATTERN",

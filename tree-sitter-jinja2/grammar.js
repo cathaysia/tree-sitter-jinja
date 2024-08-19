@@ -53,7 +53,7 @@ module.exports = grammar({
           'trans',
           'autoescape',
         ),
-        $._words,
+        /[^\r\n]*/,
         /\r?\n/,
       ),
   },
