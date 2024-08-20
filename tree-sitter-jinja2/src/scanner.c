@@ -16,15 +16,29 @@ static inline void skip_char(TSLexer *lexer, char ch);
 
 bool tree_sitter_jinja2_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     if(valid_symbols[TOKEN_TYPE_RAW_STATR]) {
-        if(parse_sequence(lexer, "{%")) {
-            skip_char(lexer, '-');
-            skip_white_space(lexer, true);
-            if(parse_sequence(lexer, "raw")) {
-                skip_white_space(lexer, true);
+        if(lexer->lookahead == '{') {
+            if(parse_sequence(lexer, "{%")) {
                 skip_char(lexer, '-');
-                if(parse_sequence(lexer, "%}")) {
-                    lexer->result_symbol = TOKEN_TYPE_RAW_STATR;
-                    return true;
+                skip_white_space(lexer, true);
+                if(parse_sequence(lexer, "raw")) {
+                    skip_white_space(lexer, true);
+                    skip_char(lexer, '-');
+                    if(parse_sequence(lexer, "%}")) {
+                        lexer->result_symbol = TOKEN_TYPE_RAW_STATR;
+                        return true;
+                    }
+                }
+            }
+        } else if(lexer->lookahead == '#') {
+            lexer->advance(lexer, false);
+            if(is_white_space(lexer->lookahead)) {
+                skip_white_space(lexer, false);
+                if(parse_sequence(lexer, "raw")) {
+                    skip_white_space(lexer, false);
+                    if(is_newline(lexer->lookahead)) {
+                        lexer->result_symbol = TOKEN_TYPE_RAW_STATR;
+                        return true;
+                    }
                 }
             }
         }
@@ -41,6 +55,18 @@ bool tree_sitter_jinja2_external_scanner_scan(void *payload, TSLexer *lexer, con
                     skip_white_space(lexer, true);
                     skip_char(lexer, '-');
                     if(parse_sequence(lexer, "%}")) {
+                        lexer->result_symbol = TOKEN_TYPE_RAW_END;
+                        return true;
+                    }
+                }
+            }
+        } else if(lexer->lookahead == '#') {
+            lexer->advance(lexer, false);
+            if(is_white_space(lexer->lookahead)) {
+                skip_white_space(lexer, false);
+                if(parse_sequence(lexer, "endraw")) {
+                    skip_white_space(lexer, false);
+                    if(is_newline(lexer->lookahead)) {
                         lexer->result_symbol = TOKEN_TYPE_RAW_END;
                         return true;
                     }
