@@ -21,7 +21,7 @@ module.exports = grammar({
       seq($.raw_start, alias(repeat($._raw_char), $.raw_body), $.raw_end),
     inline: $ =>
       seq(
-        '#',
+        '# ',
         choice(
           'endfor',
           'elif',
