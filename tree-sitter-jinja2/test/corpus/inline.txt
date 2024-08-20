@@ -1,0 +1,14 @@
+==============
+if
+==============
+
+# if loop.last
+# endif
+
+---
+
+(source
+  (definition
+    (inline))
+  (definition
+    (inline)))

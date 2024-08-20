@@ -23,6 +23,7 @@ module.exports = grammar({
       seq(
         '# ',
         choice(
+          'if',
           'endfor',
           'elif',
           'else',
