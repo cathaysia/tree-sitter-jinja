@@ -2,6 +2,7 @@
 render
 ===============
 
+{{ }}
 {{ "foo" if false }}
 {{ var[42].foo }}
 {{ async_func() + normal_func() }}
@@ -12,6 +13,9 @@ render
 --------
 
 (source
+  (definition)
+  (definition
+    (render_expression))
   (definition)
   (definition
     (render_expression

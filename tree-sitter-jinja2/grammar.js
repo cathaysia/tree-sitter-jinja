@@ -12,8 +12,7 @@ module.exports = grammar({
     render_expression: $ =>
       seq(
         choice('{{', '{{-'),
-        $.expression,
-        optional($.ternary_expression),
+        optional(seq($.expression, optional($.ternary_expression))),
         choice('}}', '-}}'),
       ),
     control: $ => seq(choice('{%', '{%-'), $.statement, choice('-%}', '%}')),
