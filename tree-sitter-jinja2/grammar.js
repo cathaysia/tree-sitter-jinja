@@ -11,11 +11,12 @@ module.exports = grammar({
       choice($.control, $.render_expression, $._words, $.raw_block, $.inline),
     render_expression: $ =>
       seq(
-        choice('{{', '{{-'),
+        choice('{{', '{{-', '{{+'),
         optional(seq($.expression, optional($.ternary_expression))),
-        choice('}}', '-}}'),
+        choice('}}', '-}}', '+}}'),
       ),
-    control: $ => seq(choice('{%', '{%-'), $.statement, choice('-%}', '%}')),
+    control: $ =>
+      seq(choice('{%', '{%-', '{%+'), $.statement, choice('-%}', '%}', '+%}')),
     raw_block: $ =>
       seq($.raw_start, alias(repeat($._raw_char), $.raw_body), $.raw_end),
     inline: $ =>

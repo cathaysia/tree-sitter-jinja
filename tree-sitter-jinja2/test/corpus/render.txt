@@ -9,6 +9,8 @@ render
 {{ outer("FOO") }}
 {{ users()|selectattr("is_active")|map(attribute="name")|join("|") }}
 
+{%+ if something +%}yay{%+ endif +%}
+{{+ something +}}
 
 --------
 
@@ -134,4 +136,26 @@ render
                         (primary_expression
                           (literal
                             (string_literal))))))))))))))
+  (definition)
+  (definition
+    (control
+      (statement
+        (if_expression
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))))))
+  (definition)
+  (definition
+    (control
+      (statement)))
+  (definition)
+  (definition
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier)))))))
   (definition))
