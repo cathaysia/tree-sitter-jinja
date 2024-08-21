@@ -1,20 +1,20 @@
 {
-  "name": "tree-sitter-jinja2",
+  "name": "tree-sitter-jinja",
   "version": "0.0.1",
   "private": true,
   "license": "Apache-2.0",
   "packageManager": "pnpm@8.15.5",
   "workspaces": [
-    "./tree-sitter-jinja2",
-    "./tree-sitter-jinja2_inline"
+    "./tree-sitter-jinja",
+    "./tree-sitter-jinja_inline"
   ],
   "scripts": {
-    "build": "pnpm build_jinja2 && pnpm build_jinja2_inline",
-    "build_jinja2": "cd tree-sitter-jinja2 && pnpm build",
-    "build_jinja2_inline": "cd tree-sitter-jinja2_inline && pnpm build",
-    "compile": "pnpm compile_jinja2 && pnpm compile_jinja2_inline",
-    "compile_jinja2": "cd tree-sitter-jinja2 && pnpm compile",
-    "compile_jinja2_inline": "cd tree-sitter-jinja2_inline && pnpm compile"
+    "build": "pnpm build_jinja && pnpm build_jinja_inline",
+    "build_jinja": "cd tree-sitter-jinja && pnpm build",
+    "build_jinja_inline": "cd tree-sitter-jinja_inline && pnpm build",
+    "compile": "pnpm compile_jinja && pnpm compile_jinja_inline",
+    "compile_jinja": "cd tree-sitter-jinja && pnpm compile",
+    "compile_jinja_inline": "cd tree-sitter-jinja_inline && pnpm compile"
   },
   "engines": {
     "node": ">=v20.12.2"
