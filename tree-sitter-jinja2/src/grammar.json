@@ -2055,14 +2055,7 @@
       "members": [
         {
           "type": "STRING",
-          "value": "#"
-        },
-        {
-          "type": "IMMEDIATE_TOKEN",
-          "content": {
-            "type": "PATTERN",
-            "value": "[ \\t]+"
-          }
+          "value": "# "
         },
         {
           "type": "CHOICE",
@@ -2190,8 +2183,25 @@
           ]
         },
         {
-          "type": "PATTERN",
-          "value": "[^\\r\\n]*"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "PATTERN",
+                  "value": "\\s+"
+                },
+                {
+                  "type": "PATTERN",
+                  "value": "[^\\r\\n]*"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "PATTERN",

@@ -21,8 +21,7 @@ module.exports = grammar({
       seq($.raw_start, alias(repeat($._raw_char), $.raw_body), $.raw_end),
     inline: $ =>
       seq(
-        '#',
-        token.immediate(/[ \t]+/),
+        '# ',
         choice(
           'if',
           'endfor',
@@ -55,7 +54,7 @@ module.exports = grammar({
           'trans',
           'autoescape',
         ),
-        /[^\r\n]*/,
+        optional(seq(/\s+/, /[^\r\n]*/)),
         /\r?\n/,
       ),
   },

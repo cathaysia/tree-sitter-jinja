@@ -45,8 +45,7 @@ bool tree_sitter_jinja2_external_scanner_scan(void *payload, TSLexer *lexer, con
             }
         } else if(lexer->lookahead == '#') {
             lexer->advance(lexer, false);
-            if(is_white_space(lexer->lookahead)) {
-                skip_white_space(lexer, false);
+            if(lexer->lookahead == ' ') {
                 if(parse_sequence(lexer, "raw")) {
                     skip_white_space(lexer, false);
                     if(is_newline(lexer->lookahead)) {
@@ -80,8 +79,7 @@ bool tree_sitter_jinja2_external_scanner_scan(void *payload, TSLexer *lexer, con
             }
         } else if(lexer->lookahead == '#') {
             lexer->advance(lexer, false);
-            if(is_white_space(lexer->lookahead)) {
-                skip_white_space(lexer, false);
+            if(lexer->lookahead == ' ') {
                 if(parse_sequence(lexer, "endraw")) {
                     skip_white_space(lexer, false);
                     if(is_newline(lexer->lookahead) && s->is_matching_raw && !s->is_block_raw) {
