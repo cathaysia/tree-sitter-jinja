@@ -2212,25 +2212,8 @@
           ]
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "PATTERN",
-                  "value": "\\s+"
-                },
-                {
-                  "type": "PATTERN",
-                  "value": "[^\\r\\n]*"
-                }
-              ]
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
+          "type": "PATTERN",
+          "value": "[ \\t]*[^\\r\\n]*"
         },
         {
           "type": "PATTERN",

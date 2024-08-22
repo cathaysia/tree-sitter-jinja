@@ -54,7 +54,7 @@ module.exports = grammar({
           'trans',
           'autoescape',
         ),
-        optional(seq(/\s+/, /[^\r\n]*/)),
+        /[ \t]*[^\r\n]*/,
         /\r?\n/,
       ),
   },

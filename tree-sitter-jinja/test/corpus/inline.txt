@@ -4,6 +4,7 @@ if
 
 # if loop.last
 # endif
+    {{ statement }}
 
 ---
 
@@ -11,4 +12,13 @@ if
   (definition
     (inline))
   (definition
-    (inline)))
+    (inline))
+  (definition)
+  (definition
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier)))))))
+  (definition))
