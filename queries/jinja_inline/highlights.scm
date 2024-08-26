@@ -65,6 +65,7 @@
   "pluralize"
   "is"
   "not"
+  "and"
 ] @keyword.builtin
 
 (do_statement
