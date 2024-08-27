@@ -102,6 +102,7 @@
   "if"
   "else"
   "endif"
+  "elif"
 ] @keyword.conditional
 
 [
