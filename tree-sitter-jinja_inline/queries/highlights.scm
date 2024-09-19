@@ -35,15 +35,7 @@
   ">"
 ] @punctuation.bracket
 
-[
-  "-"
-  "*"
-  "+"
-  "="
-  "%"
-  "~"
-  "|"
-] @operator
+(binary_operator) @operator
 
 [
   "endtrans"
