@@ -15,11 +15,12 @@ static inline bool parse_sequence_impl(TSLexer *lexer, char const *sequence, uin
 #define parse_sequence(lexer, sequence) parse_sequence_impl(lexer, sequence, sizeof(sequence) - 1)
 
 typedef struct Scanner {
+    /// is {% raw %}
     bool is_block_raw;
-    bool is_matching_raw;
 } Scanner;
 
 static inline void skip_char(TSLexer *lexer, char ch);
+#define is_matching_raw valid_symbols[TOKEN_TYPE_RAW_END]
 
 bool tree_sitter_jinja_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     if(lexer->eof(lexer)) {
@@ -39,7 +40,6 @@ bool tree_sitter_jinja_external_scanner_scan(void *payload, TSLexer *lexer, cons
                         if(parse_sequence(lexer, "%}")) {
                             lexer->result_symbol = TOKEN_TYPE_RAW_STATR;
                             s->is_block_raw = true;
-                            s->is_matching_raw = true;
                             return true;
                         }
                     }
@@ -56,7 +56,6 @@ bool tree_sitter_jinja_external_scanner_scan(void *payload, TSLexer *lexer, cons
                             lexer->advance(lexer, false);
                             lexer->result_symbol = TOKEN_TYPE_RAW_STATR;
                             s->is_block_raw = false;
-                            s->is_matching_raw = true;
                             return true;
                         }
                     }
@@ -69,36 +68,40 @@ bool tree_sitter_jinja_external_scanner_scan(void *payload, TSLexer *lexer, cons
 
     if(valid_symbols[TOKEN_TYPE_RAW_CHAR]) {
         lexer->result_symbol = TOKEN_TYPE_RAW_CHAR;
-        if(lexer->lookahead == '{') {
-            if(parse_sequence(lexer, "{%")) {
-                skip_char(lexer, '-');
-                skip_white_space(lexer, true);
-                if(parse_sequence(lexer, "endraw")) {
-                    skip_white_space(lexer, true);
+        switch(lexer->lookahead) {
+            case '{': {
+                if(parse_sequence(lexer, "{%")) {
                     skip_char(lexer, '-');
-                    if(parse_sequence(lexer, "%}") && s->is_matching_raw && s->is_block_raw) {
-                        s->is_matching_raw = false;
-                        lexer->result_symbol = TOKEN_TYPE_RAW_END;
-                        s->is_block_raw = false;
-                        return true;
+                    skip_white_space(lexer, true);
+                    if(parse_sequence(lexer, "endraw")) {
+                        skip_white_space(lexer, true);
+                        skip_char(lexer, '-');
+                        if(parse_sequence(lexer, "%}") && is_matching_raw && s->is_block_raw) {
+                            lexer->result_symbol = TOKEN_TYPE_RAW_END;
+                            s->is_block_raw = false;
+                            return true;
+                        }
                     }
                 }
+                break;
             }
-        } else if(lexer->lookahead == '#') {
-            lexer->advance(lexer, false);
-            if(lexer->lookahead == ' ') {
+            case '#': {
                 lexer->advance(lexer, false);
-                if(parse_sequence(lexer, "endraw")) {
-                    skip_white_space(lexer, false);
-                    if(is_newline(lexer->lookahead) && s->is_matching_raw && !s->is_block_raw) {
-                        s->is_matching_raw = false;
-                        lexer->result_symbol = TOKEN_TYPE_RAW_END;
-                        return true;
+                if(lexer->lookahead == ' ') {
+                    lexer->advance(lexer, false);
+                    if(parse_sequence(lexer, "endraw")) {
+                        skip_white_space(lexer, false);
+                        if(is_newline(lexer->lookahead) && is_matching_raw && !s->is_block_raw) {
+                            lexer->result_symbol = TOKEN_TYPE_RAW_END;
+                            return true;
+                        }
                     }
                 }
+                break;
+                default: {
+                    lexer->advance(lexer, false);
+                }
             }
-        } else {
-            lexer->advance(lexer, false);
         }
 
         return true;
