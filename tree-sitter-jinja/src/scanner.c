@@ -28,33 +28,40 @@ bool tree_sitter_jinja_external_scanner_scan(void *payload, TSLexer *lexer, cons
     Scanner *s = (Scanner *)payload;
 
     if(valid_symbols[TOKEN_TYPE_RAW_STATR]) {
-        if(lexer->lookahead == '{') {
-            if(parse_sequence(lexer, "{%")) {
-                skip_char(lexer, '-');
-                skip_white_space(lexer, true);
-                if(parse_sequence(lexer, "raw")) {
-                    skip_white_space(lexer, true);
+        switch(lexer->lookahead) {
+            case '{': {
+                if(parse_sequence(lexer, "{%")) {
                     skip_char(lexer, '-');
-                    if(parse_sequence(lexer, "%}")) {
-                        lexer->result_symbol = TOKEN_TYPE_RAW_STATR;
-                        s->is_block_raw = true;
-                        s->is_matching_raw = true;
-                        return true;
+                    skip_white_space(lexer, true);
+                    if(parse_sequence(lexer, "raw")) {
+                        skip_white_space(lexer, true);
+                        skip_char(lexer, '-');
+                        if(parse_sequence(lexer, "%}")) {
+                            lexer->result_symbol = TOKEN_TYPE_RAW_STATR;
+                            s->is_block_raw = true;
+                            s->is_matching_raw = true;
+                            return true;
+                        }
                     }
                 }
+                break;
             }
-        } else if(lexer->lookahead == '#') {
-            lexer->advance(lexer, false);
-            if(lexer->lookahead == ' ') {
-                if(parse_sequence(lexer, "raw")) {
-                    skip_white_space(lexer, false);
-                    if(is_newline(lexer->lookahead)) {
-                        lexer->result_symbol = TOKEN_TYPE_RAW_STATR;
-                        s->is_block_raw = false;
-                        s->is_matching_raw = true;
-                        return true;
+            case '#': {
+                lexer->advance(lexer, false);
+                if(lexer->lookahead == ' ') {
+                    lexer->advance(lexer, false);
+                    if(parse_sequence(lexer, "raw")) {
+                        skip_white_space(lexer, false);
+                        if(is_newline(lexer->lookahead)) {
+                            lexer->advance(lexer, false);
+                            lexer->result_symbol = TOKEN_TYPE_RAW_STATR;
+                            s->is_block_raw = false;
+                            s->is_matching_raw = true;
+                            return true;
+                        }
                     }
                 }
+                break;
             }
         }
         return false;
@@ -80,6 +87,7 @@ bool tree_sitter_jinja_external_scanner_scan(void *payload, TSLexer *lexer, cons
         } else if(lexer->lookahead == '#') {
             lexer->advance(lexer, false);
             if(lexer->lookahead == ' ') {
+                lexer->advance(lexer, false);
                 if(parse_sequence(lexer, "endraw")) {
                     skip_white_space(lexer, false);
                     if(is_newline(lexer->lookahead) && s->is_matching_raw && !s->is_block_raw) {
