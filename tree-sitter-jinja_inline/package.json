@@ -44,15 +44,5 @@
     "tree_sitter": {
       "optional": true
     }
-  },
-  "tree-sitter": [
-    {
-      "scope": "source.j2",
-      "file-types": [
-        "jinja_inline",
-        "jinja_inline"
-      ],
-      "highlights": "queries/highlights.scm"
-    }
-  ]
+  }
 }
