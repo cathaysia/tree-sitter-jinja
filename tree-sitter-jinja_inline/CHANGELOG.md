@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.1.0...v0.2.0) (2025-01-22)
+
+
+### Features
+
+* update highlights ([cdb4ffc](https://github.com/cathaysia/tree-sitter-jinja/commit/cdb4ffcd9a537827c5dfa66986b6b528b649f914))
+
 ## [0.1.0](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.0.1...v0.1.0) (2025-01-22)
 
 
