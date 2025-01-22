@@ -1,5 +1,6 @@
 # tree-sitter-jinja
 
-[Jinja](https://jinja.palletsprojects.com/en/3.1.x/templates/) grammar for tree-sitter.
+[tree-sitter](https://tree-sitter.github.io/) grammar for [Jinja](https://jinja.palletsprojects.com/en/3.1.x/templates/).
 
-inline statement starts with `# `.
+> [!NOTE]
+> Inline statement starts with `# `.
