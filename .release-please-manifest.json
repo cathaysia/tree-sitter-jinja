@@ -1,4 +1,4 @@
 {
-	"tree-sitter-jinja": "0.0.1",
-	"tree-sitter-jinja_inline": "0.0.1"
+	"tree-sitter-jinja": "0.1.0",
+	"tree-sitter-jinja_inline": "0.1.0"
 }
