@@ -110,8 +110,17 @@
 (function_call
   (identifier) @function.call)
 
+; function_call
 (arg
   (identifier) @variable.parameter)
+
+; macro
+(arg
+  (expression
+    (binary_expression
+      (unary_expression
+        (primary_expression
+          (identifier) @variable.parameter)))))
 
 (expression
   "."
