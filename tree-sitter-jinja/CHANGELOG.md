@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.4.0](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.3.0...v0.4.0) (2025-01-23)
+
+
+### Features
+
+* **queries:** fix https://github.com/nvim-treesitter/nvim-treesitter/pull/7573#discussion_r1925536337 ([bb32de4](https://github.com/cathaysia/tree-sitter-jinja/commit/bb32de45f82484bd18d4093dc125dc74ae6816a9))
+
+
+### Bug Fixes
+
+* **expression:** fix builtin_test ([af5b2e3](https://github.com/cathaysia/tree-sitter-jinja/commit/af5b2e39776cf1783069362a60290f8c827fb78a))
+* **queries:** fix https://github.com/nvim-treesitter/nvim-treesitter/pull/7573#discussion_r1925513647 ([2c977a3](https://github.com/cathaysia/tree-sitter-jinja/commit/2c977a3b040717f036a5b498ac3e0c6958b278f2))
+
 ## [0.3.0](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.2.0...v0.3.0) (2025-01-23)
 
 
