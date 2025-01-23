@@ -20,8 +20,7 @@ exports.rules = {
       ),
     ),
   builtin_test: $ =>
-    prec(
-      1,
+    prec.left(
       choice(
         'boolean',
         'callable',
@@ -30,7 +29,6 @@ exports.rules = {
         seq('eq', $.expression),
         'escaped',
         'even',
-        'false',
         'filter',
         'float',
         seq('ge', $.expression),
@@ -43,14 +41,12 @@ exports.rules = {
         seq('lt', $.expression),
         'mapping',
         seq('ne', $.expression),
-        'none',
         'number',
         'odd',
         seq('sameas', $.expression),
         'sequence',
         'string',
         'test',
-        'true',
         'undefined',
         'upper',
       ),

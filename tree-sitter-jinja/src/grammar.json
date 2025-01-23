@@ -565,8 +565,8 @@
       ]
     },
     "builtin_test": {
-      "type": "PREC",
-      "value": 1,
+      "type": "PREC_LEFT",
+      "value": 0,
       "content": {
         "type": "CHOICE",
         "members": [
@@ -615,10 +615,6 @@
           {
             "type": "STRING",
             "value": "even"
-          },
-          {
-            "type": "STRING",
-            "value": "false"
           },
           {
             "type": "STRING",
@@ -724,10 +720,6 @@
           },
           {
             "type": "STRING",
-            "value": "none"
-          },
-          {
-            "type": "STRING",
             "value": "number"
           },
           {
@@ -758,10 +750,6 @@
           {
             "type": "STRING",
             "value": "test"
-          },
-          {
-            "type": "STRING",
-            "value": "true"
           },
           {
             "type": "STRING",
