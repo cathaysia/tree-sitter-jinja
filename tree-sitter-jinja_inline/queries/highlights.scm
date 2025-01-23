@@ -117,8 +117,6 @@
 
 (raw_body) @markup.raw.block @nospell
 
-(identifier) @variable.parameter
-
 (builtin_test
   [
     "boolean"
