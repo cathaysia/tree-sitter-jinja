@@ -38,6 +38,7 @@ macro
                     (identifier))))))
           (arg
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression
@@ -46,6 +47,7 @@ macro
                       (string_literal)))))))
           (arg
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression

@@ -1,5 +1,4 @@
 {
-  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
   "name": "jinja_inline",
   "rules": {
     "source": {
@@ -557,8 +556,13 @@
               "name": "binary_expression"
             },
             {
-              "type": "STRING",
-              "value": "is"
+              "type": "ALIAS",
+              "content": {
+                "type": "STRING",
+                "value": "is"
+              },
+              "named": true,
+              "value": "binary_operator"
             },
             {
               "type": "CHOICE",
@@ -816,8 +820,13 @@
           ]
         },
         {
-          "type": "STRING",
-          "value": "="
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "="
+          },
+          "named": true,
+          "value": "binary_operator"
         },
         {
           "type": "SYMBOL",
@@ -857,8 +866,13 @@
             ]
           },
           {
-            "type": "STRING",
-            "value": "in"
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "in"
+            },
+            "named": true,
+            "value": "binary_operator"
           },
           {
             "type": "SYMBOL",
@@ -1077,8 +1091,13 @@
                   "name": "identifier"
                 },
                 {
-                  "type": "STRING",
-                  "value": "="
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "STRING",
+                    "value": "="
+                  },
+                  "named": true,
+                  "value": "binary_operator"
                 }
               ]
             },
@@ -1790,8 +1809,13 @@
           ]
         },
         {
-          "type": "STRING",
-          "value": "="
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "="
+          },
+          "named": true,
+          "value": "binary_operator"
         },
         {
           "type": "SYMBOL",

@@ -15,7 +15,7 @@ exports.rules = {
       seq($.binary_expression, $.binary_operator, $.unary_expression),
       seq(
         $.binary_expression,
-        'is',
+        alias('is', $.binary_operator),
         choice($.unary_expression, $.builtin_test),
       ),
     ),
@@ -56,8 +56,20 @@ exports.rules = {
       ),
     ),
   assignment_expression: $ =>
-    seq(anySep1($.identifier, '.'), '=', $.expression),
-  in_expression: $ => prec(1, seq(commaSep1($.identifier), 'in', $.expression)),
+    seq(
+      anySep1($.identifier, '.'),
+      alias('=', $.binary_operator),
+      $.expression,
+    ),
+  in_expression: $ =>
+    prec(
+      1,
+      seq(
+        commaSep1($.identifier),
+        alias('in', $.binary_operator),
+        $.expression,
+      ),
+    ),
   binary_operator: $ =>
     choice(
       '+',
@@ -91,6 +103,10 @@ exports.rules = {
     ),
 
   function_call: $ => seq($.identifier, '(', commaSep($.arg), ')'),
-  arg: $ => seq(optional(seq($.identifier, '=')), $.expression),
+  arg: $ =>
+    seq(
+      optional(seq($.identifier, alias('=', $.binary_operator))),
+      $.expression,
+    ),
   inline_trans: $ => seq('_', '(', $.expression, ')'),
 }

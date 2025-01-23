@@ -213,6 +213,7 @@ complex
         (for_statement
           (in_expression
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression
@@ -251,6 +252,7 @@ complex
                 (unary_expression
                   (primary_expression
                     (identifier))))
+              (binary_operator)
               (builtin_test))))
         (expression
           (binary_expression
@@ -305,6 +307,7 @@ complex
                 (unary_expression
                   (primary_expression
                     (identifier))))
+              (binary_operator)
               (builtin_test))))
         (expression
           (binary_expression

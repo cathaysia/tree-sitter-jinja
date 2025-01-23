@@ -4,7 +4,7 @@
 
 (number_literal) @number
 
-(float_literal) @number
+(float_literal) @number.float
 
 (boolean_literal) @boolean
 
@@ -12,7 +12,7 @@
 
 "defined" @constant
 
-(comment) @comment
+(comment) @comment @spell
 
 [
   ","
@@ -36,12 +36,6 @@
 ] @punctuation.bracket
 
 (binary_operator) @operator
-
-[
-  "is"
-  "not"
-  "and"
-] @keyword.operator
 
 [
   "block"

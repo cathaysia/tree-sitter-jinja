@@ -13,6 +13,7 @@ loop
       (for_statement
         (in_expression
           (identifier)
+          (binary_operator)
           (expression
             (binary_expression
               (unary_expression

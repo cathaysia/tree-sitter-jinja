@@ -103,7 +103,7 @@ module.exports = {
       seq(
         'set',
         commaSep1($.expression),
-        '=',
+        alias('=', $.binary_operator),
         $.expression,
         optional($.ternary_expression),
       ),

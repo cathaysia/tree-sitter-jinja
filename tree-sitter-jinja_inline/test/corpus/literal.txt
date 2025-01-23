@@ -18,6 +18,7 @@ string
             (unary_expression
               (primary_expression
                 (identifier)))))
+        (binary_operator)
         (expression
           (binary_expression
             (unary_expression
@@ -32,6 +33,7 @@ string
             (unary_expression
               (primary_expression
                 (identifier)))))
+        (binary_operator)
         (expression
           (binary_expression
             (unary_expression
@@ -46,6 +48,7 @@ string
             (unary_expression
               (primary_expression
                 (identifier)))))
+        (binary_operator)
         (expression
           (binary_expression
             (unary_expression
@@ -60,6 +63,7 @@ string
             (unary_expression
               (primary_expression
                 (identifier)))))
+        (binary_operator)
         (expression
           (binary_expression
             (unary_expression

@@ -20,6 +20,7 @@ extends
                   (unary_expression
                     (primary_expression
                       (identifier))))
+                (binary_operator)
                 (builtin_test)))
             (expression
               (binary_expression

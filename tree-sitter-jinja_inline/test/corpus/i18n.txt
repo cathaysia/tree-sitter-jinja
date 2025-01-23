@@ -19,6 +19,7 @@ trans
       (trans_statement
         (assignment_expression
           (identifier)
+          (binary_operator)
           (expression
             (expression
               (binary_expression
@@ -46,6 +47,7 @@ block
       (trans_statement
         (assignment_expression
           (identifier)
+          (binary_operator)
           (expression
             (expression
               (binary_expression
@@ -59,6 +61,7 @@ block
                     (identifier)))))))
         (assignment_expression
           (identifier)
+          (binary_operator)
           (expression
             (expression
               (binary_expression
@@ -89,6 +92,7 @@ pluralize
       (trans_statement
         (assignment_expression
           (identifier)
+          (binary_operator)
           (expression
             (binary_expression
               (binary_expression

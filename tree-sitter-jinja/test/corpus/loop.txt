@@ -34,6 +34,7 @@ continue
         (for_statement
           (in_expression
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression
@@ -56,6 +57,7 @@ continue
                   (unary_expression
                     (primary_expression
                       (identifier))))
+                (binary_operator)
                 (builtin_test))))))))
   (definition
     (control
@@ -74,6 +76,7 @@ continue
         (for_statement
           (in_expression
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression
@@ -120,6 +123,7 @@ continue
         (for_statement
           (in_expression
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression
@@ -164,6 +168,7 @@ continue
         (for_statement
           (in_expression
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression
@@ -186,6 +191,7 @@ continue
         (for_statement
           (in_expression
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression
@@ -243,6 +249,7 @@ continue
         (for_statement
           (in_expression
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression
@@ -273,6 +280,7 @@ continue
         (for_statement
           (in_expression
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression
@@ -316,6 +324,7 @@ continue
         (for_statement
           (in_expression
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression
@@ -329,6 +338,7 @@ continue
         (for_statement
           (in_expression
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression
@@ -350,6 +360,7 @@ continue
                   (unary_expression
                     (primary_expression
                       (identifier))))
+                (binary_operator)
                 (builtin_test))))))))
   (definition)
   (definition
@@ -360,6 +371,7 @@ continue
             (identifier)
             (identifier)
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression
@@ -400,6 +412,7 @@ continue
         (for_statement
           (in_expression
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression
@@ -477,6 +490,7 @@ break
         (for_statement
           (in_expression
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression

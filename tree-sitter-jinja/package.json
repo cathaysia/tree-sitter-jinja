@@ -44,5 +44,11 @@
     "tree_sitter": {
       "optional": true
     }
-  }
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.jinja",
+      "injection-regex": "^jinja$"
+    }
+  ]
 }

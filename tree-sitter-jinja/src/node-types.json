@@ -8,6 +8,10 @@
       "required": true,
       "types": [
         {
+          "type": "binary_operator",
+          "named": true
+        },
+        {
           "type": "expression",
           "named": true
         },
@@ -26,6 +30,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "binary_operator",
+          "named": true
+        },
         {
           "type": "expression",
           "named": true
@@ -454,6 +462,10 @@
       "required": true,
       "types": [
         {
+          "type": "binary_operator",
+          "named": true
+        },
+        {
           "type": "expression",
           "named": true
         },
@@ -745,6 +757,10 @@
       "required": true,
       "types": [
         {
+          "type": "binary_operator",
+          "named": true
+        },
+        {
           "type": "expression",
           "named": true
         },
@@ -758,7 +774,6 @@
   {
     "type": "source",
     "named": true,
-    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -1052,10 +1067,6 @@
     "named": false
   },
   {
-    "type": "=",
-    "named": false
-  },
-  {
     "type": "==",
     "named": false
   },
@@ -1285,10 +1296,6 @@
   },
   {
     "type": "integer",
-    "named": false
-  },
-  {
-    "type": "is",
     "named": false
   },
   {

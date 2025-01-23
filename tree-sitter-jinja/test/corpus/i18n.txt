@@ -32,6 +32,7 @@ trans
         (trans_statement
           (assignment_expression
             (identifier)
+            (binary_operator)
             (expression
               (expression
                 (binary_expression
@@ -75,6 +76,7 @@ This is {{ book_title }} by {{ author }}
         (trans_statement
           (assignment_expression
             (identifier)
+            (binary_operator)
             (expression
               (expression
                 (binary_expression
@@ -88,6 +90,7 @@ This is {{ book_title }} by {{ author }}
                       (identifier)))))))
           (assignment_expression
             (identifier)
+            (binary_operator)
             (expression
               (expression
                 (binary_expression
@@ -141,6 +144,7 @@ There are {{ count }} {{ name }} objects.
         (trans_statement
           (assignment_expression
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (binary_expression
@@ -241,6 +245,7 @@ inline
                 (identifier)
                 (arg
                   (identifier)
+                  (binary_operator)
                   (expression
                     (expression
                       (binary_expression
@@ -299,6 +304,7 @@ gettext
                             (string_literal)))))))
                 (arg
                   (identifier)
+                  (binary_operator)
                   (expression
                     (binary_expression
                       (unary_expression

@@ -18,6 +18,7 @@ set
             (unary_expression
               (primary_expression
                 (identifier)))))
+        (binary_operator)
         (expression
           (binary_expression
             (unary_expression
@@ -31,6 +32,7 @@ set
             (unary_expression
               (primary_expression
                 (identifier)))))
+        (binary_operator)
         (expression
           (binary_expression
             (unary_expression
@@ -39,6 +41,7 @@ set
                   (identifier)
                   (arg
                     (identifier)
+                    (binary_operator)
                     (expression
                       (binary_expression
                         (unary_expression
@@ -51,6 +54,7 @@ set
         (in_expression
           (identifier)
           (identifier)
+          (binary_operator)
           (expression
             (binary_expression
               (binary_expression
@@ -76,6 +80,7 @@ set
         (in_expression
           (identifier)
           (identifier)
+          (binary_operator)
           (expression
             (binary_expression
               (binary_expression
@@ -96,6 +101,7 @@ set
                                 (string_literal)))))))
                     (arg
                       (identifier)
+                      (binary_operator)
                       (expression
                         (binary_expression
                           (unary_expression

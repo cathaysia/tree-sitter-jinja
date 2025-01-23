@@ -118,6 +118,7 @@ render
                   (identifier)
                   (arg
                     (identifier)
+                    (binary_operator)
                     (expression
                       (binary_expression
                         (unary_expression

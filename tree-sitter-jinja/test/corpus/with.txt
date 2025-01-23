@@ -24,6 +24,7 @@ with
         (with_statement
           (assignment_expression
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression
@@ -42,6 +43,7 @@ with
         (with_statement
           (assignment_expression
             (identifier)
+            (binary_operator)
             (expression
               (binary_expression
                 (unary_expression
@@ -76,6 +78,7 @@ with
               (unary_expression
                 (primary_expression
                   (identifier)))))
+          (binary_operator)
           (expression
             (binary_expression
               (unary_expression
