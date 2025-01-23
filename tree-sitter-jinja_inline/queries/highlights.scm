@@ -101,12 +101,10 @@
   (identifier) @variable.parameter)
 
 (expression
-  (expression) @variable.member
   "."
   (expression)+ @variable.member)
 
 (assignment_expression
-  (identifier) @variable.member
   "."
   (identifier)+ @variable.member)
 
