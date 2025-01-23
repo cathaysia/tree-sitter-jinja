@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.2.0...v0.3.0) (2025-01-23)
+
+
+### Features
+
+* make '=' as binary_operator ([6ee7c48](https://github.com/cathaysia/tree-sitter-jinja/commit/6ee7c483d353c94737c8000ffbb745f6cce5021b))
+
 ## [0.2.0](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.1.0...v0.2.0) (2025-01-22)
 
 
