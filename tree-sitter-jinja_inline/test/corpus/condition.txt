@@ -3,6 +3,8 @@ extends
 ======================
 
 # extends layout_template if layout_template is defined else 'default.html'
+# for item in seq
+# for item in seq:
 
 ----
 
@@ -25,4 +27,26 @@ extends
               (unary_expression
                 (primary_expression
                   (literal
-                    (string_literal)))))))))))
+                    (string_literal))))))))))
+  (line_statement
+    (statement
+      (for_statement
+        (in_expression
+          (identifier)
+          (binary_operator)
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))))))
+  (line_statement
+    (statement
+      (for_statement
+        (in_expression
+          (identifier)
+          (binary_operator)
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))))))))

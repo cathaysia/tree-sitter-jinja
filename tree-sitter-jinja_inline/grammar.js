@@ -8,7 +8,7 @@ module.exports = grammar({
     source: $ =>
       repeat(choice($.line_statement, $.raw_block, $._words, $._NEWLINE)),
     ...gram.rules,
-    line_statement: $ => seq('#', $.statement, $._END),
+    line_statement: $ => seq('#', $.statement, optional(':'), $._END),
     raw_block: $ =>
       seq(
         '#',
