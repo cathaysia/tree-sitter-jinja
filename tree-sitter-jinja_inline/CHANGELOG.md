@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.5.0...v0.6.0) (2025-02-07)
+
+
+### Features
+
+* **inline:** allow ends with colon ([5e57cd1](https://github.com/cathaysia/tree-sitter-jinja/commit/5e57cd13c8d02cfee0fa9fb760910ba706770d1f))
+
 ## [0.5.0](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.4.0...v0.5.0) (2025-01-23)
 
 
