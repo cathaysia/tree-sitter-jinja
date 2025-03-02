@@ -1,13 +1,9 @@
-name: Publish packages
+name: Publish jinja
 
 on:
   workflow_dispatch:
   push:
     tags: ['tree-sitter-jinja-*']
-
-concurrency:
-  group: ${{github.workflow}}-${{github.ref}}
-  cancel-in-progress: true
 
 jobs:
   crates:
@@ -25,4 +21,3 @@ jobs:
           CARGO_REGISTRY_TOKEN: ${{secrets.CARGO_REGISTRY_TOKEN}}
         run: |
           bash -c 'cd tree-sitter-jinja && cargo publish'
-          bash -c 'cd tree-sitter-jinja_inline && cargo publish'
