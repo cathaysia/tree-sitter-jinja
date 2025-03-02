@@ -1,8 +1,9 @@
-name: CI
+name: release_please
 
 on:
   push:
-  pull_request:
+    branches:
+      - master
   workflow_dispatch:
 
 permissions:
