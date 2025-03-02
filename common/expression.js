@@ -1,4 +1,4 @@
-const { commaSep, commaSep1, anySep1 } = require('./common')
+const { commaSep, commaSep1, anySep1 } = require('./common');
 
 exports.rules = {
   expression: $ =>
@@ -105,4 +105,4 @@ exports.rules = {
       $.expression,
     ),
   inline_trans: $ => seq('_', '(', $.expression, ')'),
-}
+};

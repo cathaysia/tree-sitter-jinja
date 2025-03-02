@@ -4,10 +4,7 @@
   "private": true,
   "license": "Apache-2.0",
   "packageManager": "pnpm@9.15.1",
-  "workspaces": [
-    "./tree-sitter-jinja",
-    "./tree-sitter-jinja_inline"
-  ],
+  "workspaces": ["./tree-sitter-jinja", "./tree-sitter-jinja_inline"],
   "scripts": {
     "build": "pnpm build_jinja && pnpm build_jinja_inline",
     "build_jinja": "cd tree-sitter-jinja && pnpm build",

@@ -1,4 +1,4 @@
-const { commaSep } = require('./common')
+const { commaSep } = require('./common');
 
 exports.rules = {
   literal: $ =>
@@ -44,4 +44,4 @@ exports.rules = {
       seq('"', repeat(choice(/[^\"]/, '\\"')), '"'),
       seq("'", repeat(choice(/[^']/, "\\'")), "'"),
     ),
-}
+};

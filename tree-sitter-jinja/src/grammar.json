@@ -2229,8 +2229,8 @@
           ]
         },
         {
-          "type": "PATTERN",
-          "value": "[ \\t]*[^\\r\\n]*"
+          "type": "SYMBOL",
+          "name": "_inline_words"
         },
         {
           "type": "PATTERN",
@@ -2259,6 +2259,10 @@
     {
       "type": "SYMBOL",
       "name": "raw_end"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "_inline_words"
     }
   ],
   "inline": [],
