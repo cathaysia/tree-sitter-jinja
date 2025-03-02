@@ -2030,12 +2030,12 @@
   },
   "extras": [
     {
-      "type": "STRING",
-      "value": " "
+      "type": "PATTERN",
+      "value": "\\s"
     },
     {
-      "type": "STRING",
-      "value": "\t"
+      "type": "PATTERN",
+      "value": "\\r?\\n"
     },
     {
       "type": "SYMBOL",

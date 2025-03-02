@@ -1,8 +1,8 @@
-const gram = require('../grammar.js')
+const gram = require('../grammar.js');
 
 module.exports = grammar({
   name: 'jinja_inline',
-  extras: $ => [' ', '\t', $.comment],
+  extras: $ => [/\s/, /\r?\n/, $.comment],
   externals: $ => [$._raw_char, $.raw_end, $._eof],
   rules: {
     source: $ =>
@@ -21,4 +21,4 @@ module.exports = grammar({
     _END: $ => choice($._NEWLINE, $._eof),
     _NEWLINE: $ => /\r?\n/,
   },
-})
+});

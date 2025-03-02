@@ -14,7 +14,6 @@ import
 ----
 
 (source
-  (words)
   (line_statement
     (statement
       (extends_statement

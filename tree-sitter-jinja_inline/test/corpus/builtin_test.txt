@@ -17,7 +17,6 @@ simple
 ----
 
 (source
-  (words)
   (line_statement
     (statement
       (if_expression
@@ -142,5 +141,4 @@ simple
             (binary_operator)
             (unary_expression
               (primary_expression
-                (identifier))))))))
-  (words))
+                (identifier)))))))))
