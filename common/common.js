@@ -7,7 +7,7 @@
  *
  */
 function commaSep1(rule) {
-  return seq(rule, repeat(seq(',', rule)))
+  return seq(rule, repeat(seq(',', rule)));
 }
 
 /**
@@ -19,7 +19,7 @@ function commaSep1(rule) {
  *
  */
 function commaSep(rule) {
-  return optional(commaSep1(rule))
+  return optional(commaSep1(rule));
 }
 
 /**
@@ -28,7 +28,7 @@ function commaSep(rule) {
  * @return {SeqRule}
  */
 function anySep1(rule, sep) {
-  return seq(rule, repeat(seq(sep, rule)))
+  return seq(rule, repeat(seq(sep, rule)));
 }
 
 /**
@@ -37,10 +37,10 @@ function anySep1(rule, sep) {
  * @return {ChoiceRule}
  */
 function anySep(rule, sep) {
-  return optional(anySep1(rule, sep))
+  return optional(anySep1(rule, sep));
 }
 
-exports.commaSep1 = commaSep1
-exports.commaSep = commaSep
-exports.anySep1 = anySep1
-exports.anySep = anySep
+exports.commaSep1 = commaSep1;
+exports.commaSep = commaSep;
+exports.anySep1 = anySep1;
+exports.anySep = anySep;

@@ -1,6 +1,6 @@
-const { anySep1, commaSep, commaSep1, anySep } = require('./common/common')
-const literal = require('./common/literal')
-const expression = require('./common/expression')
+const { anySep1, commaSep, commaSep1, anySep } = require('./common/common');
+const literal = require('./common/literal');
+const expression = require('./common/expression');
 
 const PREC = {
   LOGICAL_OR: 1,
@@ -14,7 +14,7 @@ const PREC = {
   ADD: 10,
   MULTIPLY: 11,
   UNARY: 14,
-}
+};
 
 module.exports = {
   externals: $ => [$.raw_start, $._raw_char, $.raw_end],
@@ -124,4 +124,4 @@ module.exports = {
         seq('{#', repeat(choice(/[^#]+/, '#')), '#}'),
       ),
   },
-}
+};
