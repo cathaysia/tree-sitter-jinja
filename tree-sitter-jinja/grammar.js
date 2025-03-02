@@ -1,9 +1,9 @@
-const gram = require('../grammar.js')
+const gram = require('../grammar.js');
 
 module.exports = grammar({
   name: 'jinja',
   extras: $ => [/\s/],
-  externals: $ => [$.raw_start, $._raw_char, $.raw_end],
+  externals: $ => [$.raw_start, $._raw_char, $.raw_end, $._inline_words],
   rules: {
     source: $ => repeat($.definition),
     ...gram.rules,
@@ -61,8 +61,8 @@ module.exports = grammar({
           'trans',
           'autoescape',
         ),
-        /[ \t]*[^\r\n]*/,
+        $._inline_words,
         /\r?\n/,
       ),
   },
-})
+});

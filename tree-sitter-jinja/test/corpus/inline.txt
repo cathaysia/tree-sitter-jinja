@@ -2,6 +2,9 @@
 if
 ==============
 
+# for href, caption in [('index.html', 'Index'),
+                        ('about.html', 'About')]:
+
 # if loop.last
 # endif
     {{ statement }}
@@ -9,6 +12,8 @@ if
 ---
 
 (source
+  (definition
+    (inline))
   (definition
     (inline))
   (definition

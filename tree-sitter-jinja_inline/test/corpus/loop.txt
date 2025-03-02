@@ -14,7 +14,6 @@ continue
 ----------
 
 (source
-  (words)
   (line_statement
     (statement
       (for_statement
@@ -49,7 +48,6 @@ continue
     (statement))
   (line_statement
     (statement))
-  (words)
   (line_statement
     (statement
       (for_statement
@@ -100,7 +98,6 @@ break
 --------------
 
 (source
-  (words)
   (line_statement
     (statement
       (for_statement

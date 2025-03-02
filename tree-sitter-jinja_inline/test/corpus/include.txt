@@ -17,7 +17,6 @@ include
 ----
 
 (source
-  (words)
   (line_statement
     (statement
       (include_statement

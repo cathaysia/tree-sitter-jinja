@@ -1,0 +1,59 @@
+==========
+multiline
+==========
+
+# for href, caption in [('index.html', 'Index'),
+                        ('about.html', 'About')]:
+
+---
+
+(source
+  (line_statement
+    (statement
+      (for_statement
+        (in_expression
+          (identifier)
+          (identifier)
+          (binary_operator)
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (list_literal
+                      (expression
+                        (binary_expression
+                          (unary_expression
+                            (primary_expression
+                              (literal
+                                (tuple_literal
+                                  (expression
+                                    (binary_expression
+                                      (unary_expression
+                                        (primary_expression
+                                          (literal
+                                            (string_literal))))))
+                                  (expression
+                                    (binary_expression
+                                      (unary_expression
+                                        (primary_expression
+                                          (literal
+                                            (string_literal))))))))))))
+                      (expression
+                        (binary_expression
+                          (unary_expression
+                            (primary_expression
+                              (literal
+                                (tuple_literal
+                                  (expression
+                                    (binary_expression
+                                      (unary_expression
+                                        (primary_expression
+                                          (literal
+                                            (string_literal))))))
+                                  (expression
+                                    (binary_expression
+                                      (unary_expression
+                                        (primary_expression
+                                          (literal
+                                            (string_literal)))))))))))))))))))))))

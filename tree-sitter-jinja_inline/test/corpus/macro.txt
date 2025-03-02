@@ -9,7 +9,6 @@ macro
 ----
 
 (source
-  (words)
   (line_statement
     (statement
       (macro_statement

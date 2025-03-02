@@ -7,7 +7,6 @@ do
 -----
 
 (source
-  (words)
   (line_statement
     (statement
       (do_statement
