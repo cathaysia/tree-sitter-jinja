@@ -16,8 +16,8 @@
     "compile_jinja": "cd tree-sitter-jinja && pnpm compile",
     "compile_jinja_inline": "cd tree-sitter-jinja_inline && pnpm compile",
     "test": "pnpm test_jinja && pnpm test_jinja_inline",
-    "test_jinja": "cd tree-sitter-jinja && tree-sitter test",
-    "test_jinja_inline": "cd tree-sitter-jinja_inline && tree-sitter test"
+    "test_jinja": "cd tree-sitter-jinja && pnpm test",
+    "test_jinja_inline": "cd tree-sitter-jinja_inline && pnpm test"
   },
   "engines": {
     "node": ">=v20.12.2"
