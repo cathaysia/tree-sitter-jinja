@@ -8,6 +8,7 @@ loop
 ----
 
 (source
+  (words)
   (line_statement
     (statement
       (for_statement
@@ -32,6 +33,7 @@ autoescape
 ----------
 
 (source
+  (words)
   (line_statement
     (statement
       (autoescape_statement

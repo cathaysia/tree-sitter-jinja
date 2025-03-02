@@ -17,7 +17,8 @@ simple
 ----
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -43,7 +44,8 @@ simple
                           (literal
                             (number_literal
                               (dec_literal)))))))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -75,7 +77,8 @@ simple
                                       (literal
                                         (number_literal
                                           (dec_literal)))))))))))))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -88,7 +91,8 @@ simple
                     (identifier))))
               (binary_operator)
               (builtin_test)))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -102,7 +106,8 @@ simple
                       (string_literal)))))
               (binary_operator)
               (builtin_test)))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -127,7 +132,8 @@ simple
                         (primary_expression
                           (literal
                             (boolean_literal))))))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -141,7 +147,8 @@ simple
                       (string_literal)))))
               (binary_operator)
               (builtin_test)))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -156,4 +163,5 @@ simple
               (unary_expression
                 (primary_expression
                   (identifier)))))))))
-  (definition))
+  (definition
+    (words)))

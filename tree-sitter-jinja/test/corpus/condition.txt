@@ -7,7 +7,8 @@ extends
 ----
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -28,4 +29,5 @@ extends
                   (primary_expression
                     (literal
                       (string_literal)))))))))))
-  (definition))
+  (definition
+    (words)))

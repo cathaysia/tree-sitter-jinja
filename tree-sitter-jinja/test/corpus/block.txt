@@ -7,13 +7,15 @@ block
 ---
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
         (block_statement
           (identifier)))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement)))
@@ -31,4 +33,5 @@ block
               (primary_expression
                 (function_call
                   (identifier)))))))))
-  (definition))
+  (definition
+    (words)))

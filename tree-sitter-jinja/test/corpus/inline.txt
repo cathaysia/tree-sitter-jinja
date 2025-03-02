@@ -13,7 +13,8 @@ if
     (inline))
   (definition
     (inline))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -21,4 +22,5 @@ if
           (unary_expression
             (primary_expression
               (identifier)))))))
-  (definition))
+  (definition
+    (words)))

@@ -17,7 +17,8 @@ with
 ----
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -32,11 +33,13 @@ with
                     (literal
                       (number_literal
                         (dec_literal))))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement)))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -51,7 +54,8 @@ with
                     (literal
                       (number_literal
                         (dec_literal))))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -59,16 +63,19 @@ with
           (unary_expression
             (primary_expression
               (identifier)))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement)))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
         (with_statement))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -86,7 +93,8 @@ with
                   (literal
                     (number_literal
                       (dec_literal)))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -94,8 +102,10 @@ with
           (unary_expression
             (primary_expression
               (identifier)))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement)))
-  (definition))
+  (definition
+    (words)))

@@ -116,7 +116,7 @@ module.exports = {
       ),
     if_expression: $ => seq('if', $.expression),
 
-    _words: _ => prec.right(repeat1(choice(/[^\{]/, /\{[^\#\%]/))),
+    words: _ => prec.right(repeat1(choice(/[^\{]/, /\{[^\#\%]/))),
     identifier: $ => /[a-zA-Z_][\w\d_]*/,
     comment: $ =>
       choice(

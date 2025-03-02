@@ -731,6 +731,10 @@
         {
           "type": "raw_block",
           "named": true
+        },
+        {
+          "type": "words",
+          "named": true
         }
       ]
     }
@@ -906,6 +910,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "words",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "!",

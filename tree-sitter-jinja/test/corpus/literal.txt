@@ -10,7 +10,8 @@ string
 --------
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -27,7 +28,8 @@ string
                 (primary_expression
                   (literal
                     (string_literal))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -44,7 +46,8 @@ string
                 (primary_expression
                   (literal
                     (string_literal))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -61,7 +64,8 @@ string
                 (primary_expression
                   (literal
                     (string_literal))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -78,7 +82,8 @@ string
                 (primary_expression
                   (literal
                     (string_literal))))))))))
-  (definition))
+  (definition
+    (words)))
 
 ====================
 list
@@ -91,7 +96,8 @@ list
 ----
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -127,7 +133,8 @@ list
                           (literal
                             (number_literal
                               (dec_literal)))))))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -163,7 +170,8 @@ list
                           (literal
                             (number_literal
                               (dec_literal)))))))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -189,7 +197,8 @@ list
                       (unary_expression
                         (primary_expression
                           (identifier)))))))))))))
-  (definition))
+  (definition
+    (words)))
 
 ========================
 dict
@@ -215,7 +224,8 @@ dict
 ------
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -224,7 +234,8 @@ dict
             (primary_expression
               (literal
                 (dict_literal))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -246,7 +257,8 @@ dict
                           (literal
                             (number_literal
                               (dec_literal)))))))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -313,7 +325,8 @@ dict
                       (unary_expression
                         (primary_expression
                           (identifier)))))))))))))
-  (definition))
+  (definition
+    (words)))
 
 ===================
 number
@@ -331,7 +344,8 @@ number
 ---------
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -341,7 +355,8 @@ number
               (literal
                 (number_literal
                   (dec_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -351,7 +366,8 @@ number
               (literal
                 (number_literal
                   (hex_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -362,7 +378,8 @@ number
                 (float_literal
                   (dec_literal)
                   (dec_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -372,7 +389,8 @@ number
               (literal
                 (number_literal
                   (bin_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -382,7 +400,8 @@ number
               (literal
                 (number_literal
                   (bin_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -394,7 +413,8 @@ number
                   (big_dec_literal
                     (dec_literal)
                     (dec_literal))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -406,7 +426,8 @@ number
                   (big_dec_literal
                     (dec_literal)
                     (dec_literal))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -416,4 +437,5 @@ number
               (literal
                 (number_literal
                   (dec_literal)))))))))
-  (definition))
+  (definition
+    (words)))
