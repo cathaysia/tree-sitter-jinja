@@ -8,6 +8,7 @@ block
 ---
 
 (source
+  (words)
   (line_statement
     (statement
       (block_statement

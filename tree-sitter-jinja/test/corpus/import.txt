@@ -14,13 +14,15 @@ import
 ----
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
         (extends_statement
           (string_literal)))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -31,7 +33,8 @@ import
           (identifier)
           (import_as
             (identifier))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -39,7 +42,8 @@ import
           (string_literal)
           (import_as
             (identifier))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -49,7 +53,8 @@ import
             (identifier))
           (import_attribute
             (attribute_context))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -59,7 +64,8 @@ import
             (identifier))
           (import_attribute
             (attribute_context))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -69,7 +75,8 @@ import
           (identifier)
           (import_attribute
             (attribute_context))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -79,7 +86,8 @@ import
           (identifier)
           (import_attribute
             (attribute_context))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -90,4 +98,5 @@ import
           (identifier)
           (import_attribute
             (attribute_context))))))
-  (definition))
+  (definition
+    (words)))

@@ -7,7 +7,8 @@ Hello {{ name }}!
 ---
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -15,7 +16,8 @@ Hello {{ name }}!
           (unary_expression
             (primary_expression
               (identifier)))))))
-  (definition))
+  (definition
+    (words)))
 
 =============
 loop
@@ -30,7 +32,8 @@ loop
 ----
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -43,7 +46,8 @@ loop
                 (unary_expression
                   (primary_expression
                     (identifier))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -51,11 +55,13 @@ loop
           (unary_expression
             (primary_expression
               (identifier)))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement)))
-  (definition))
+  (definition
+    (words)))
 
 ============
 operator
@@ -66,7 +72,8 @@ operator
 ----
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -123,7 +130,8 @@ operator
           (unary_expression
             (primary_expression
               (identifier)))))))
-  (definition))
+  (definition
+    (words)))
 
 ===========
 whitespace
@@ -135,7 +143,8 @@ foo {#- comment -#} baz {# blah #} blub
 -----
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -143,7 +152,8 @@ foo {#- comment -#} baz {# blah #} blub
           (unary_expression
             (primary_expression
               (identifier)))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -152,8 +162,15 @@ foo {#- comment -#} baz {# blah #} blub
             (primary_expression
               (identifier)))))))
   (definition
-    (comment)
-    (comment)))
+    (words))
+  (definition
+    (comment))
+  (definition
+    (words))
+  (definition
+    (comment))
+  (definition
+    (words)))
 
 ================
 single bracket
@@ -164,7 +181,8 @@ single bracket
 ----
 
 (source
-  (definition))
+  (definition
+    (words)))
 
 ==========
 literals
@@ -200,7 +218,8 @@ literals
 ----
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -209,7 +228,8 @@ literals
             (primary_expression
               (literal
                 (boolean_literal))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -218,7 +238,8 @@ literals
             (primary_expression
               (literal
                 (boolean_literal))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -227,7 +248,8 @@ literals
             (primary_expression
               (literal
                 (null_literal))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -238,7 +260,8 @@ literals
                 (float_literal
                   (dec_literal)
                   (dec_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -249,7 +272,8 @@ literals
                 (float_literal
                   (dec_literal)
                   (dec_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -259,7 +283,8 @@ literals
               (literal
                 (number_literal
                   (dec_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -269,7 +294,8 @@ literals
               (literal
                 (number_literal
                   (dec_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -299,7 +325,8 @@ literals
                           (literal
                             (number_literal
                               (dec_literal)))))))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -320,7 +347,8 @@ literals
                         (primary_expression
                           (literal
                             (string_literal))))))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -330,7 +358,8 @@ literals
               (literal
                 (number_literal
                   (dec_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -340,7 +369,8 @@ literals
               (literal
                 (number_literal
                   (dec_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -350,7 +380,8 @@ literals
               (literal
                 (number_literal
                   (dec_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -360,7 +391,8 @@ literals
               (literal
                 (number_literal
                   (dec_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -370,7 +402,8 @@ literals
               (literal
                 (number_literal
                   (dec_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -380,7 +413,8 @@ literals
               (literal
                 (number_literal
                   (bin_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -390,7 +424,8 @@ literals
               (literal
                 (number_literal
                   (bin_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -400,7 +435,8 @@ literals
               (literal
                 (number_literal
                   (oct_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -410,7 +446,8 @@ literals
               (literal
                 (number_literal
                   (oct_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -420,7 +457,8 @@ literals
               (literal
                 (number_literal
                   (oct_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -430,7 +468,8 @@ literals
               (literal
                 (number_literal
                   (hex_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -440,7 +479,8 @@ literals
               (literal
                 (number_literal
                   (hex_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -450,7 +490,8 @@ literals
               (literal
                 (number_literal
                   (hex_literal)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -462,7 +503,8 @@ literals
                   (big_dec_literal
                     (dec_literal)
                     (dec_literal))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -474,7 +516,8 @@ literals
                   (big_dec_literal
                     (dec_literal)
                     (dec_literal))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -486,7 +529,8 @@ literals
                   (big_dec_literal
                     (dec_literal)
                     (dec_literal))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -498,7 +542,8 @@ literals
                   (big_dec_literal
                     (dec_literal)
                     (dec_literal))))))))))
-  (definition))
+  (definition
+    (words)))
 
 =======
 attrs
@@ -513,7 +558,11 @@ attrs
 
 (source
   (definition
+    (words))
+  (definition
     (comment))
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -539,7 +588,8 @@ attrs
             (unary_expression
               (primary_expression
                 (identifier))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -566,7 +616,8 @@ attrs
             (unary_expression
               (primary_expression
                 (identifier))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -602,7 +653,8 @@ attrs
             (unary_expression
               (primary_expression
                 (identifier))))))))
-  (definition))
+  (definition
+    (words)))
 
 =============
 block filter
@@ -614,7 +666,8 @@ block filter
 ------
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -627,7 +680,8 @@ block filter
                 (unary_expression
                   (primary_expression
                     (identifier))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -638,7 +692,8 @@ block filter
   (definition
     (control
       (statement)))
-  (definition))
+  (definition
+    (words)))
 
 =======================
 autoescape
@@ -655,24 +710,29 @@ autoescape
 ----------
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
         (autoescape_statement
           (boolean_literal)))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement)))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
         (autoescape_statement
           (boolean_literal)))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement)))
-  (definition))
+  (definition
+    (words)))

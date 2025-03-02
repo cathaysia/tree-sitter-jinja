@@ -10,6 +10,7 @@ set
 ---
 
 (source
+  (words)
   (line_statement
     (statement
       (set_statement

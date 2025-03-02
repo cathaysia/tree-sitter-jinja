@@ -10,7 +10,8 @@ set
 ---
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -26,7 +27,8 @@ set
               (unary_expression
                 (primary_expression
                   (identifier)))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -52,7 +54,8 @@ set
                             (primary_expression
                               (literal
                                 (string_literal))))))))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -80,7 +83,8 @@ set
                               (primary_expression
                                 (literal
                                   (string_literal)))))))))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -115,4 +119,5 @@ set
                             (unary_expression
                               (primary_expression
                                 (identifier))))))))))))))))
-  (definition))
+  (definition
+    (words)))

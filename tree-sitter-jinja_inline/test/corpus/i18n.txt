@@ -9,6 +9,7 @@ trans
 ---
 
 (source
+  (words)
   (line_statement
     (statement
       (trans_statement)))
@@ -42,6 +43,7 @@ block
 ----
 
 (source
+  (words)
   (line_statement
     (statement
       (trans_statement
@@ -87,6 +89,7 @@ pluralize
 ----
 
 (source
+  (words)
   (line_statement
     (statement
       (trans_statement
@@ -119,7 +122,8 @@ inline
 
 ----
 
-(source)
+(source
+  (words))
 
 =================
 gettext
@@ -131,4 +135,5 @@ gettext
 
 ---------
 
-(source)
+(source
+  (words))

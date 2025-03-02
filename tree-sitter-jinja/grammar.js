@@ -2,13 +2,20 @@ const gram = require('../grammar.js')
 
 module.exports = grammar({
   name: 'jinja',
-  extras: $ => [/\s/, $.comment],
+  extras: $ => [/\s/],
   externals: $ => [$.raw_start, $._raw_char, $.raw_end],
   rules: {
     source: $ => repeat($.definition),
     ...gram.rules,
     definition: $ =>
-      choice($.control, $.render_expression, $._words, $.raw_block, $.inline),
+      choice(
+        $.control,
+        $.render_expression,
+        $.words,
+        $.raw_block,
+        $.inline,
+        $.comment,
+      ),
     render_expression: $ =>
       seq(
         choice('{{', '{{-', '{{+'),

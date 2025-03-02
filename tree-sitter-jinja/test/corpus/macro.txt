@@ -11,7 +11,8 @@ macro
 ----
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -24,7 +25,8 @@ macro
                   (unary_expression
                     (primary_expression
                       (identifier)))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -32,7 +34,8 @@ macro
           (unary_expression
             (primary_expression
               (identifier)))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -41,7 +44,8 @@ macro
             (primary_expression
               (function_call
                 (identifier))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement)))
@@ -61,14 +65,16 @@ macro
                           (literal
                             (number_literal
                               (dec_literal)))))))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
         (macro_statement
           (function_call
             (identifier))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -76,7 +82,8 @@ macro
           (unary_expression
             (primary_expression
               (identifier)))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -84,33 +91,39 @@ macro
           (unary_expression
             (primary_expression
               (identifier)))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement)))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
         (macro_statement
           (function_call
             (identifier))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement)))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
         (macro_statement
           (function_call
             (identifier))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement)))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -154,7 +167,8 @@ macro
           (unary_expression
             (primary_expression
               (identifier)))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -162,7 +176,8 @@ macro
           (unary_expression
             (primary_expression
               (identifier)))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -170,7 +185,8 @@ macro
           (unary_expression
             (primary_expression
               (identifier)))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -181,4 +197,5 @@ macro
   (definition
     (control
       (statement)))
-  (definition))
+  (definition
+    (words)))

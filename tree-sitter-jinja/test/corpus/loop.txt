@@ -27,7 +27,8 @@ continue
 ----------
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -40,7 +41,8 @@ continue
                 (unary_expression
                   (primary_expression
                     (identifier))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -65,58 +67,13 @@ continue
   (definition
     (control
       (statement)))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement)))
-  (definition)
   (definition
-    (control
-      (statement
-        (for_statement
-          (in_expression
-            (identifier)
-            (binary_operator)
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (literal
-                      (list_literal
-                        (expression
-                          (binary_expression
-                            (unary_expression
-                              (primary_expression
-                                (literal
-                                  (number_literal
-                                    (dec_literal)))))))
-                        (expression
-                          (binary_expression
-                            (unary_expression
-                              (primary_expression
-                                (literal
-                                  (number_literal
-                                    (dec_literal)))))))
-                        (expression
-                          (binary_expression
-                            (unary_expression
-                              (primary_expression
-                                (literal
-                                  (number_literal
-                                    (dec_literal))))))))))))))))))
-  (definition)
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (identifier)))))))
-  (definition)
-  (definition
-    (control
-      (statement)))
-  (definition)
+    (words))
   (definition
     (control
       (statement
@@ -152,6 +109,56 @@ continue
                                   (number_literal
                                     (dec_literal))))))))))))))))))
   (definition
+    (words))
+  (definition
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier)))))))
+  (definition
+    (words))
+  (definition
+    (control
+      (statement)))
+  (definition
+    (words))
+  (definition
+    (control
+      (statement
+        (for_statement
+          (in_expression
+            (identifier)
+            (binary_operator)
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (literal
+                      (list_literal
+                        (expression
+                          (binary_expression
+                            (unary_expression
+                              (primary_expression
+                                (literal
+                                  (number_literal
+                                    (dec_literal)))))))
+                        (expression
+                          (binary_expression
+                            (unary_expression
+                              (primary_expression
+                                (literal
+                                  (number_literal
+                                    (dec_literal)))))))
+                        (expression
+                          (binary_expression
+                            (unary_expression
+                              (primary_expression
+                                (literal
+                                  (number_literal
+                                    (dec_literal))))))))))))))))))
+  (definition
     (render_expression
       (expression
         (binary_expression
@@ -161,7 +168,8 @@ continue
   (definition
     (control
       (statement)))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -184,7 +192,8 @@ continue
   (definition
     (control
       (statement)))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -210,7 +219,8 @@ continue
             (unary_expression
               (primary_expression
                 (identifier))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -221,7 +231,8 @@ continue
   (definition
     (control
       (statement)))
-  (definition)
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -242,7 +253,8 @@ continue
                         (unary_expression
                           (primary_expression
                             (identifier))))))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -255,7 +267,8 @@ continue
                 (unary_expression
                   (primary_expression
                     (identifier))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -273,7 +286,8 @@ continue
                 (unary_expression
                   (primary_expression
                     (identifier))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -313,11 +327,13 @@ continue
                       (literal
                         (number_literal
                           (dec_literal)))))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement)))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -331,7 +347,8 @@ continue
                   (primary_expression
                     (literal
                       (list_literal)))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -362,7 +379,8 @@ continue
                       (identifier))))
                 (binary_operator)
                 (builtin_test))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -405,7 +423,8 @@ continue
                                             (literal
                                               (number_literal
                                                 (dec_literal))))))))))))))))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -448,7 +467,11 @@ continue
                     (primary_expression
                       (identifier)))))))))))
   (definition
+    (words))
+  (definition
     (comment))
+  (definition
+    (words))
   (definition
     (render_expression
       (expression
@@ -469,7 +492,8 @@ continue
                         (unary_expression
                           (primary_expression
                             (identifier))))))))))))))
-  (definition))
+  (definition
+    (words)))
 
 =========================
 break
@@ -483,7 +507,8 @@ break
 --------------
 
 (source
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -496,7 +521,8 @@ break
                 (unary_expression
                   (primary_expression
                     (identifier))))))))))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement
@@ -525,8 +551,10 @@ break
   (definition
     (control
       (statement)))
-  (definition)
+  (definition
+    (words))
   (definition
     (control
       (statement)))
-  (definition))
+  (definition
+    (words)))

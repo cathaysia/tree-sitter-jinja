@@ -8,6 +8,7 @@ call
 ---
 
 (source
+  (words)
   (line_statement
     (statement
       (call_statement

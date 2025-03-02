@@ -1856,7 +1856,7 @@
         }
       ]
     },
-    "_words": {
+    "words": {
       "type": "PREC_RIGHT",
       "value": 0,
       "content": {
@@ -1944,7 +1944,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_words"
+          "name": "words"
         },
         {
           "type": "SYMBOL",
@@ -1953,6 +1953,10 @@
         {
           "type": "SYMBOL",
           "name": "inline"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "comment"
         }
       ]
     },
@@ -2239,10 +2243,6 @@
     {
       "type": "PATTERN",
       "value": "\\s"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "comment"
     }
   ],
   "conflicts": [],
