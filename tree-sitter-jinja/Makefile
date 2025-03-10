@@ -28,7 +28,7 @@ LIBDIR ?= $(PREFIX)/lib
 PCLIBDIR ?= $(LIBDIR)/pkgconfig
 
 # source/object files
-PARSER := $(SRC_DIR)/parser.c
+PARSER := $(SRC_DIR)/parser.c $(SRC_DIR)/src/scanner.c
 EXTRAS := $(filter-out $(PARSER),$(wildcard $(SRC_DIR)/*.c))
 OBJS := $(patsubst %.c,%.o,$(PARSER) $(EXTRAS))
 
