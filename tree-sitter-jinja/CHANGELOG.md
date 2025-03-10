@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.2](https://github.com/cathaysia/tree-sitter-jinja/compare/tree-sitter-jinja-v0.6.1...tree-sitter-jinja-v0.6.2) (2025-03-10)
+
+
+### Bug Fixes
+
+* fix symbol problem ([501b3e3](https://github.com/cathaysia/tree-sitter-jinja/commit/501b3e3fee62cf025b8dbb2af024e1fda8121c74))
+
 ## [0.6.1](https://github.com/cathaysia/tree-sitter-jinja/compare/tree-sitter-jinja-v0.6.0...tree-sitter-jinja-v0.6.1) (2025-03-02)
 
 
