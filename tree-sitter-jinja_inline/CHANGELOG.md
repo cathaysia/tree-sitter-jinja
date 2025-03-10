@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.3](https://github.com/cathaysia/tree-sitter-jinja/compare/tree-sitter-jinja-inline-v0.7.2...tree-sitter-jinja-inline-v0.7.3) (2025-03-10)
+
+
+### Bug Fixes
+
+* **rs:** fix rust publish ([fdf596c](https://github.com/cathaysia/tree-sitter-jinja/commit/fdf596ccc720ba9419b0fab5cfc3dc05d5bf14c1))
+
 ## [0.7.2](https://github.com/cathaysia/tree-sitter-jinja/compare/tree-sitter-jinja-inline-v0.7.1...tree-sitter-jinja-inline-v0.7.2) (2025-03-10)
 
 
