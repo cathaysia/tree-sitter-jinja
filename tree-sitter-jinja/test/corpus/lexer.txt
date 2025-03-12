@@ -7,17 +7,14 @@ Hello {{ name }}!
 ---
 
 (source
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (identifier)))))))
-  (definition
-    (words)))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (identifier))))))
+  (words))
 
 =============
 loop
@@ -32,36 +29,29 @@ loop
 ----
 
 (source
-  (definition
-    (words))
-  (definition
-    (control
-      (statement
-        (for_statement
-          (in_expression
-            (identifier)
-            (binary_operator)
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier))))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (identifier)))))))
-  (definition
-    (words))
-  (definition
-    (control
-      (statement)))
-  (definition
-    (words)))
+  (words)
+  (control
+    (statement
+      (for_statement
+        (in_expression
+          (identifier)
+          (binary_operator)
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (identifier))))))
+  (words)
+  (control
+    (statement))
+  (words))
 
 ============
 operator
@@ -72,34 +62,15 @@ operator
 ----
 
 (source
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
         (binary_expression
           (binary_expression
             (binary_expression
               (binary_expression
                 (binary_expression
-                  (binary_expression
-                    (unary_expression
-                      (primary_expression
-                        (literal
-                          (tuple_literal
-                            (expression
-                              (binary_expression
-                                (binary_expression
-                                  (unary_expression
-                                    (unary_operator)
-                                    (unary_expression
-                                      (primary_expression
-                                        (identifier)))))
-                                (binary_operator)
-                                (unary_expression
-                                  (primary_expression
-                                    (identifier))))))))))
-                  (binary_operator)
                   (unary_expression
                     (primary_expression
                       (literal
@@ -108,8 +79,10 @@ operator
                             (binary_expression
                               (binary_expression
                                 (unary_expression
-                                  (primary_expression
-                                    (identifier))))
+                                  (unary_operator)
+                                  (unary_expression
+                                    (primary_expression
+                                      (identifier)))))
                               (binary_operator)
                               (unary_expression
                                 (primary_expression
@@ -117,7 +90,18 @@ operator
                 (binary_operator)
                 (unary_expression
                   (primary_expression
-                    (identifier))))
+                    (literal
+                      (tuple_literal
+                        (expression
+                          (binary_expression
+                            (binary_expression
+                              (unary_expression
+                                (primary_expression
+                                  (identifier))))
+                            (binary_operator)
+                            (unary_expression
+                              (primary_expression
+                                (identifier))))))))))
               (binary_operator)
               (unary_expression
                 (primary_expression
@@ -129,9 +113,12 @@ operator
           (binary_operator)
           (unary_expression
             (primary_expression
-              (identifier)))))))
-  (definition
-    (words)))
+              (identifier))))
+        (binary_operator)
+        (unary_expression
+          (primary_expression
+            (identifier))))))
+  (words))
 
 ===========
 whitespace
@@ -143,34 +130,25 @@ foo {#- comment -#} baz {# blah #} blub
 -----
 
 (source
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (identifier)))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (identifier)))))))
-  (definition
-    (words))
-  (definition
-    (comment))
-  (definition
-    (words))
-  (definition
-    (comment))
-  (definition
-    (words)))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (identifier))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (identifier))))))
+  (words)
+  (comment)
+  (words)
+  (comment)
+  (words))
 
 ================
 single bracket
@@ -181,8 +159,7 @@ single bracket
 ----
 
 (source
-  (definition
-    (words)))
+  (words))
 
 ==========
 literals
@@ -218,86 +195,348 @@ literals
 ----
 
 (source
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (boolean_literal))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (boolean_literal))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (null_literal))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (float_literal
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (boolean_literal)))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (boolean_literal)))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (null_literal)))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (float_literal
+                (dec_literal)
+                (dec_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (float_literal
+                (dec_literal)
+                (dec_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (dec_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (dec_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (list_literal
+                (expression
+                  (binary_expression
+                    (unary_expression
+                      (primary_expression
+                        (literal
+                          (number_literal
+                            (dec_literal)))))))
+                (expression
+                  (binary_expression
+                    (unary_expression
+                      (primary_expression
+                        (literal
+                          (number_literal
+                            (dec_literal)))))))
+                (expression
+                  (binary_expression
+                    (unary_expression
+                      (primary_expression
+                        (literal
+                          (number_literal
+                            (dec_literal))))))))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (dict_literal
+                (expression
+                  (binary_expression
+                    (unary_expression
+                      (primary_expression
+                        (literal
+                          (string_literal))))))
+                (expression
+                  (binary_expression
+                    (unary_expression
+                      (primary_expression
+                        (literal
+                          (string_literal)))))))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (dec_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (dec_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (dec_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (dec_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (dec_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (bin_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (bin_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (oct_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (oct_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (oct_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (hex_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (hex_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (hex_literal))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (big_dec_literal
                   (dec_literal)
                   (dec_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (float_literal
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (big_dec_literal
                   (dec_literal)
                   (dec_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (big_dec_literal
+                  (dec_literal)
+                  (dec_literal)))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (literal
+              (number_literal
+                (big_dec_literal
+                  (dec_literal)
+                  (dec_literal)))))))))
+  (words))
+
+=======
+attrs
+=======
+
+{# useless comment #}
+{{ foo.bar[baz].blah }}
+{{ {"foo": "bar"}.test }}
+{{ [1, 2, 3].test }}
+
+----
+
+(source
+  (words)
+  (comment)
+  (words)
+  (render_expression
+    (expression
+      (expression
+        (expression
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))))
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier))))))
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier)))))))
+  (words)
+  (render_expression
+    (expression
       (expression
         (binary_expression
           (unary_expression
             (primary_expression
               (literal
-                (number_literal
-                  (dec_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
+                (dict_literal
+                  (expression
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
+                          (literal
+                            (string_literal))))))
+                  (expression
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
+                          (literal
+                            (string_literal))))))))))))
       (expression
         (binary_expression
           (unary_expression
             (primary_expression
-              (literal
-                (number_literal
-                  (dec_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
+              (identifier)))))))
+  (words)
+  (render_expression
+    (expression
       (expression
         (binary_expression
           (unary_expression
@@ -324,337 +563,13 @@ literals
                         (primary_expression
                           (literal
                             (number_literal
-                              (dec_literal)))))))))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
+                              (dec_literal)))))))))))))
       (expression
         (binary_expression
           (unary_expression
             (primary_expression
-              (literal
-                (dict_literal
-                  (expression
-                    (binary_expression
-                      (unary_expression
-                        (primary_expression
-                          (literal
-                            (string_literal))))))
-                  (expression
-                    (binary_expression
-                      (unary_expression
-                        (primary_expression
-                          (literal
-                            (string_literal))))))))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (dec_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (dec_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (dec_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (dec_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (dec_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (bin_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (bin_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (oct_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (oct_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (oct_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (hex_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (hex_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (hex_literal)))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (big_dec_literal
-                    (dec_literal)
-                    (dec_literal))))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (big_dec_literal
-                    (dec_literal)
-                    (dec_literal))))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (big_dec_literal
-                    (dec_literal)
-                    (dec_literal))))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (literal
-                (number_literal
-                  (big_dec_literal
-                    (dec_literal)
-                    (dec_literal))))))))))
-  (definition
-    (words)))
-
-=======
-attrs
-=======
-
-{# useless comment #}
-{{ foo.bar[baz].blah }}
-{{ {"foo": "bar"}.test }}
-{{ [1, 2, 3].test }}
-
-----
-
-(source
-  (definition
-    (words))
-  (definition
-    (comment))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (expression
-          (expression
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier)))))
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier))))))
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier))))))
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (identifier))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (literal
-                  (dict_literal
-                    (expression
-                      (binary_expression
-                        (unary_expression
-                          (primary_expression
-                            (literal
-                              (string_literal))))))
-                    (expression
-                      (binary_expression
-                        (unary_expression
-                          (primary_expression
-                            (literal
-                              (string_literal))))))))))))
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (identifier))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (literal
-                  (list_literal
-                    (expression
-                      (binary_expression
-                        (unary_expression
-                          (primary_expression
-                            (literal
-                              (number_literal
-                                (dec_literal)))))))
-                    (expression
-                      (binary_expression
-                        (unary_expression
-                          (primary_expression
-                            (literal
-                              (number_literal
-                                (dec_literal)))))))
-                    (expression
-                      (binary_expression
-                        (unary_expression
-                          (primary_expression
-                            (literal
-                              (number_literal
-                                (dec_literal)))))))))))))
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (identifier))))))))
-  (definition
-    (words)))
+              (identifier)))))))
+  (words))
 
 =============
 block filter
@@ -666,34 +581,28 @@ block filter
 ------
 
 (source
-  (definition
-    (words))
-  (definition
-    (control
-      (statement
-        (for_statement
-          (in_expression
-            (identifier)
-            (binary_operator)
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier))))))))))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (identifier)))))))
-  (definition
-    (control
-      (statement)))
-  (definition
-    (words)))
+  (words)
+  (control
+    (statement
+      (for_statement
+        (in_expression
+          (identifier)
+          (binary_operator)
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))))))
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (identifier))))))
+  (control
+    (statement))
+  (words))
 
 =======================
 autoescape
@@ -710,29 +619,20 @@ autoescape
 ----------
 
 (source
-  (definition
-    (words))
-  (definition
-    (control
-      (statement
-        (autoescape_statement
-          (boolean_literal)))))
-  (definition
-    (words))
-  (definition
-    (control
-      (statement)))
-  (definition
-    (words))
-  (definition
-    (control
-      (statement
-        (autoescape_statement
-          (boolean_literal)))))
-  (definition
-    (words))
-  (definition
-    (control
-      (statement)))
-  (definition
-    (words)))
+  (words)
+  (control
+    (statement
+      (autoescape_statement
+        (boolean_literal))))
+  (words)
+  (control
+    (statement))
+  (words)
+  (control
+    (statement
+      (autoescape_statement
+        (boolean_literal))))
+  (words)
+  (control
+    (statement))
+  (words))
