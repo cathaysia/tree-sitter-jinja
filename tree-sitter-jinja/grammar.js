@@ -5,16 +5,17 @@ module.exports = grammar({
   extras: $ => [/\s/],
   externals: $ => [$.raw_start, $._raw_char, $.raw_end, $._inline_words],
   rules: {
-    source: $ => repeat(
-      choice(
-        $.control,
-        $.render_expression,
-        $.words,
-        $.raw_block,
-        $.inline,
-        $.comment,
+    source: $ =>
+      repeat(
+        choice(
+          $.control,
+          $.render_expression,
+          $.words,
+          $.raw_block,
+          $.inline,
+          $.comment,
+        ),
       ),
-    ),
     ...gram.rules,
     render_expression: $ =>
       seq(
