@@ -12,20 +12,14 @@ if
 ---
 
 (source
-  (definition
-    (inline))
-  (definition
-    (inline))
-  (definition
-    (inline))
-  (definition
-    (words))
-  (definition
-    (render_expression
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (identifier)))))))
-  (definition
-    (words)))
+  (inline)
+  (inline)
+  (inline)
+  (words)
+  (render_expression
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (identifier))))))
+  (words))
