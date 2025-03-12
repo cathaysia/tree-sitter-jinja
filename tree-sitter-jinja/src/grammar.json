@@ -4,8 +4,33 @@
     "source": {
       "type": "REPEAT",
       "content": {
-        "type": "SYMBOL",
-        "name": "definition"
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "control"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "render_expression"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "words"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "raw_block"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "inline"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "comment"
+          }
+        ]
       }
     },
     "literal": {
@@ -1928,35 +1953,6 @@
               "value": "#}"
             }
           ]
-        }
-      ]
-    },
-    "definition": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "control"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "render_expression"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "words"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "raw_block"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "inline"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "comment"
         }
       ]
     },
