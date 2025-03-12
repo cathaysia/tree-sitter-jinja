@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.4](https://github.com/cathaysia/tree-sitter-jinja/compare/tree-sitter-jinja-inline-v0.7.3...tree-sitter-jinja-inline-v0.7.4) (2025-03-12)
+
+
+### Bug Fixes
+
+* python package name ([dd2c42e](https://github.com/cathaysia/tree-sitter-jinja/commit/dd2c42ea360b7e4b6c6fb809494203ae251e1c87))
+
 ## [0.7.3](https://github.com/cathaysia/tree-sitter-jinja/compare/tree-sitter-jinja-inline-v0.7.2...tree-sitter-jinja-inline-v0.7.3) (2025-03-10)
 
 

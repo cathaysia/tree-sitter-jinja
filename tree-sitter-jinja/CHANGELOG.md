@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.4](https://github.com/cathaysia/tree-sitter-jinja/compare/tree-sitter-jinja-v0.6.3...tree-sitter-jinja-v0.6.4) (2025-03-12)
+
+
+### Bug Fixes
+
+* python package name ([dd2c42e](https://github.com/cathaysia/tree-sitter-jinja/commit/dd2c42ea360b7e4b6c6fb809494203ae251e1c87))
+* remove unnecessary definition node ([25a8f4a](https://github.com/cathaysia/tree-sitter-jinja/commit/25a8f4a5959479ab0c4228206a10540a7d9af4bd))
+
 ## [0.6.3](https://github.com/cathaysia/tree-sitter-jinja/compare/tree-sitter-jinja-v0.6.2...tree-sitter-jinja-v0.6.3) (2025-03-10)
 
 
