@@ -5,9 +5,7 @@ module.exports = grammar({
   extras: $ => [/\s/],
   externals: $ => [$.raw_start, $._raw_char, $.raw_end, $._inline_words],
   rules: {
-    source: $ => repeat($.definition),
-    ...gram.rules,
-    definition: $ =>
+    source: $ => repeat(
       choice(
         $.control,
         $.render_expression,
@@ -16,6 +14,8 @@ module.exports = grammar({
         $.inline,
         $.comment,
       ),
+    ),
+    ...gram.rules,
     render_expression: $ =>
       seq(
         choice('{{', '{{-', '{{+'),
