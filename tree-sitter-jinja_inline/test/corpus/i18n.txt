@@ -113,9 +113,9 @@ pluralize
 inline
 =================
 
-{{ _("Hello, World!") }}
+# _("Hello, World!")
 
-{{ _("Hello, %(user)s!")|format(user=user.username) }}
+# _("Hello, %(user)s!")|format(user=user.username)
 
 ----
 
@@ -126,9 +126,9 @@ inline
 gettext
 =================
 
-{{ gettext('Hello World!') }}
-{{ gettext('Hello %(name)s!', name='World') }}
-{{ ngettext('%(num)d apple', '%(num)d apples', apples|count) }}
+# gettext('Hello World!')
+# gettext('Hello %(name)s!', name='World')
+# ngettext('%(num)d apple', '%(num)d apples', apples|count)
 
 ---------
 
