@@ -5,14 +5,13 @@ module.exports = grammar({
   extras: $ => [/\s/, /\r?\n/, $.comment],
   externals: $ => [$._raw_char, $.raw_end, $._eof],
   rules: {
-    source: $ =>
-      repeat(choice($.line_statement, $.raw_block, $.words, $._NEWLINE)),
+    source: $ => repeat(choice($.line_statement, $.raw_block, $._NEWLINE)),
     ...gram.rules,
     line_statement: $ => seq('#', $.statement, optional(':'), $._END),
     raw_block: $ =>
       seq(
         '#',
-        'seq',
+        'raw',
         /\r?\n/,
         alias(repeat($._raw_char), $.raw_body),
         $.raw_end,

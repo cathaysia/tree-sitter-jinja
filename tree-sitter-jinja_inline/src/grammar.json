@@ -16,10 +16,6 @@
           },
           {
             "type": "SYMBOL",
-            "name": "words"
-          },
-          {
-            "type": "SYMBOL",
             "name": "_NEWLINE"
           }
         ]
@@ -1888,6 +1884,14 @@
             {
               "type": "PATTERN",
               "value": "\\{[^\\#\\%]"
+            },
+            {
+              "type": "STRING",
+              "value": "#"
+            },
+            {
+              "type": "STRING",
+              "value": "# "
             }
           ]
         }
@@ -1986,7 +1990,7 @@
         },
         {
           "type": "STRING",
-          "value": "seq"
+          "value": "raw"
         },
         {
           "type": "PATTERN",

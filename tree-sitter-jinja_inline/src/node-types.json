@@ -731,10 +731,6 @@
         {
           "type": "raw_block",
           "named": true
-        },
-        {
-          "type": "words",
-          "named": true
         }
       ]
     }
@@ -912,11 +908,6 @@
     }
   },
   {
-    "type": "words",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "!",
     "named": false
   },
@@ -930,6 +921,10 @@
   },
   {
     "type": "#",
+    "named": false
+  },
+  {
+    "type": "# ",
     "named": false
   },
   {
@@ -1297,6 +1292,10 @@
     "named": false
   },
   {
+    "type": "raw",
+    "named": false
+  },
+  {
     "type": "raw_end",
     "named": true
   },
@@ -1306,10 +1305,6 @@
   },
   {
     "type": "sameas",
-    "named": false
-  },
-  {
-    "type": "seq",
     "named": false
   },
   {
