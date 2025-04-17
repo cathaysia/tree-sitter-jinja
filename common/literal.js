@@ -1,4 +1,4 @@
-const { commaSep } = require('./common');
+const { commaSep } = require('./common.js');
 
 exports.rules = {
   literal: $ =>
@@ -12,8 +12,8 @@ exports.rules = {
       $.string_literal,
       $.dict_literal,
     ),
-  boolean_literal: $ => choice('true', 'false'),
-  null_literal: $ => choice('null', 'none'),
+  boolean_literal: _ => choice('true', 'false'),
+  null_literal: _ => choice('null', 'none'),
   number_literal: $ =>
     seq(
       optional(choice('-', '+')),
@@ -25,12 +25,12 @@ exports.rules = {
         $.big_dec_literal,
       ),
     ),
-  dec_literal: $ => /\d[\d_]*/,
+  dec_literal: _ => /\d[\d_]*/,
   big_dec_literal: $ =>
     seq($.dec_literal, choice('e', 'e+', 'e-'), optional('_'), $.dec_literal),
-  oct_literal: $ => /0[oO][0-7_]+/,
-  bin_literal: $ => /0[bB][01_]+/,
-  hex_literal: $ => /0[xX][\da-fA-F_]+/,
+  oct_literal: _ => /0[oO][0-7_]+/,
+  bin_literal: _ => /0[bB][01_]+/,
+  hex_literal: _ => /0[xX][\da-fA-F_]+/,
   float_literal: $ => prec(2, seq($.dec_literal, '.', $.dec_literal)),
 
   list_literal: $ => seq('[', commaSep($.expression), optional(','), ']'),
@@ -39,7 +39,7 @@ exports.rules = {
   dict_literal: $ =>
     seq('{', commaSep(seq($.expression, ':', $.expression)), '}'),
 
-  string_literal: $ =>
+  string_literal: _ =>
     choice(
       seq('"', repeat(choice(/[^\"]/, '\\"')), '"'),
       seq("'", repeat(choice(/[^']/, "\\'")), "'"),

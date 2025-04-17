@@ -2,7 +2,7 @@ const gram = require('../grammar.js');
 
 module.exports = grammar({
   name: 'jinja',
-  extras: $ => [/\s/],
+  extras: _ => [/\s/],
   externals: $ => [$.raw_start, $._raw_char, $.raw_end, $._inline_words],
   rules: {
     source: $ =>

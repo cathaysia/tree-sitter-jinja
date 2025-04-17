@@ -1,4 +1,4 @@
-const { commaSep, commaSep1, anySep1 } = require('./common');
+const { commaSep, commaSep1, anySep1 } = require('./common.js');
 
 exports.rules = {
   expression: $ =>
@@ -66,7 +66,7 @@ exports.rules = {
         $.expression,
       ),
     ),
-  binary_operator: $ =>
+  binary_operator: _ =>
     choice(
       '+',
       '-',
@@ -88,7 +88,7 @@ exports.rules = {
     ),
   unary_expression: $ =>
     choice($.primary_expression, seq($.unary_operator, $.unary_expression)),
-  unary_operator: $ => choice('not', '!'),
+  unary_operator: _ => choice('not', '!'),
   primary_expression: $ =>
     choice(
       $.function_call,

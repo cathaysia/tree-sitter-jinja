@@ -1,20 +1,6 @@
-const { anySep1, commaSep, commaSep1, anySep } = require('./common/common');
-const literal = require('./common/literal');
-const expression = require('./common/expression');
-
-const PREC = {
-  LOGICAL_OR: 1,
-  LOGICAL_AND: 2,
-  INCLUSIVE_OR: 3,
-  EXCLUSIVE_OR: 4,
-  BITWISE_AND: 5,
-  EQUAL: 6,
-  RELATIONAL: 7,
-  SHIFT: 9,
-  ADD: 10,
-  MULTIPLY: 11,
-  UNARY: 14,
-};
+const { commaSep, commaSep1 } = require('./common/common.js');
+const literal = require('./common/literal.js');
+const expression = require('./common/expression.js');
 
 module.exports = {
   externals: $ => [$.raw_start, $._raw_char, $.raw_end],
@@ -97,8 +83,8 @@ module.exports = {
         repeat($.include_attribute),
       ),
     include_attribute: $ => choice($.attribute_ignore, $.attribute_context),
-    attribute_ignore: $ => seq('ignore', 'missing'),
-    attribute_context: $ => seq(choice('with', 'without'), 'context'),
+    attribute_ignore: _ => seq('ignore', 'missing'),
+    attribute_context: _ => seq(choice('with', 'without'), 'context'),
     set_statement: $ =>
       seq(
         'set',
@@ -117,8 +103,8 @@ module.exports = {
     if_expression: $ => seq('if', $.expression),
 
     words: _ => prec.right(repeat1(choice(/[^\{]/, /\{[^\#\%]/, '#', '# '))),
-    identifier: $ => /[a-zA-Z_][\w\d_]*/,
-    comment: $ =>
+    identifier: _ => /[a-zA-Z_][\w\d_]*/,
+    comment: _ =>
       choice(
         seq('##', /[^\r\n]*/, /\r?\n/),
         seq('{#', repeat(choice(/[^#]+/, '#')), '#}'),
