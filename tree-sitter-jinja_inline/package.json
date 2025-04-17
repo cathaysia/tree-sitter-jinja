@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-jinja_inline",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "jinja grammar for tree-sitter",
   "repository": "github:cathaysia/tree-sitter-jinja",
   "license": "Apache-2.0",
