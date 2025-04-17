@@ -508,6 +508,10 @@
       "required": true,
       "types": [
         {
+          "type": "expression",
+          "named": true
+        },
+        {
           "type": "statement",
           "named": true
         }
