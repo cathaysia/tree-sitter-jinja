@@ -18,6 +18,6 @@ module.exports = grammar({
       ),
 
     _END: $ => choice($._NEWLINE, $._eof),
-    _NEWLINE: $ => /\r?\n/,
+    _NEWLINE: _ => /\r?\n/,
   },
 });
