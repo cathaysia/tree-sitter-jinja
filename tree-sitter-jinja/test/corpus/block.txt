@@ -7,12 +7,12 @@ block
 ---
 
 (source
-  (words)
+  (content)
   (control
     (statement
       (block_statement
         (identifier))))
-  (words)
+  (content)
   (control
     (statement))
   (render_expression
@@ -28,4 +28,4 @@ block
             (primary_expression
               (function_call
                 (identifier))))))))
-  (words))
+  (content))

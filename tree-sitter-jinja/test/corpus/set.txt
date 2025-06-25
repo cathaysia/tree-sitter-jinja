@@ -10,7 +10,7 @@ set
 ---
 
 (source
-  (words)
+  (content)
   (control
     (statement
       (set_statement
@@ -25,7 +25,7 @@ set
             (unary_expression
               (primary_expression
                 (identifier))))))))
-  (words)
+  (content)
   (control
     (statement
       (set_statement
@@ -50,7 +50,7 @@ set
                           (primary_expression
                             (literal
                               (string_literal)))))))))))))))
-  (words)
+  (content)
   (control
     (statement
       (for_statement
@@ -77,7 +77,7 @@ set
                             (primary_expression
                               (literal
                                 (string_literal))))))))))))))))
-  (words)
+  (content)
   (control
     (statement
       (for_statement
@@ -111,4 +111,4 @@ set
                           (unary_expression
                             (primary_expression
                               (identifier)))))))))))))))
-  (words))
+  (content))

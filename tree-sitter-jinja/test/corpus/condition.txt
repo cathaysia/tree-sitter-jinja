@@ -7,7 +7,7 @@ extends
 ----
 
 (source
-  (words)
+  (content)
   (control
     (statement
       (extends_statement
@@ -27,4 +27,4 @@ extends
                 (primary_expression
                   (literal
                     (string_literal))))))))))
-  (words))
+  (content))

@@ -1869,7 +1869,7 @@
         }
       ]
     },
-    "words": {
+    "content": {
       "type": "PREC_RIGHT",
       "value": 0,
       "content": {

@@ -9,7 +9,7 @@ call
 ---
 
 (source
-  (words)
+  (content)
   (render_expression
     (expression
       (expression
@@ -29,13 +29,13 @@ call
             (primary_expression
               (function_call
                 (identifier))))))))
-  (words)
+  (content)
   (control
     (statement
       (call_statement
         (function_call
           (identifier)))))
-  (words)
+  (content)
   (control
     (statement))
-  (words))
+  (content))

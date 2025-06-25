@@ -17,7 +17,7 @@ simple
 ----
 
 (source
-  (words)
+  (content)
   (control
     (statement
       (if_expression
@@ -42,7 +42,7 @@ simple
                         (literal
                           (number_literal
                             (dec_literal))))))))))))))
-  (words)
+  (content)
   (control
     (statement
       (if_expression
@@ -73,7 +73,7 @@ simple
                                     (literal
                                       (number_literal
                                         (dec_literal))))))))))))))))))))
-  (words)
+  (content)
   (control
     (statement
       (if_expression
@@ -85,7 +85,7 @@ simple
                   (identifier))))
             (binary_operator)
             (builtin_test))))))
-  (words)
+  (content)
   (control
     (statement
       (if_expression
@@ -98,7 +98,7 @@ simple
                     (string_literal)))))
             (binary_operator)
             (builtin_test))))))
-  (words)
+  (content)
   (control
     (statement
       (if_expression
@@ -122,7 +122,7 @@ simple
                       (primary_expression
                         (literal
                           (boolean_literal)))))))))))))
-  (words)
+  (content)
   (control
     (statement
       (if_expression
@@ -135,7 +135,7 @@ simple
                     (string_literal)))))
             (binary_operator)
             (builtin_test))))))
-  (words)
+  (content)
   (control
     (statement
       (if_expression
@@ -149,4 +149,4 @@ simple
             (unary_expression
               (primary_expression
                 (identifier))))))))
-  (words))
+  (content))

@@ -17,7 +17,7 @@ with
 ----
 
 (source
-  (words)
+  (content)
   (control
     (statement
       (with_statement
@@ -31,10 +31,10 @@ with
                   (literal
                     (number_literal
                       (dec_literal)))))))))))
-  (words)
+  (content)
   (control
     (statement))
-  (words)
+  (content)
   (control
     (statement
       (with_statement
@@ -48,21 +48,21 @@ with
                   (literal
                     (number_literal
                       (dec_literal)))))))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
         (unary_expression
           (primary_expression
             (identifier))))))
-  (words)
+  (content)
   (control
     (statement))
-  (words)
+  (content)
   (control
     (statement
       (with_statement)))
-  (words)
+  (content)
   (control
     (statement
       (set_statement
@@ -79,14 +79,14 @@ with
                 (literal
                   (number_literal
                     (dec_literal))))))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
         (unary_expression
           (primary_expression
             (identifier))))))
-  (words)
+  (content)
   (control
     (statement))
-  (words))
+  (content))

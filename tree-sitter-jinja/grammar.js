@@ -10,7 +10,7 @@ module.exports = grammar({
         choice(
           $.control,
           $.render_expression,
-          $.words,
+          $.content,
           $.raw_block,
           $.inline,
           $.comment,

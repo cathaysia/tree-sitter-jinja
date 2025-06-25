@@ -17,17 +17,17 @@ include
 ----
 
 (source
-  (words)
+  (content)
   (control
     (statement
       (include_statement
         (string_literal))))
-  (words)
+  (content)
   (control
     (statement
       (include_statement
         (identifier))))
-  (words)
+  (content)
   (control
     (statement
       (include_statement
@@ -44,7 +44,7 @@ include
                 (primary_expression
                   (literal
                     (string_literal))))))))))
-  (words)
+  (content)
   (control
     (statement
       (include_statement
@@ -61,7 +61,7 @@ include
                 (primary_expression
                   (literal
                     (string_literal))))))))))
-  (words)
+  (content)
   (control
     (statement
       (include_statement
@@ -83,7 +83,7 @@ include
               (unary_expression
                 (primary_expression
                   (identifier)))))))))
-  (words)
+  (content)
   (control
     (statement
       (include_statement
@@ -105,21 +105,21 @@ include
               (unary_expression
                 (primary_expression
                   (identifier)))))))))
-  (words)
+  (content)
   (control
     (statement
       (include_statement
         (string_literal)
         (include_attribute
           (attribute_context)))))
-  (words)
+  (content)
   (control
     (statement
       (include_statement
         (string_literal)
         (include_attribute
           (attribute_context)))))
-  (words)
+  (content)
   (control
     (statement
       (include_statement
@@ -138,7 +138,7 @@ include
                     (string_literal)))))))
         (include_attribute
           (attribute_ignore)))))
-  (words)
+  (content)
   (control
     (statement
       (include_statement
@@ -159,7 +159,7 @@ include
           (attribute_ignore))
         (include_attribute
           (attribute_context)))))
-  (words)
+  (content)
   (control
     (statement
       (include_statement
@@ -180,7 +180,7 @@ include
           (attribute_ignore))
         (include_attribute
           (attribute_context)))))
-  (words))
+  (content))
 
 ================
 complex
@@ -195,7 +195,7 @@ complex
 ----
 
 (source
-  (words)
+  (content)
   (control
     (statement
       (for_statement
@@ -207,7 +207,7 @@ complex
               (unary_expression
                 (primary_expression
                   (identifier)))))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (expression
@@ -247,7 +247,7 @@ complex
             (primary_expression
               (literal
                 (string_literal))))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (expression
@@ -260,7 +260,7 @@ complex
           (unary_expression
             (primary_expression
               (identifier)))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (expression
@@ -314,7 +314,7 @@ complex
               (unary_expression
                 (primary_expression
                   (identifier)))))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
@@ -334,10 +334,10 @@ complex
                       (unary_expression
                         (primary_expression
                           (identifier)))))))))))))
-  (words)
+  (content)
   (control
     (statement))
-  (words)
+  (content)
   (control
     (statement))
-  (words))
+  (content))

@@ -181,6 +181,11 @@
     "fields": {}
   },
   {
+    "type": "content",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "control",
     "named": true,
     "fields": {},
@@ -757,6 +762,10 @@
           "named": true
         },
         {
+          "type": "content",
+          "named": true
+        },
+        {
           "type": "control",
           "named": true
         },
@@ -770,10 +779,6 @@
         },
         {
           "type": "render_expression",
-          "named": true
-        },
-        {
-          "type": "words",
           "named": true
         }
       ]
@@ -950,11 +955,6 @@
         }
       ]
     }
-  },
-  {
-    "type": "words",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "!",

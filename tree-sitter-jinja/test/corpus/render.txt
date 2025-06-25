@@ -15,9 +15,9 @@ render
 --------
 
 (source
-  (words)
+  (content)
   (render_expression)
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
@@ -32,7 +32,7 @@ render
             (primary_expression
               (literal
                 (boolean_literal))))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (expression
@@ -53,7 +53,7 @@ render
           (unary_expression
             (primary_expression
               (identifier)))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
@@ -67,7 +67,7 @@ render
           (primary_expression
             (function_call
               (identifier)))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
@@ -82,7 +82,7 @@ render
                       (primary_expression
                         (literal
                           (string_literal)))))))))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
@@ -131,7 +131,7 @@ render
                       (primary_expression
                         (literal
                           (string_literal)))))))))))))
-  (words)
+  (content)
   (control
     (statement
       (if_expression
@@ -140,14 +140,14 @@ render
             (unary_expression
               (primary_expression
                 (identifier))))))))
-  (words)
+  (content)
   (control
     (statement))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
         (unary_expression
           (primary_expression
             (identifier))))))
-  (words))
+  (content))
