@@ -7,7 +7,7 @@ do
 -----
 
 (source
-  (words)
+  (content)
   (control
     (statement
       (do_statement
@@ -30,4 +30,4 @@ do
                             (primary_expression
                               (literal
                                 (string_literal))))))))))))))))
-  (words))
+  (content))

@@ -8,11 +8,11 @@ key: {{ var }}
 ----
 
 (source
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
         (unary_expression
           (primary_expression
             (identifier))))))
-  (words))
+  (content))

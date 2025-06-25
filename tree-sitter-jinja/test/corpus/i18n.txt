@@ -8,21 +8,21 @@ trans
 ---
 
 (source
-  (words)
+  (content)
   (control
     (statement
       (trans_statement)))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
         (unary_expression
           (primary_expression
             (identifier))))))
-  (words)
+  (content)
   (control
     (statement))
-  (words)
+  (content)
   (control
     (statement
       (trans_statement
@@ -40,17 +40,17 @@ trans
                 (unary_expression
                   (primary_expression
                     (identifier))))))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
         (unary_expression
           (primary_expression
             (identifier))))))
-  (words)
+  (content)
   (control
     (statement))
-  (words))
+  (content))
 
 ==============
 block
@@ -63,7 +63,7 @@ This is {{ book_title }} by {{ author }}
 ----
 
 (source
-  (words)
+  (content)
   (control
     (statement
       (trans_statement
@@ -95,24 +95,24 @@ This is {{ book_title }} by {{ author }}
                 (unary_expression
                   (primary_expression
                     (identifier))))))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
         (unary_expression
           (primary_expression
             (identifier))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
         (unary_expression
           (primary_expression
             (identifier))))))
-  (words)
+  (content)
   (control
     (statement))
-  (words))
+  (content))
 
 ==================
 pluralize
@@ -127,7 +127,7 @@ There are {{ count }} {{ name }} objects.
 ----
 
 (source
-  (words)
+  (content)
   (control
     (statement
       (trans_statement
@@ -144,42 +144,42 @@ There are {{ count }} {{ name }} objects.
               (unary_expression
                 (primary_expression
                   (identifier)))))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
         (unary_expression
           (primary_expression
             (identifier))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
         (unary_expression
           (primary_expression
             (identifier))))))
-  (words)
+  (content)
   (control
     (statement
       (pluralize_statement)))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
         (unary_expression
           (primary_expression
             (identifier))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
         (unary_expression
           (primary_expression
             (identifier))))))
-  (words)
+  (content)
   (control
     (statement))
-  (words))
+  (content))
 
 =================
 inline
@@ -192,7 +192,7 @@ inline
 ----
 
 (source
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
@@ -205,7 +205,7 @@ inline
                     (primary_expression
                       (literal
                         (string_literal))))))))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
@@ -238,7 +238,7 @@ inline
                       (unary_expression
                         (primary_expression
                           (identifier)))))))))))))
-  (words))
+  (content))
 
 =================
 gettext
@@ -251,7 +251,7 @@ gettext
 ---------
 
 (source
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
@@ -266,7 +266,7 @@ gettext
                       (primary_expression
                         (literal
                           (string_literal)))))))))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
@@ -290,7 +290,7 @@ gettext
                       (primary_expression
                         (literal
                           (string_literal)))))))))))))
-  (words)
+  (content)
   (render_expression
     (expression
       (binary_expression
@@ -323,4 +323,4 @@ gettext
                     (unary_expression
                       (primary_expression
                         (identifier))))))))))))
-  (words))
+  (content))

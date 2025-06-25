@@ -16,7 +16,7 @@
           },
           {
             "type": "SYMBOL",
-            "name": "words"
+            "name": "content"
           },
           {
             "type": "SYMBOL",
@@ -1881,7 +1881,7 @@
         }
       ]
     },
-    "words": {
+    "content": {
       "type": "PREC_RIGHT",
       "value": 0,
       "content": {

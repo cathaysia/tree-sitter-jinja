@@ -14,12 +14,12 @@ import
 ----
 
 (source
-  (words)
+  (content)
   (control
     (statement
       (extends_statement
         (string_literal))))
-  (words)
+  (content)
   (control
     (statement
       (import_statement
@@ -29,14 +29,14 @@ import
         (identifier)
         (import_as
           (identifier)))))
-  (words)
+  (content)
   (control
     (statement
       (import_statement
         (string_literal)
         (import_as
           (identifier)))))
-  (words)
+  (content)
   (control
     (statement
       (import_statement
@@ -45,7 +45,7 @@ import
           (identifier))
         (import_attribute
           (attribute_context)))))
-  (words)
+  (content)
   (control
     (statement
       (import_statement
@@ -54,7 +54,7 @@ import
           (identifier))
         (import_attribute
           (attribute_context)))))
-  (words)
+  (content)
   (control
     (statement
       (import_statement
@@ -63,7 +63,7 @@ import
         (identifier)
         (import_attribute
           (attribute_context)))))
-  (words)
+  (content)
   (control
     (statement
       (import_statement
@@ -72,7 +72,7 @@ import
         (identifier)
         (import_attribute
           (attribute_context)))))
-  (words)
+  (content)
   (control
     (statement
       (import_statement
@@ -82,4 +82,4 @@ import
         (identifier)
         (import_attribute
           (attribute_context)))))
-  (words))
+  (content))
