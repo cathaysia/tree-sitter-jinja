@@ -1,13 +1,18 @@
 {
   "name": "tree-sitter-jinja",
-  "version": "0.6.5",
+  "version": "0.7.0",
   "description": "jinja grammar for tree-sitter",
   "repository": "github:cathaysia/tree-sitter-jinja",
   "license": "Apache-2.0",
   "author": "Loongtao Zhang <loongtao.zhang@outlook.com>",
   "main": "bindings/node",
   "types": "bindings/node",
-  "keywords": ["incremental", "parsing", "tree-sitter", "c++"],
+  "keywords": [
+    "incremental",
+    "parsing",
+    "tree-sitter",
+    "c++"
+  ],
   "scripts": {
     "install": "node-gyp-build",
     "prebuildify": "prebuildify --napi --strip",
