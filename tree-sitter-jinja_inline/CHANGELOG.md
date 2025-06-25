@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/cathaysia/tree-sitter-jinja/compare/tree-sitter-jinja-inline-v0.7.5...tree-sitter-jinja-inline-v0.8.0) (2025-06-25)
+
+
+### Features
+
+* rename words to content ([d8dd27a](https://github.com/cathaysia/tree-sitter-jinja/commit/d8dd27af2fb4d5e76057aed8e71e573d895c473e))
+
 ## [0.7.5](https://github.com/cathaysia/tree-sitter-jinja/compare/tree-sitter-jinja-inline-v0.7.4...tree-sitter-jinja-inline-v0.7.5) (2025-04-17)
 
 
