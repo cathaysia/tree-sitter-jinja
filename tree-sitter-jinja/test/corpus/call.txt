@@ -30,12 +30,9 @@ call
               (function_call
                 (identifier))))))))
   (content)
-  (control
-    (statement
-      (call_statement
-        (function_call
-          (identifier)))))
-  (content)
-  (control
-    (statement))
+  (call_block
+    (call_statement
+      (function_call
+        (identifier)))
+    (content))
   (content))

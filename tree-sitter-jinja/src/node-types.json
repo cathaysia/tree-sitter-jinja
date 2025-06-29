@@ -56,6 +56,85 @@
     "fields": {}
   },
   {
+    "type": "autoescape_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "autoescape_block",
+          "named": true
+        },
+        {
+          "type": "autoescape_statement",
+          "named": true
+        },
+        {
+          "type": "block_block",
+          "named": true
+        },
+        {
+          "type": "call_block",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "control",
+          "named": true
+        },
+        {
+          "type": "filter_block",
+          "named": true
+        },
+        {
+          "type": "for_block",
+          "named": true
+        },
+        {
+          "type": "if_block",
+          "named": true
+        },
+        {
+          "type": "inline",
+          "named": true
+        },
+        {
+          "type": "macro_block",
+          "named": true
+        },
+        {
+          "type": "raw_block",
+          "named": true
+        },
+        {
+          "type": "render_expression",
+          "named": true
+        },
+        {
+          "type": "ternary_expression",
+          "named": true
+        },
+        {
+          "type": "trans_block",
+          "named": true
+        },
+        {
+          "type": "with_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "autoescape_statement",
     "named": true,
     "fields": {},
@@ -118,6 +197,85 @@
     "fields": {}
   },
   {
+    "type": "block_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "autoescape_block",
+          "named": true
+        },
+        {
+          "type": "block_block",
+          "named": true
+        },
+        {
+          "type": "block_statement",
+          "named": true
+        },
+        {
+          "type": "call_block",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "control",
+          "named": true
+        },
+        {
+          "type": "filter_block",
+          "named": true
+        },
+        {
+          "type": "for_block",
+          "named": true
+        },
+        {
+          "type": "if_block",
+          "named": true
+        },
+        {
+          "type": "inline",
+          "named": true
+        },
+        {
+          "type": "macro_block",
+          "named": true
+        },
+        {
+          "type": "raw_block",
+          "named": true
+        },
+        {
+          "type": "render_expression",
+          "named": true
+        },
+        {
+          "type": "ternary_expression",
+          "named": true
+        },
+        {
+          "type": "trans_block",
+          "named": true
+        },
+        {
+          "type": "with_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "block_statement",
     "named": true,
     "fields": {},
@@ -138,6 +296,11 @@
     "fields": {}
   },
   {
+    "type": "break_block",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "builtin_test",
     "named": true,
     "fields": {},
@@ -151,6 +314,85 @@
         },
         {
           "type": "list_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "call_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "autoescape_block",
+          "named": true
+        },
+        {
+          "type": "block_block",
+          "named": true
+        },
+        {
+          "type": "call_block",
+          "named": true
+        },
+        {
+          "type": "call_statement",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "control",
+          "named": true
+        },
+        {
+          "type": "filter_block",
+          "named": true
+        },
+        {
+          "type": "for_block",
+          "named": true
+        },
+        {
+          "type": "if_block",
+          "named": true
+        },
+        {
+          "type": "inline",
+          "named": true
+        },
+        {
+          "type": "macro_block",
+          "named": true
+        },
+        {
+          "type": "raw_block",
+          "named": true
+        },
+        {
+          "type": "render_expression",
+          "named": true
+        },
+        {
+          "type": "ternary_expression",
+          "named": true
+        },
+        {
+          "type": "trans_block",
+          "named": true
+        },
+        {
+          "type": "with_block",
           "named": true
         }
       ]
@@ -182,6 +424,11 @@
   },
   {
     "type": "content",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "continue_block",
     "named": true,
     "fields": {}
   },
@@ -273,6 +520,85 @@
     }
   },
   {
+    "type": "filter_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "autoescape_block",
+          "named": true
+        },
+        {
+          "type": "block_block",
+          "named": true
+        },
+        {
+          "type": "call_block",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "control",
+          "named": true
+        },
+        {
+          "type": "filter_block",
+          "named": true
+        },
+        {
+          "type": "filter_statement",
+          "named": true
+        },
+        {
+          "type": "for_block",
+          "named": true
+        },
+        {
+          "type": "if_block",
+          "named": true
+        },
+        {
+          "type": "inline",
+          "named": true
+        },
+        {
+          "type": "macro_block",
+          "named": true
+        },
+        {
+          "type": "raw_block",
+          "named": true
+        },
+        {
+          "type": "render_expression",
+          "named": true
+        },
+        {
+          "type": "ternary_expression",
+          "named": true
+        },
+        {
+          "type": "trans_block",
+          "named": true
+        },
+        {
+          "type": "with_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "filter_statement",
     "named": true,
     "fields": {},
@@ -297,6 +623,93 @@
       "types": [
         {
           "type": "dec_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "for_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "autoescape_block",
+          "named": true
+        },
+        {
+          "type": "block_block",
+          "named": true
+        },
+        {
+          "type": "break_block",
+          "named": true
+        },
+        {
+          "type": "call_block",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "continue_block",
+          "named": true
+        },
+        {
+          "type": "control",
+          "named": true
+        },
+        {
+          "type": "filter_block",
+          "named": true
+        },
+        {
+          "type": "for_block",
+          "named": true
+        },
+        {
+          "type": "for_statement",
+          "named": true
+        },
+        {
+          "type": "if_block",
+          "named": true
+        },
+        {
+          "type": "inline",
+          "named": true
+        },
+        {
+          "type": "macro_block",
+          "named": true
+        },
+        {
+          "type": "raw_block",
+          "named": true
+        },
+        {
+          "type": "render_expression",
+          "named": true
+        },
+        {
+          "type": "ternary_expression",
+          "named": true
+        },
+        {
+          "type": "trans_block",
+          "named": true
+        },
+        {
+          "type": "with_block",
           "named": true
         }
       ]
@@ -335,6 +748,93 @@
         },
         {
           "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "autoescape_block",
+          "named": true
+        },
+        {
+          "type": "block_block",
+          "named": true
+        },
+        {
+          "type": "break_block",
+          "named": true
+        },
+        {
+          "type": "call_block",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "continue_block",
+          "named": true
+        },
+        {
+          "type": "control",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "filter_block",
+          "named": true
+        },
+        {
+          "type": "for_block",
+          "named": true
+        },
+        {
+          "type": "if_block",
+          "named": true
+        },
+        {
+          "type": "if_expression",
+          "named": true
+        },
+        {
+          "type": "inline",
+          "named": true
+        },
+        {
+          "type": "macro_block",
+          "named": true
+        },
+        {
+          "type": "raw_block",
+          "named": true
+        },
+        {
+          "type": "render_expression",
+          "named": true
+        },
+        {
+          "type": "trans_block",
+          "named": true
+        },
+        {
+          "type": "with_block",
           "named": true
         }
       ]
@@ -583,6 +1083,85 @@
     }
   },
   {
+    "type": "macro_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "autoescape_block",
+          "named": true
+        },
+        {
+          "type": "block_block",
+          "named": true
+        },
+        {
+          "type": "call_block",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "control",
+          "named": true
+        },
+        {
+          "type": "filter_block",
+          "named": true
+        },
+        {
+          "type": "for_block",
+          "named": true
+        },
+        {
+          "type": "if_block",
+          "named": true
+        },
+        {
+          "type": "inline",
+          "named": true
+        },
+        {
+          "type": "macro_block",
+          "named": true
+        },
+        {
+          "type": "macro_statement",
+          "named": true
+        },
+        {
+          "type": "raw_block",
+          "named": true
+        },
+        {
+          "type": "render_expression",
+          "named": true
+        },
+        {
+          "type": "ternary_expression",
+          "named": true
+        },
+        {
+          "type": "trans_block",
+          "named": true
+        },
+        {
+          "type": "with_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "macro_statement",
     "named": true,
     "fields": {},
@@ -758,6 +1337,18 @@
       "required": false,
       "types": [
         {
+          "type": "autoescape_block",
+          "named": true
+        },
+        {
+          "type": "block_block",
+          "named": true
+        },
+        {
+          "type": "call_block",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         },
@@ -770,7 +1361,23 @@
           "named": true
         },
         {
+          "type": "filter_block",
+          "named": true
+        },
+        {
+          "type": "for_block",
+          "named": true
+        },
+        {
+          "type": "if_block",
+          "named": true
+        },
+        {
           "type": "inline",
+          "named": true
+        },
+        {
+          "type": "macro_block",
           "named": true
         },
         {
@@ -779,6 +1386,14 @@
         },
         {
           "type": "render_expression",
+          "named": true
+        },
+        {
+          "type": "trans_block",
+          "named": true
+        },
+        {
+          "type": "with_block",
           "named": true
         }
       ]
@@ -793,39 +1408,11 @@
       "required": false,
       "types": [
         {
-          "type": "autoescape_statement",
-          "named": true
-        },
-        {
-          "type": "block_statement",
-          "named": true
-        },
-        {
-          "type": "call_statement",
-          "named": true
-        },
-        {
           "type": "do_statement",
           "named": true
         },
         {
-          "type": "expression",
-          "named": true
-        },
-        {
           "type": "extends_statement",
-          "named": true
-        },
-        {
-          "type": "filter_statement",
-          "named": true
-        },
-        {
-          "type": "for_statement",
-          "named": true
-        },
-        {
-          "type": "if_expression",
           "named": true
         },
         {
@@ -837,23 +1424,11 @@
           "named": true
         },
         {
-          "type": "macro_statement",
-          "named": true
-        },
-        {
           "type": "pluralize_statement",
           "named": true
         },
         {
           "type": "set_statement",
-          "named": true
-        },
-        {
-          "type": "trans_statement",
-          "named": true
-        },
-        {
-          "type": "with_statement",
           "named": true
         }
       ]
@@ -874,6 +1449,85 @@
       "types": [
         {
           "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "trans_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "autoescape_block",
+          "named": true
+        },
+        {
+          "type": "block_block",
+          "named": true
+        },
+        {
+          "type": "call_block",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "control",
+          "named": true
+        },
+        {
+          "type": "filter_block",
+          "named": true
+        },
+        {
+          "type": "for_block",
+          "named": true
+        },
+        {
+          "type": "if_block",
+          "named": true
+        },
+        {
+          "type": "inline",
+          "named": true
+        },
+        {
+          "type": "macro_block",
+          "named": true
+        },
+        {
+          "type": "raw_block",
+          "named": true
+        },
+        {
+          "type": "render_expression",
+          "named": true
+        },
+        {
+          "type": "ternary_expression",
+          "named": true
+        },
+        {
+          "type": "trans_block",
+          "named": true
+        },
+        {
+          "type": "trans_statement",
+          "named": true
+        },
+        {
+          "type": "with_block",
           "named": true
         }
       ]
@@ -940,6 +1594,85 @@
     "type": "unary_operator",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "with_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "autoescape_block",
+          "named": true
+        },
+        {
+          "type": "block_block",
+          "named": true
+        },
+        {
+          "type": "call_block",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "content",
+          "named": true
+        },
+        {
+          "type": "control",
+          "named": true
+        },
+        {
+          "type": "filter_block",
+          "named": true
+        },
+        {
+          "type": "for_block",
+          "named": true
+        },
+        {
+          "type": "if_block",
+          "named": true
+        },
+        {
+          "type": "inline",
+          "named": true
+        },
+        {
+          "type": "macro_block",
+          "named": true
+        },
+        {
+          "type": "raw_block",
+          "named": true
+        },
+        {
+          "type": "render_expression",
+          "named": true
+        },
+        {
+          "type": "ternary_expression",
+          "named": true
+        },
+        {
+          "type": "trans_block",
+          "named": true
+        },
+        {
+          "type": "with_block",
+          "named": true
+        },
+        {
+          "type": "with_statement",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "with_statement",

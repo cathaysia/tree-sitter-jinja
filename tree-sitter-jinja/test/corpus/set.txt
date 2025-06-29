@@ -6,6 +6,8 @@ set
 {% set ns = namespace(foo="Bar") %}
 {%- for grouper, list in items()|groupby('foo') -%}
 {% for k, vs in data|groupby('k', case_sensitive=cs) %}
+{% endfor %}
+{% endfor %}
 
 ---
 
@@ -51,35 +53,33 @@ set
                             (literal
                               (string_literal)))))))))))))))
   (content)
-  (control
-    (statement
-      (for_statement
-        (in_expression
-          (identifier)
-          (identifier)
-          (binary_operator)
-          (expression
+  (for_block
+    (for_statement
+      (in_expression
+        (identifier)
+        (identifier)
+        (binary_operator)
+        (expression
+          (binary_expression
             (binary_expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (function_call
-                      (identifier)))))
-              (binary_operator)
               (unary_expression
                 (primary_expression
                   (function_call
-                    (identifier)
-                    (arg
-                      (expression
-                        (binary_expression
-                          (unary_expression
-                            (primary_expression
-                              (literal
-                                (string_literal))))))))))))))))
-  (content)
-  (control
-    (statement
+                    (identifier)))))
+            (binary_operator)
+            (unary_expression
+              (primary_expression
+                (function_call
+                  (identifier)
+                  (arg
+                    (expression
+                      (binary_expression
+                        (unary_expression
+                          (primary_expression
+                            (literal
+                              (string_literal))))))))))))))
+    (content)
+    (for_block
       (for_statement
         (in_expression
           (identifier)
@@ -110,5 +110,7 @@ set
                         (binary_expression
                           (unary_expression
                             (primary_expression
-                              (identifier)))))))))))))))
+                              (identifier)))))))))))))
+      (content))
+    (content))
   (content))

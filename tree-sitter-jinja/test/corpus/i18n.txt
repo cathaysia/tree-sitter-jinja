@@ -9,47 +9,41 @@ trans
 
 (source
   (content)
-  (control
-    (statement
-      (trans_statement)))
+  (trans_block
+    (trans_statement)
+    (content)
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier))))))
+    (content))
   (content)
-  (render_expression
-    (expression
-      (binary_expression
-        (unary_expression
-          (primary_expression
-            (identifier))))))
-  (content)
-  (control
-    (statement))
-  (content)
-  (control
-    (statement
-      (trans_statement
-        (assignment_expression
-          (identifier)
-          (binary_operator)
+  (trans_block
+    (trans_statement
+      (assignment_expression
+        (identifier)
+        (binary_operator)
+        (expression
           (expression
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier)))))
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier))))))))))
-  (content)
-  (render_expression
-    (expression
-      (binary_expression
-        (unary_expression
-          (primary_expression
-            (identifier))))))
-  (content)
-  (control
-    (statement))
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))))))
+    (content)
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier))))))
+    (content))
   (content))
 
 ==============
@@ -64,54 +58,51 @@ This is {{ book_title }} by {{ author }}
 
 (source
   (content)
-  (control
-    (statement
-      (trans_statement
-        (assignment_expression
-          (identifier)
-          (binary_operator)
+  (trans_block
+    (trans_statement
+      (assignment_expression
+        (identifier)
+        (binary_operator)
+        (expression
           (expression
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier)))))
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier)))))))
-        (assignment_expression
-          (identifier)
-          (binary_operator)
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
           (expression
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier)))))
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier))))))))))
-  (content)
-  (render_expression
-    (expression
-      (binary_expression
-        (unary_expression
-          (primary_expression
-            (identifier))))))
-  (content)
-  (render_expression
-    (expression
-      (binary_expression
-        (unary_expression
-          (primary_expression
-            (identifier))))))
-  (content)
-  (control
-    (statement))
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))))
+      (assignment_expression
+        (identifier)
+        (binary_operator)
+        (expression
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))))))
+    (content)
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier))))))
+    (content)
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier))))))
+    (content))
   (content))
 
 ==================
@@ -128,57 +119,54 @@ There are {{ count }} {{ name }} objects.
 
 (source
   (content)
-  (control
-    (statement
-      (trans_statement
-        (assignment_expression
-          (identifier)
-          (binary_operator)
-          (expression
+  (trans_block
+    (trans_statement
+      (assignment_expression
+        (identifier)
+        (binary_operator)
+        (expression
+          (binary_expression
             (binary_expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier))))
-              (binary_operator)
               (unary_expression
                 (primary_expression
-                  (identifier)))))))))
-  (content)
-  (render_expression
-    (expression
-      (binary_expression
-        (unary_expression
-          (primary_expression
-            (identifier))))))
-  (content)
-  (render_expression
-    (expression
-      (binary_expression
-        (unary_expression
-          (primary_expression
-            (identifier))))))
-  (content)
-  (control
-    (statement
-      (pluralize_statement)))
-  (content)
-  (render_expression
-    (expression
-      (binary_expression
-        (unary_expression
-          (primary_expression
-            (identifier))))))
-  (content)
-  (render_expression
-    (expression
-      (binary_expression
-        (unary_expression
-          (primary_expression
-            (identifier))))))
-  (content)
-  (control
-    (statement))
+                  (identifier))))
+            (binary_operator)
+            (unary_expression
+              (primary_expression
+                (identifier)))))))
+    (content)
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier))))))
+    (content)
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier))))))
+    (content)
+    (control
+      (statement
+        (pluralize_statement)))
+    (content)
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier))))))
+    (content)
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier))))))
+    (content))
   (content))
 
 =================

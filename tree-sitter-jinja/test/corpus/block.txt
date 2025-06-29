@@ -8,13 +8,10 @@ block
 
 (source
   (content)
-  (control
-    (statement
-      (block_statement
-        (identifier))))
-  (content)
-  (control
-    (statement))
+  (block_block
+    (block_statement
+      (identifier))
+    (content))
   (render_expression
     (expression
       (expression
