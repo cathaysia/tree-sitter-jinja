@@ -9,7 +9,7 @@
   },
   "include": [
     "common/*.js",
-    "grammar.js",
+    "**/grammar.js",
     "./node_modules/tree-sitter-cli/dsl.d.ts"
   ]
 }
