@@ -18,59 +18,10 @@ with
 
 (source
   (content)
-  (control
-    (statement
-      (with_statement
-        (assignment_expression
-          (identifier)
-          (binary_operator)
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (literal
-                    (number_literal
-                      (dec_literal)))))))))))
-  (content)
-  (control
-    (statement))
-  (content)
-  (control
-    (statement
-      (with_statement
-        (assignment_expression
-          (identifier)
-          (binary_operator)
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (literal
-                    (number_literal
-                      (dec_literal)))))))))))
-  (content)
-  (render_expression
-    (expression
-      (binary_expression
-        (unary_expression
-          (primary_expression
-            (identifier))))))
-  (content)
-  (control
-    (statement))
-  (content)
-  (control
-    (statement
-      (with_statement)))
-  (content)
-  (control
-    (statement
-      (set_statement
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (identifier)))))
+  (with_block
+    (with_statement
+      (assignment_expression
+        (identifier)
         (binary_operator)
         (expression
           (binary_expression
@@ -78,15 +29,55 @@ with
               (primary_expression
                 (literal
                   (number_literal
-                    (dec_literal))))))))))
+                    (dec_literal)))))))))
+    (content))
   (content)
-  (render_expression
-    (expression
-      (binary_expression
-        (unary_expression
-          (primary_expression
-            (identifier))))))
+  (with_block
+    (with_statement
+      (assignment_expression
+        (identifier)
+        (binary_operator)
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
+                  (number_literal
+                    (dec_literal)))))))))
+    (content)
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier))))))
+    (content))
   (content)
-  (control
-    (statement))
+  (with_block
+    (with_statement)
+    (content)
+    (control
+      (statement
+        (set_statement
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
+          (binary_operator)
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (number_literal
+                      (dec_literal))))))))))
+    (content)
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier))))))
+    (content))
   (content))

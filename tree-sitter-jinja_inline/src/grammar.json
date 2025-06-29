@@ -1117,149 +1117,6 @@
         }
       ]
     },
-    "statement": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "endfor"
-            },
-            {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "elif"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "expression"
-                }
-              ]
-            },
-            {
-              "type": "STRING",
-              "value": "else"
-            },
-            {
-              "type": "STRING",
-              "value": "endif"
-            },
-            {
-              "type": "STRING",
-              "value": "endblock"
-            },
-            {
-              "type": "STRING",
-              "value": "endwith"
-            },
-            {
-              "type": "STRING",
-              "value": "endfilter"
-            },
-            {
-              "type": "STRING",
-              "value": "endmacro"
-            },
-            {
-              "type": "STRING",
-              "value": "endcall"
-            },
-            {
-              "type": "STRING",
-              "value": "endset"
-            },
-            {
-              "type": "STRING",
-              "value": "endtrans"
-            },
-            {
-              "type": "STRING",
-              "value": "continue"
-            },
-            {
-              "type": "STRING",
-              "value": "break"
-            },
-            {
-              "type": "STRING",
-              "value": "debug"
-            },
-            {
-              "type": "STRING",
-              "value": "endautoescape"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "do_statement"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "include_statement"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "import_statement"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "set_statement"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "for_statement"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "if_expression"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "with_statement"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "call_statement"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "set_statement"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "extends_statement"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "macro_statement"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "filter_statement"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "block_statement"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "pluralize_statement"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "trans_statement"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "autoescape_statement"
-            }
-          ]
-        }
-      ]
-    },
     "do_statement": {
       "type": "SEQ",
       "members": [
@@ -1820,41 +1677,45 @@
       ]
     },
     "for_statement": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "for"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "in_expression"
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "ternary_expression"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "recursive"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        }
-      ]
+      "type": "PREC_LEFT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "for"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "in_expression"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "ternary_expression"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "recursive"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
+        ]
+      }
     },
     "if_expression": {
       "type": "SEQ",
@@ -1947,6 +1808,149 @@
             {
               "type": "STRING",
               "value": "#}"
+            }
+          ]
+        }
+      ]
+    },
+    "statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "endfor"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "elif"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "expression"
+                }
+              ]
+            },
+            {
+              "type": "STRING",
+              "value": "else"
+            },
+            {
+              "type": "STRING",
+              "value": "endif"
+            },
+            {
+              "type": "STRING",
+              "value": "endblock"
+            },
+            {
+              "type": "STRING",
+              "value": "endwith"
+            },
+            {
+              "type": "STRING",
+              "value": "endfilter"
+            },
+            {
+              "type": "STRING",
+              "value": "endmacro"
+            },
+            {
+              "type": "STRING",
+              "value": "endcall"
+            },
+            {
+              "type": "STRING",
+              "value": "endset"
+            },
+            {
+              "type": "STRING",
+              "value": "endtrans"
+            },
+            {
+              "type": "STRING",
+              "value": "continue"
+            },
+            {
+              "type": "STRING",
+              "value": "break"
+            },
+            {
+              "type": "STRING",
+              "value": "debug"
+            },
+            {
+              "type": "STRING",
+              "value": "endautoescape"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "do_statement"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "include_statement"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "import_statement"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "set_statement"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "for_statement"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "if_expression"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "with_statement"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "call_statement"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "set_statement"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "extends_statement"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "macro_statement"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "filter_statement"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "block_statement"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "pluralize_statement"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "trans_statement"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "autoescape_statement"
             }
           ]
         }

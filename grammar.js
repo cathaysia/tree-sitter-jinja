@@ -8,42 +8,7 @@ module.exports = {
   rules: {
     ...literal.rules,
     ...expression.rules,
-    statement: $ =>
-      seq(
-        choice(
-          'endfor',
-          seq('elif', $.expression),
-          'else',
-          'endif',
-          'endblock',
-          'endwith',
-          'endfilter',
-          'endmacro',
-          'endcall',
-          'endset',
-          'endtrans',
-          'continue',
-          'break',
-          'debug',
-          'endautoescape',
-          $.do_statement,
-          $.include_statement,
-          $.import_statement,
-          $.set_statement,
-          $.for_statement,
-          $.if_expression,
-          $.with_statement,
-          $.call_statement,
-          $.set_statement,
-          $.extends_statement,
-          $.macro_statement,
-          $.filter_statement,
-          $.block_statement,
-          $.pluralize_statement,
-          $.trans_statement,
-          $.autoescape_statement,
-        ),
-      ),
+
     do_statement: $ => seq('do', $.expression),
     autoescape_statement: $ => seq('autoescape', optional($.boolean_literal)),
     trans_statement: $ =>
@@ -94,11 +59,13 @@ module.exports = {
         optional($.ternary_expression),
       ),
     for_statement: $ =>
-      seq(
-        'for',
-        $.in_expression,
-        optional($.ternary_expression),
-        optional('recursive'),
+      prec.left(
+        seq(
+          'for',
+          $.in_expression,
+          optional($.ternary_expression),
+          optional('recursive'),
+        ),
       ),
     if_expression: $ => seq('if', $.expression),
 

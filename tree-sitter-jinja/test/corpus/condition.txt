@@ -3,6 +3,11 @@ extends
 ======================
 
 {% extends layout_template if layout_template is defined else 'default.html' %}
+{%+ if something +%}
+yyy
+{%+ else +%}
+xxx
+{%+ endif +%}
 
 ----
 
@@ -27,4 +32,14 @@ extends
                 (primary_expression
                   (literal
                     (string_literal))))))))))
+  (content)
+  (if_block
+    (if_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier))))))
+    (content)
+    (content))
   (content))

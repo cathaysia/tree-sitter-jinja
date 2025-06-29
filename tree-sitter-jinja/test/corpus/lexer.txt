@@ -30,27 +30,24 @@ loop
 
 (source
   (content)
-  (control
-    (statement
-      (for_statement
-        (in_expression
-          (identifier)
-          (binary_operator)
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier)))))))))
-  (content)
-  (render_expression
-    (expression
-      (binary_expression
-        (unary_expression
-          (primary_expression
-            (identifier))))))
-  (content)
-  (control
-    (statement))
+  (for_block
+    (for_statement
+      (in_expression
+        (identifier)
+        (binary_operator)
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier)))))))
+    (content)
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier))))))
+    (content))
   (content))
 
 ============
@@ -582,26 +579,23 @@ block filter
 
 (source
   (content)
-  (control
-    (statement
-      (for_statement
-        (in_expression
-          (identifier)
-          (binary_operator)
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier)))))))))
-  (content)
-  (render_expression
-    (expression
-      (binary_expression
-        (unary_expression
-          (primary_expression
-            (identifier))))))
-  (control
-    (statement))
+  (for_block
+    (for_statement
+      (in_expression
+        (identifier)
+        (binary_operator)
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier)))))))
+    (content)
+    (render_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier)))))))
   (content))
 
 =======================
@@ -620,19 +614,13 @@ autoescape
 
 (source
   (content)
-  (control
-    (statement
-      (autoescape_statement
-        (boolean_literal))))
+  (autoescape_block
+    (autoescape_statement
+      (boolean_literal))
+    (content))
   (content)
-  (control
-    (statement))
-  (content)
-  (control
-    (statement
-      (autoescape_statement
-        (boolean_literal))))
-  (content)
-  (control
-    (statement))
+  (autoescape_block
+    (autoescape_statement
+      (boolean_literal))
+    (content))
   (content))

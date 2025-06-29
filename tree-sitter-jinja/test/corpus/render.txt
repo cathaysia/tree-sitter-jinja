@@ -132,17 +132,14 @@ render
                         (literal
                           (string_literal)))))))))))))
   (content)
-  (control
-    (statement
-      (if_expression
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (identifier))))))))
-  (content)
-  (control
-    (statement))
+  (if_block
+    (if_expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier))))))
+    (content))
   (content)
   (render_expression
     (expression

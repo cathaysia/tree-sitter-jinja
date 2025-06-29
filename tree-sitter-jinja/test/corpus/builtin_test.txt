@@ -9,6 +9,13 @@ simple
 {% if foo.attribute is sameas false %}
 {% if 'loud' is test %}
 {% if value is loud %}
+{% endif %}
+{% endif %}
+{% endif %}
+{% endif %}
+{% endif %}
+{% endif %}
+{% endif %}
 
 
 
@@ -18,33 +25,31 @@ simple
 
 (source
   (content)
-  (control
-    (statement
-      (if_expression
+  (if_block
+    (if_expression
+      (expression
         (expression
-          (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier)))))
+        (expression
+          (binary_expression
             (binary_expression
               (unary_expression
                 (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier))))
-              (binary_operator)
-              (builtin_test
-                (expression
-                  (binary_expression
-                    (unary_expression
-                      (primary_expression
-                        (literal
-                          (number_literal
-                            (dec_literal))))))))))))))
-  (content)
-  (control
-    (statement
+                  (identifier))))
+            (binary_operator)
+            (builtin_test
+              (expression
+                (binary_expression
+                  (unary_expression
+                    (primary_expression
+                      (literal
+                        (number_literal
+                          (dec_literal))))))))))))
+    (content)
+    (if_block
       (if_expression
         (expression
           (expression
@@ -72,42 +77,10 @@ simple
                                   (primary_expression
                                     (literal
                                       (number_literal
-                                        (dec_literal))))))))))))))))))))
-  (content)
-  (control
-    (statement
-      (if_expression
-        (expression
-          (binary_expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier))))
-            (binary_operator)
-            (builtin_test))))))
-  (content)
-  (control
-    (statement
-      (if_expression
-        (expression
-          (binary_expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (literal
-                    (string_literal)))))
-            (binary_operator)
-            (builtin_test))))))
-  (content)
-  (control
-    (statement
-      (if_expression
-        (expression
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier)))))
+                                        (dec_literal))))))))))))))))))
+      (content)
+      (if_block
+        (if_expression
           (expression
             (binary_expression
               (binary_expression
@@ -115,38 +88,72 @@ simple
                   (primary_expression
                     (identifier))))
               (binary_operator)
-              (builtin_test
+              (builtin_test))))
+        (content)
+        (if_block
+          (if_expression
+            (expression
+              (binary_expression
+                (binary_expression
+                  (unary_expression
+                    (primary_expression
+                      (literal
+                        (string_literal)))))
+                (binary_operator)
+                (builtin_test))))
+          (content)
+          (if_block
+            (if_expression
+              (expression
                 (expression
                   (binary_expression
                     (unary_expression
                       (primary_expression
-                        (literal
-                          (boolean_literal)))))))))))))
-  (content)
-  (control
-    (statement
-      (if_expression
-        (expression
-          (binary_expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (literal
-                    (string_literal)))))
-            (binary_operator)
-            (builtin_test))))))
-  (content)
-  (control
-    (statement
-      (if_expression
-        (expression
-          (binary_expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier))))
-            (binary_operator)
-            (unary_expression
-              (primary_expression
-                (identifier))))))))
+                        (identifier)))))
+                (expression
+                  (binary_expression
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
+                          (identifier))))
+                    (binary_operator)
+                    (builtin_test
+                      (expression
+                        (binary_expression
+                          (unary_expression
+                            (primary_expression
+                              (literal
+                                (boolean_literal)))))))))))
+            (content)
+            (if_block
+              (if_expression
+                (expression
+                  (binary_expression
+                    (binary_expression
+                      (unary_expression
+                        (primary_expression
+                          (literal
+                            (string_literal)))))
+                    (binary_operator)
+                    (builtin_test))))
+              (content)
+              (if_block
+                (if_expression
+                  (expression
+                    (binary_expression
+                      (binary_expression
+                        (unary_expression
+                          (primary_expression
+                            (identifier))))
+                      (binary_operator)
+                      (unary_expression
+                        (primary_expression
+                          (identifier))))))
+                (content))
+              (content))
+            (content))
+          (content))
+        (content))
+      (content))
+    (content))
   (content))
