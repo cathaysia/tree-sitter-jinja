@@ -3,7 +3,7 @@ name: Publish jinja_inline to pypi
 on:
   workflow_dispatch:
   push:
-    tags: ["tree-sitter-jinja-inline*"]
+    tags: ["*"]
 
 permissions:
   contents: write
@@ -12,6 +12,12 @@ permissions:
 
 jobs:
   pypi-jinja:
+    uses: cathaysia/tree-sitter-workflows/.github/workflows/package-pypi.yml@main
+    secrets:
+      PYPI_API_TOKEN: ${{secrets.PYPI_API_TOKEN}}
+    with:
+      working-directory: tree-sitter-jinja
+  pypi-jinja_inline:
     uses: cathaysia/tree-sitter-workflows/.github/workflows/package-pypi.yml@main
     secrets:
       PYPI_API_TOKEN: ${{secrets.PYPI_API_TOKEN}}
