@@ -1,4 +1,5 @@
 # See https://pre-commit.com/hooks.html for more hooks
+exclude: (alloc.h)|(array.h)|(parser.h)|(node-types.json)|(parser.c)
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
@@ -10,10 +11,9 @@ repos:
   - repo: https://github.com/biomejs/pre-commit
     rev: "v0.4.0"
     hooks:
-    - id: biome-check
-      additional_dependencies: ["@biomejs/biome@1.9.4"]
-      exclude: 'CHANGELOG.md'
-
+      - id: biome-check
+        additional_dependencies: ["@biomejs/biome@1.9.4"]
+        exclude: 'CHANGELOG.md'
   - repo: local
     hooks:
       - id: clang-format
