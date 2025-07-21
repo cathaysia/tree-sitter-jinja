@@ -7,12 +7,7 @@
   "author": "Loongtao Zhang <loongtao.zhang@outlook.com>",
   "main": "bindings/node",
   "types": "bindings/node",
-  "keywords": [
-    "incremental",
-    "parsing",
-    "tree-sitter",
-    "c++"
-  ],
+  "keywords": ["incremental", "parsing", "tree-sitter", "c++"],
   "scripts": {
     "install": "node-gyp-build",
     "prebuildify": "prebuildify --napi --strip",
@@ -32,7 +27,7 @@
   ],
   "devDependencies": {
     "prebuildify": "^6.0.0",
-    "tree-sitter-cli": "^0.22.6"
+    "tree-sitter-cli": "^0.25.8"
   },
   "dependencies": {
     "node-addon-api": "^8.0.0",
