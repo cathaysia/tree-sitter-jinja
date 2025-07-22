@@ -433,7 +433,7 @@
                 "members": [
                   {
                     "type": "PATTERN",
-                    "value": "[^\\\"]"
+                    "value": "[^\"]"
                   },
                   {
                     "type": "STRING",
@@ -1889,11 +1889,11 @@
           "members": [
             {
               "type": "PATTERN",
-              "value": "[^\\{]"
+              "value": "[^{]"
             },
             {
               "type": "PATTERN",
-              "value": "\\{[^\\#\\%]"
+              "value": "\\{[^#%]"
             },
             {
               "type": "STRING",

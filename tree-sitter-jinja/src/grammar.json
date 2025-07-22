@@ -1,4 +1,5 @@
 {
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
   "name": "jinja",
   "rules": {
     "source": {
@@ -435,7 +436,7 @@
                 "members": [
                   {
                     "type": "PATTERN",
-                    "value": "[^\\\"]"
+                    "value": "[^\"]"
                   },
                   {
                     "type": "STRING",
@@ -1891,11 +1892,11 @@
           "members": [
             {
               "type": "PATTERN",
-              "value": "[^\\{]"
+              "value": "[^{]"
             },
             {
               "type": "PATTERN",
-              "value": "\\{[^\\#\\%]"
+              "value": "\\{[^#%]"
             },
             {
               "type": "STRING",
@@ -2270,5 +2271,6 @@
     }
   ],
   "inline": [],
-  "supertypes": []
+  "supertypes": [],
+  "reserved": {}
 }
