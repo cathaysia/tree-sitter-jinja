@@ -41,7 +41,7 @@ exports.rules = {
 
   string_literal: _ =>
     choice(
-      seq('"', repeat(choice(/[^\"]/, '\\"')), '"'),
+      seq('"', repeat(choice(/[^"]/, '\\"')), '"'),
       seq("'", repeat(choice(/[^']/, "\\'")), "'"),
     ),
 };
