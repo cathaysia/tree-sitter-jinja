@@ -22,6 +22,11 @@ jobs:
           node-version: lts/*
           cache: pnpm
 
+      - name: check regenerate parser
+        run: |
+          pnpm build
+          git diff --exit-code .
+
       - name: run test
         run: |
           pnpm test
