@@ -14,3 +14,20 @@ block
         (identifier))))
   (line_statement
     (statement)))
+
+===============
+required block
+===============
+
+# block foo required
+# endblock
+
+---
+
+(source
+  (line_statement
+    (statement
+      (block_statement
+        (identifier))))
+  (line_statement
+    (statement)))

@@ -1374,6 +1374,10 @@
     "named": false
   },
   {
+    "type": "required",
+    "named": false
+  },
+  {
     "type": "sameas",
     "named": false
   },

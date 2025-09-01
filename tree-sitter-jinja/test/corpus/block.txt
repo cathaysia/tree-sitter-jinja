@@ -29,3 +29,35 @@ block
               (function_call
                 (identifier))))))))
   (content))
+
+===============
+required block
+===============
+
+{% block foo required %}<Test>{% endblock %}{{ self.foo() }}
+
+---
+
+(source
+  (content)
+  (control
+    (statement
+      (block_statement
+        (identifier))))
+  (content)
+  (control
+    (statement))
+  (render_expression
+    (expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier)))))
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (function_call
+                (identifier))))))))
+  (content))

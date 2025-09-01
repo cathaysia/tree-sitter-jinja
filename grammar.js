@@ -51,7 +51,7 @@ module.exports = {
     pluralize_statement: $ => seq('pluralize', optional($.identifier)),
     ternary_expression: $ =>
       seq('if', $.expression, optional(seq('else', $.expression))),
-    block_statement: $ => seq('block', $.identifier),
+    block_statement: $ => seq('block', $.identifier, optional('required')),
     filter_statement: $ => seq('filter', $.expression),
     macro_statement: $ => seq('macro', $.function_call),
     extends_statement: $ =>

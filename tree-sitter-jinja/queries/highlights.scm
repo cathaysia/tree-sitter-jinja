@@ -59,6 +59,7 @@
   "trans"
   "pluralize"
   "autoescape"
+  "required"
 ] @keyword
 
 [
