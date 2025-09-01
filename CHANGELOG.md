@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.0](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.10.0...v0.11.0) (2025-09-01)
+
+
+### Features
+
+* **block:** support required blocks ([5c0fd73](https://github.com/cathaysia/tree-sitter-jinja/commit/5c0fd73d4ac539afec90517e951c7a4c7cac9e34)), closes [#41](https://github.com/cathaysia/tree-sitter-jinja/issues/41)
+
 ## [0.10.0](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.9.0...v0.10.0) (2025-07-23)
 
 
