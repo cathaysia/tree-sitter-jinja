@@ -58,6 +58,7 @@
   "endset"
   "endtrans"
   "endautoescape"
+  "required"
 ] @keyword
 
 (do_statement
