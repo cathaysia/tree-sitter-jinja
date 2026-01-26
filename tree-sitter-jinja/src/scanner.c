@@ -3,7 +3,7 @@
 #include "tree_sitter/parser.h"
 
 enum TokenType {
-    TOKEN_TYPE_RAW_STATR,
+    TOKEN_TYPE_RAW_START,
     TOKEN_TYPE_RAW_CHAR,
     TOKEN_TYPE_RAW_END,
     TOKEN_INLINE_WORDS,
@@ -117,7 +117,7 @@ bool tree_sitter_jinja_external_scanner_scan(void *payload, TSLexer *lexer, cons
         return true;
     }
 
-    if(valid_symbols[TOKEN_TYPE_RAW_STATR]) {
+    if(valid_symbols[TOKEN_TYPE_RAW_START]) {
         switch(lexer->lookahead) {
             case '{': {
                 if(parse_sequence(lexer, "{%")) {
@@ -127,7 +127,7 @@ bool tree_sitter_jinja_external_scanner_scan(void *payload, TSLexer *lexer, cons
                         skip_white_space(lexer, true);
                         skip_char(lexer, '-');
                         if(parse_sequence(lexer, "%}")) {
-                            lexer->result_symbol = TOKEN_TYPE_RAW_STATR;
+                            lexer->result_symbol = TOKEN_TYPE_RAW_START;
                             s->is_block_raw = true;
                             return true;
                         }
@@ -143,7 +143,7 @@ bool tree_sitter_jinja_external_scanner_scan(void *payload, TSLexer *lexer, cons
                         skip_white_space(lexer, false);
                         if(is_newline(lexer->lookahead)) {
                             lexer->advance(lexer, false);
-                            lexer->result_symbol = TOKEN_TYPE_RAW_STATR;
+                            lexer->result_symbol = TOKEN_TYPE_RAW_START;
                             s->is_block_raw = false;
                             return true;
                         }
