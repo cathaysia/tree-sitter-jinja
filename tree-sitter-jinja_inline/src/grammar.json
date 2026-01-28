@@ -682,7 +682,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "list_literal"
+                "name": "expression"
               }
             ]
           },
