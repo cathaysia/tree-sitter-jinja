@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.11.1](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.11.0...v0.11.1) (2026-01-28)
+
+
+### Bug Fixes
+
+* fix built-in "in" test ([d268e94](https://github.com/cathaysia/tree-sitter-jinja/commit/d268e94390e97fb5f859bd6d822155ba0d8fb0d1))
+* **scanner:** typo in TOKEN_TYPE_RAW_START definition ([7af1849](https://github.com/cathaysia/tree-sitter-jinja/commit/7af1849c7f7ab7da20fb973b7a5c76f7349a789c))
+
 ## [0.11.0](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.10.0...v0.11.0) (2025-09-01)
 
 
