@@ -33,7 +33,7 @@ exports.rules = {
         'float',
         seq('ge', $.expression),
         seq('gt', $.expression),
-        seq('in', $.list_literal),
+        seq('in', $.expression),
         'integer',
         'iterable',
         seq('le', $.expression),

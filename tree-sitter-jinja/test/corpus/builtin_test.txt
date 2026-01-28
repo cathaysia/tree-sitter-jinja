@@ -9,6 +9,10 @@ simple
 {% if foo.attribute is sameas false %}
 {% if 'loud' is test %}
 {% if value is loud %}
+{% if "a" is in "abc" %}
+{% if value is in [] %}
+{% if value is in () %}
+{% if value is in data %}
 
 
 
@@ -149,4 +153,76 @@ simple
             (unary_expression
               (primary_expression
                 (identifier))))))))
+  (content)
+  (control
+    (statement
+      (if_expression
+        (expression
+          (binary_expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal)))))
+            (binary_operator)
+            (builtin_test
+              (expression
+                (binary_expression
+                  (unary_expression
+                    (primary_expression
+                      (literal
+                        (string_literal))))))))))))
+  (content)
+  (control
+    (statement
+      (if_expression
+        (expression
+          (binary_expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))
+            (binary_operator)
+            (builtin_test
+              (expression
+                (binary_expression
+                  (unary_expression
+                    (primary_expression
+                      (literal
+                        (list_literal))))))))))))
+  (content)
+  (control
+    (statement
+      (if_expression
+        (expression
+          (binary_expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))
+            (binary_operator)
+            (builtin_test
+              (expression
+                (binary_expression
+                  (unary_expression
+                    (primary_expression
+                      (literal
+                        (tuple_literal))))))))))))
+  (content)
+  (control
+    (statement
+      (if_expression
+        (expression
+          (binary_expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))
+            (binary_operator)
+            (builtin_test
+              (expression
+                (binary_expression
+                  (unary_expression
+                    (primary_expression
+                      (identifier)))))))))))
   (content))

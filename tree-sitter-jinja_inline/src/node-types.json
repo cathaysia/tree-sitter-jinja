@@ -148,10 +148,6 @@
         {
           "type": "expression",
           "named": true
-        },
-        {
-          "type": "list_literal",
-          "named": true
         }
       ]
     }
