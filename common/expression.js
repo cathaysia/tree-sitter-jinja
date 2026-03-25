@@ -18,6 +18,16 @@ exports.rules = {
         alias('is', $.binary_operator),
         choice($.unary_expression, $.builtin_test),
       ),
+      seq(
+        $.binary_expression,
+        alias('in', $.binary_operator),
+        $.unary_expression,
+      ),
+      seq(
+        $.binary_expression,
+        alias(seq('not', 'in'), $.binary_operator),
+        $.unary_expression,
+      ),
     ),
   builtin_test: $ =>
     prec.left(

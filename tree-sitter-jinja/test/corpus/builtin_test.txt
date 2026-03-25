@@ -13,6 +13,14 @@ simple
 {% if value is in [] %}
 {% if value is in () %}
 {% if value is in data %}
+{% if value in abc %}
+{% if value in [] %}
+{% if value in () %}
+{% if value in data %}
+{% if value not in abc %}
+{% if value not in [] %}
+{% if value not in () %}
+{% if value not in data %}
 
 
 
@@ -225,4 +233,124 @@ simple
                   (unary_expression
                     (primary_expression
                       (identifier)))))))))))
+  (content)
+  (control
+    (statement
+      (if_expression
+        (expression
+          (binary_expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))
+            (binary_operator)
+            (unary_expression
+              (primary_expression
+                (identifier))))))))
+  (content)
+  (control
+    (statement
+      (if_expression
+        (expression
+          (binary_expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))
+            (binary_operator)
+            (unary_expression
+              (primary_expression
+                (literal
+                  (list_literal)))))))))
+  (content)
+  (control
+    (statement
+      (if_expression
+        (expression
+          (binary_expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))
+            (binary_operator)
+            (unary_expression
+              (primary_expression
+                (literal
+                  (tuple_literal)))))))))
+  (content)
+  (control
+    (statement
+      (if_expression
+        (expression
+          (binary_expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))
+            (binary_operator)
+            (unary_expression
+              (primary_expression
+                (identifier))))))))
+  (content)
+  (control
+    (statement
+      (if_expression
+        (expression
+          (binary_expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))
+            (binary_operator)
+            (binary_operator)
+            (unary_expression
+              (primary_expression
+                (identifier))))))))
+  (content)
+  (control
+    (statement
+      (if_expression
+        (expression
+          (binary_expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))
+            (binary_operator)
+            (binary_operator)
+            (unary_expression
+              (primary_expression
+                (literal
+                  (list_literal)))))))))
+  (content)
+  (control
+    (statement
+      (if_expression
+        (expression
+          (binary_expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))
+            (binary_operator)
+            (binary_operator)
+            (unary_expression
+              (primary_expression
+                (literal
+                  (tuple_literal)))))))))
+  (content)
+  (control
+    (statement
+      (if_expression
+        (expression
+          (binary_expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))
+            (binary_operator)
+            (binary_operator)
+            (unary_expression
+              (primary_expression
+                (identifier))))))))
   (content))
