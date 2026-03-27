@@ -20,12 +20,7 @@ exports.rules = {
       ),
       seq(
         $.binary_expression,
-        alias('in', $.binary_operator),
-        $.unary_expression,
-      ),
-      seq(
-        $.binary_expression,
-        alias(seq('not', 'in'), $.binary_operator),
+        alias(seq(optional('not'), 'in'), $.binary_operator),
         $.unary_expression,
       ),
     ),
