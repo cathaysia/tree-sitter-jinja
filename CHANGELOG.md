@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.12.0](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.11.1...v0.12.0) (2026-03-28)
+
+
+### Features
+
+* add support for "in" and "not in" operators in "if" statements ([07e3275](https://github.com/cathaysia/tree-sitter-jinja/commit/07e3275e171b56eeefb7cff40a481e4fdec617bb))
+
+
+### Bug Fixes
+
+* handle "not" operator using optional() instead of using a dedicated sequence ([a56ec73](https://github.com/cathaysia/tree-sitter-jinja/commit/a56ec73f1b1fd03f8101a61b724278c5a4f31c57))
+
 ## [0.11.1](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.11.0...v0.11.1) (2026-01-28)
 
 
