@@ -37,7 +37,7 @@ exports.rules = {
   tuple_literal: $ =>
     prec(1, seq('(', commaSep($.expression), optional(','), ')')),
   dict_literal: $ =>
-    seq('{', commaSep(seq($.expression, ':', $.expression)), '}'),
+    seq('{', commaSep(seq($.expression, ':', $.expression)), optional(','), '}'),
 
   string_literal: _ =>
     choice(

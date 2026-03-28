@@ -7,6 +7,7 @@ exports.rules = {
         $.binary_expression,
         seq($.expression, '.', $.expression),
         seq($.expression, '[', $.expression, ']'),
+        seq($.expression, '(', commaSep($.arg), ')'),
       ),
     ),
   binary_expression: $ =>
@@ -103,7 +104,7 @@ exports.rules = {
       seq('(', $.expression, ')'),
     ),
 
-  function_call: $ => seq($.identifier, '(', commaSep($.arg), ')'),
+  function_call: $ => prec(1, seq($.identifier, '(', commaSep($.arg), ')')),
   arg: $ =>
     seq(
       optional(seq($.identifier, alias('=', $.binary_operator))),

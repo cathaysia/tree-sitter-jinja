@@ -111,7 +111,8 @@
       .
       (unary_expression
         (primary_expression
-          (identifier) @variable.member)))))
+          (identifier) @variable.member))
+      .)))
 
 (expression
   "."
@@ -128,11 +129,11 @@
 
 ; jinja filters
 (binary_expression
-  (binary_operator
-    "|")
+  (binary_operator) @_op
   (unary_expression
     (primary_expression
-      (identifier) @function.call)))
+      (identifier) @function.call))
+  (#eq? @_op "|"))
 
 (inline_trans
   "_" @function.builtin)

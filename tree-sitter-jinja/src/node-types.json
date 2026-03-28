@@ -235,6 +235,10 @@
       "required": true,
       "types": [
         {
+          "type": "arg",
+          "named": true
+        },
+        {
           "type": "binary_expression",
           "named": true
         },

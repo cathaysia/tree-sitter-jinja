@@ -8,6 +8,9 @@ render
 {{ async_func() + normal_func() }}
 {{ outer("FOO") }}
 {{ users()|selectattr("is_active")|map(attribute="name")|join("|") }}
+{{ dict['module.function']() }}
+{{ dict['module.function'](arg) }}
+{{ dict['module.function'](key=value) }}
 
 {%+ if something +%}yay{%+ endif +%}
 {{+ something +}}
@@ -131,6 +134,65 @@ render
                       (primary_expression
                         (literal
                           (string_literal)))))))))))))
+  (content)
+  (render_expression
+    (expression
+      (expression
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier)))))
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
+                  (string_literal)))))))))
+  (content)
+  (render_expression
+    (expression
+      (expression
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier)))))
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
+                  (string_literal)))))))
+      (arg
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier))))))))
+  (content)
+  (render_expression
+    (expression
+      (expression
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier)))))
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
+                  (string_literal)))))))
+      (arg
+        (identifier)
+        (binary_operator)
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier))))))))
   (content)
   (control
     (statement
