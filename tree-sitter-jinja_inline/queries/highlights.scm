@@ -56,7 +56,6 @@
   "endmacro"
   "endcall"
   "endset"
-  "endtrans"
   "endautoescape"
   "required"
 ] @keyword
@@ -148,14 +147,12 @@
   [
     "boolean"
     "even"
-    "in"
     "mapping"
     "sequence"
     "callable"
     "integer"
     "ne"
     "string"
-    "defined"
     "filter"
     "iterable"
     "none"
