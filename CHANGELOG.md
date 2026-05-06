@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.12.1](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.12.0...v0.12.1) (2026-05-06)
+
+
+### Bug Fixes
+
+* remove duplicate captures in jinja_inline highlights ([792cc9e](https://github.com/cathaysia/tree-sitter-jinja/commit/792cc9ebb30c1dbe4f349bd0a9928f0f7581baee))
+
 ## [0.12.0](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.11.1...v0.12.0) (2026-03-28)
 
 
