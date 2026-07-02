@@ -5,32 +5,31 @@ trans
 # trans
 # endtrans
 # trans user=user.username
+# endtrans
 
 ---
 
 (source
-  (line_statement
-    (statement
-      (trans_statement)))
-  (line_statement
-    (statement))
-  (line_statement
-    (statement
-      (trans_statement
-        (assignment_expression
-          (identifier)
-          (binary_operator)
+  (trans_block
+    (trans_statement)
+    (endtrans_statement))
+  (trans_block
+    (trans_statement
+      (assignment_expression
+        (identifier)
+        (binary_operator)
+        (expression
           (expression
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier)))))
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier)))))))))))
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))))))
+    (endtrans_statement)))
 
 ==============
 block
@@ -42,39 +41,37 @@ block
 ----
 
 (source
-  (line_statement
-    (statement
-      (trans_statement
-        (assignment_expression
-          (identifier)
-          (binary_operator)
+  (trans_block
+    (trans_statement
+      (assignment_expression
+        (identifier)
+        (binary_operator)
+        (expression
           (expression
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier)))))
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier)))))))
-        (assignment_expression
-          (identifier)
-          (binary_operator)
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
           (expression
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier)))))
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier))))))))))
-  (line_statement
-    (statement)))
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))))
+      (assignment_expression
+        (identifier)
+        (binary_operator)
+        (expression
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier)))))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))))))
+    (endtrans_statement)))
 
 ==================
 pluralize
@@ -87,27 +84,24 @@ pluralize
 ----
 
 (source
-  (line_statement
-    (statement
-      (trans_statement
-        (assignment_expression
-          (identifier)
-          (binary_operator)
-          (expression
+  (trans_block
+    (trans_statement
+      (assignment_expression
+        (identifier)
+        (binary_operator)
+        (expression
+          (binary_expression
             (binary_expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier))))
-              (binary_operator)
               (unary_expression
                 (primary_expression
-                  (identifier)))))))))
-  (line_statement
-    (statement
-      (pluralize_statement)))
-  (line_statement
-    (statement)))
+                  (identifier))))
+            (binary_operator)
+            (unary_expression
+              (primary_expression
+                (identifier)))))))
+    (pluralize_block
+      (pluralize_statement))
+    (endtrans_statement)))
 
 =================
 inline

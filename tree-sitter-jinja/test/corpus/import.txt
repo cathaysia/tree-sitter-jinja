@@ -15,71 +15,63 @@ import
 
 (source
   (content)
-  (control
-    (statement
-      (extends_statement
-        (string_literal))))
+  (statement
+    (extends_statement
+      (string_literal)))
   (content)
-  (control
-    (statement
-      (import_statement
-        (import_from
-          (string_literal))
-        (identifier)
-        (identifier)
-        (import_as
-          (identifier)))))
+  (statement
+    (import_statement
+      (import_from
+        (string_literal))
+      (identifier)
+      (identifier)
+      (import_as
+        (identifier))))
   (content)
-  (control
-    (statement
-      (import_statement
-        (string_literal)
-        (import_as
-          (identifier)))))
+  (statement
+    (import_statement
+      (string_literal)
+      (import_as
+        (identifier))))
   (content)
-  (control
-    (statement
-      (import_statement
-        (string_literal)
-        (import_as
-          (identifier))
-        (import_attribute
-          (attribute_context)))))
+  (statement
+    (import_statement
+      (string_literal)
+      (import_as
+        (identifier))
+      (import_attribute
+        (attribute_context))))
   (content)
-  (control
-    (statement
-      (import_statement
-        (string_literal)
-        (import_as
-          (identifier))
-        (import_attribute
-          (attribute_context)))))
+  (statement
+    (import_statement
+      (string_literal)
+      (import_as
+        (identifier))
+      (import_attribute
+        (attribute_context))))
   (content)
-  (control
-    (statement
-      (import_statement
-        (import_from
-          (string_literal))
-        (identifier)
-        (import_attribute
-          (attribute_context)))))
+  (statement
+    (import_statement
+      (import_from
+        (string_literal))
+      (identifier)
+      (import_attribute
+        (attribute_context))))
   (content)
-  (control
-    (statement
-      (import_statement
-        (import_from
-          (string_literal))
-        (identifier)
-        (import_attribute
-          (attribute_context)))))
+  (statement
+    (import_statement
+      (import_from
+        (string_literal))
+      (identifier)
+      (import_attribute
+        (attribute_context))))
   (content)
-  (control
-    (statement
-      (import_statement
-        (import_from
-          (string_literal))
-        (identifier)
-        (identifier)
-        (import_attribute
-          (attribute_context)))))
+  (statement
+    (import_statement
+      (import_from
+        (string_literal))
+      (identifier)
+      (identifier)
+      (import_attribute
+        (attribute_context))))
   (content))

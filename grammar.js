@@ -9,51 +9,67 @@ module.exports = {
     ...literal.rules,
     ...expression.rules,
     statement: $ =>
-      seq(
-        choice(
-          'endfor',
-          seq('elif', $.expression),
-          'else',
-          'endif',
-          'endblock',
-          'endwith',
-          'endfilter',
-          'endmacro',
-          'endcall',
-          'endset',
-          'endtrans',
-          'continue',
-          'break',
-          'debug',
-          'endautoescape',
-          $.do_statement,
-          $.include_statement,
-          $.import_statement,
-          $.set_statement,
-          $.for_statement,
-          $.if_expression,
-          $.with_statement,
-          $.call_statement,
-          $.set_statement,
-          $.extends_statement,
-          $.macro_statement,
-          $.filter_statement,
-          $.block_statement,
-          $.pluralize_statement,
-          $.trans_statement,
-          $.autoescape_statement,
-        ),
+      choice(
+        $.do_statement,
+        $.include_statement,
+        $.import_statement,
+        $.set_statement,
+        $.extends_statement,
+        'continue',
+        'break',
+        'debug'
       ),
-    do_statement: $ => seq('do', $.expression),
+    if_statement: $ => seq('if', $.expression),
+    elif_statement: $ => seq('elif', $.expression),
+    else_statement: $ => 'else',
+    endif_statement: $ => 'endif',
+
+    for_statement: $ =>
+      seq(
+        'for',
+        $.in_expression,
+        optional($.ternary_expression),
+        optional('recursive'),
+      ),
+    endfor_statement: $ => 'endfor',
+
+    block_statement: $ => seq('block', $.identifier, optional('required')),
+    endblock_statement: $ => 'endblock',
+
+    with_statement: $ => seq('with', repeat($.assignment_expression)),
+    endwith_statement: $ => 'endwith',
+
+    filter_statement: $ => seq('filter', $.expression),
+    endfilter_statement: $ => 'endfilter',
+
+    macro_statement: $ => seq('macro', $.function_call),
+    endmacro_statement: $ => 'endmacro',
+
+    call_statement: $ => seq('call', optional(seq('(', $.identifier, ')')), $.function_call),
+    endcall_statement: $ => 'endcall',
+
+    set_statement: $ =>
+      seq(
+        'set',
+        commaSep1($.expression),
+        alias('=', $.binary_operator),
+        $.expression,
+        optional($.ternary_expression),
+      ),
+    set_block_statement: $ => seq('set', commaSep1($.expression)),
+    endset_statement: $ => 'endset',
+
+    trans_statement: $ => seq('trans', optional(commaSep(choice($.identifier, $.assignment_expression)))),
+    endtrans_statement: $ => 'endtrans',
+
     autoescape_statement: $ => seq('autoescape', optional($.boolean_literal)),
-    trans_statement: $ =>
-      seq('trans', commaSep(choice($.identifier, $.assignment_expression))),
+    endautoescape_statement: $ => 'endautoescape',
+
     pluralize_statement: $ => seq('pluralize', optional($.identifier)),
+
+    do_statement: $ => seq('do', $.expression),
     ternary_expression: $ =>
       seq('if', $.expression, optional(seq('else', $.expression))),
-    block_statement: $ => seq('block', $.identifier, optional('required')),
-    filter_statement: $ => seq('filter', $.expression),
-    macro_statement: $ => seq('macro', $.function_call),
     extends_statement: $ =>
       prec.right(
         seq(
@@ -62,9 +78,6 @@ module.exports = {
           optional($.ternary_expression),
         ),
       ),
-    call_statement: $ =>
-      seq('call', optional(seq('(', $.identifier, ')')), $.function_call),
-    with_statement: $ => seq('with', repeat($.assignment_expression)),
     import_statement: $ =>
       seq(
         optional($.import_from),
@@ -85,22 +98,6 @@ module.exports = {
     include_attribute: $ => choice($.attribute_ignore, $.attribute_context),
     attribute_ignore: _ => seq('ignore', 'missing'),
     attribute_context: _ => seq(choice('with', 'without'), 'context'),
-    set_statement: $ =>
-      seq(
-        'set',
-        commaSep1($.expression),
-        alias('=', $.binary_operator),
-        $.expression,
-        optional($.ternary_expression),
-      ),
-    for_statement: $ =>
-      seq(
-        'for',
-        $.in_expression,
-        optional($.ternary_expression),
-        optional('recursive'),
-      ),
-    if_expression: $ => seq('if', $.expression),
 
     content: _ => prec.right(repeat1(choice(/[^{]/, /\{[^#%]/, '#', '# '))),
     identifier: _ => /[a-zA-Z_][\w\d_]*/,

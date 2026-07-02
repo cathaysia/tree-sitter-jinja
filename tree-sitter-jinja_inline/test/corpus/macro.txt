@@ -3,54 +3,57 @@ macro
 ==============
 
 # macro toplevel()
+# endmacro
 # macro __private()
+# endmacro
 # macro m(a, b, c='c', d='d')
+# endmacro
 
 ----
 
 (source
-  (line_statement
-    (statement
-      (macro_statement
-        (function_call
-          (identifier)))))
-  (line_statement
-    (statement
-      (macro_statement
-        (function_call
-          (identifier)))))
-  (line_statement
-    (statement
-      (macro_statement
-        (function_call
+  (macro_block
+    (macro_statement
+      (function_call
+        (identifier)))
+    (endmacro_statement))
+  (macro_block
+    (macro_statement
+      (function_call
+        (identifier)))
+    (endmacro_statement))
+  (macro_block
+    (macro_statement
+      (function_call
+        (identifier)
+        (arg
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))))
+        (arg
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (identifier))))))
+        (arg
           (identifier)
-          (arg
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier))))))
-          (arg
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier))))))
-          (arg
-            (identifier)
-            (binary_operator)
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (literal
-                      (string_literal)))))))
-          (arg
-            (identifier)
-            (binary_operator)
-            (expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (literal
-                      (string_literal))))))))))))
+          (binary_operator)
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal)))))))
+        (arg
+          (identifier)
+          (binary_operator)
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal)))))))))
+    (endmacro_statement)))
