@@ -8,12 +8,10 @@ block
 ---
 
 (source
-  (line_statement
-    (statement
-      (block_statement
-        (identifier))))
-  (line_statement
-    (statement)))
+  (block_block
+    (block_statement
+      (identifier))
+    (endblock_statement)))
 
 ===============
 required block
@@ -25,9 +23,7 @@ required block
 ---
 
 (source
-  (line_statement
-    (statement
-      (block_statement
-        (identifier))))
-  (line_statement
-    (statement)))
+  (block_block
+    (block_statement
+      (identifier))
+    (endblock_statement)))

@@ -3,86 +3,94 @@ continue
 ==================
 
 # for user in users
+# endfor
     # if loop.index is even
     # continue
-    # endif
+   
+# endif
 # endfor
 
 # for item in [1, 2, 3]
+# endfor
 # endfor
 
 ----------
 
 (source
-  (line_statement
-    (statement
-      (for_statement
-        (in_expression
-          (identifier)
-          (binary_operator)
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier)))))))))
-  (line_statement
-    (statement
-      (if_expression
+  (for_block
+    (for_statement
+      (in_expression
+        (identifier)
+        (binary_operator)
         (expression
-          (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier)))))))
+    (endfor_statement))
+  (if_block
+    (if_statement
+      (expression
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier)))))
+        (expression
+          (binary_expression
             (binary_expression
               (unary_expression
                 (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier))))
-              (binary_operator)
-              (builtin_test)))))))
+                  (identifier))))
+            (binary_operator)
+            (builtin_test)))))
+    (line_statement)
+    (endif_statement))
   (line_statement
-    (statement))
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (identifier))))))
+  (for_block
+    (for_statement
+      (in_expression
+        (identifier)
+        (binary_operator)
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
+                  (list_literal
+                    (expression
+                      (binary_expression
+                        (unary_expression
+                          (primary_expression
+                            (literal
+                              (number_literal
+                                (dec_literal)))))))
+                    (expression
+                      (binary_expression
+                        (unary_expression
+                          (primary_expression
+                            (literal
+                              (number_literal
+                                (dec_literal)))))))
+                    (expression
+                      (binary_expression
+                        (unary_expression
+                          (primary_expression
+                            (literal
+                              (number_literal
+                                (dec_literal)))))))))))))))
+    (endfor_statement))
   (line_statement
-    (statement))
-  (line_statement
-    (statement))
-  (line_statement
-    (statement
-      (for_statement
-        (in_expression
-          (identifier)
-          (binary_operator)
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (literal
-                    (list_literal
-                      (expression
-                        (binary_expression
-                          (unary_expression
-                            (primary_expression
-                              (literal
-                                (number_literal
-                                  (dec_literal)))))))
-                      (expression
-                        (binary_expression
-                          (unary_expression
-                            (primary_expression
-                              (literal
-                                (number_literal
-                                  (dec_literal)))))))
-                      (expression
-                        (binary_expression
-                          (unary_expression
-                            (primary_expression
-                              (literal
-                                (number_literal
-                                  (dec_literal)))))))))))))))))
-  (line_statement
-    (statement)))
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (identifier)))))))
 
 =========================
 break
@@ -90,7 +98,9 @@ break
 
 
 # for user in users
+# endfor
 # if loop.index >= 10
+# endif
 # break
 # endif
 # endfor
@@ -98,41 +108,48 @@ break
 --------------
 
 (source
-  (line_statement
-    (statement
-      (for_statement
-        (in_expression
-          (identifier)
-          (binary_operator)
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier)))))))))
-  (line_statement
-    (statement
-      (if_expression
+  (for_block
+    (for_statement
+      (in_expression
+        (identifier)
+        (binary_operator)
         (expression
-          (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier)))))))
+    (endfor_statement))
+  (if_block
+    (if_statement
+      (expression
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (identifier)))))
+        (expression
+          (binary_expression
             (binary_expression
               (unary_expression
                 (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (binary_expression
-                (unary_expression
-                  (primary_expression
-                    (identifier))))
-              (binary_operator)
-              (unary_expression
-                (primary_expression
-                  (literal
-                    (number_literal
-                      (dec_literal)))))))))))
+                  (identifier))))
+            (binary_operator)
+            (unary_expression
+              (primary_expression
+                (literal
+                  (number_literal
+                    (dec_literal)))))))))
+    (endif_statement))
+  (line_statement)
   (line_statement
-    (statement))
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (identifier))))))
   (line_statement
-    (statement))
-  (line_statement
-    (statement)))
+    (expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (identifier)))))))

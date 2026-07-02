@@ -8,13 +8,11 @@ block
 
 (source
   (content)
-  (control
-    (statement
-      (block_statement
-        (identifier))))
-  (content)
-  (control
-    (statement))
+  (block_block
+    (block_statement
+      (identifier))
+    (content)
+    (endblock_statement))
   (render_expression
     (expression
       (expression
@@ -40,13 +38,11 @@ required block
 
 (source
   (content)
-  (control
-    (statement
-      (block_statement
-        (identifier))))
-  (content)
-  (control
-    (statement))
+  (block_block
+    (block_statement
+      (identifier))
+    (content)
+    (endblock_statement))
   (render_expression
     (expression
       (expression
