@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.13.0](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.12.1...v0.13.0) (2026-07-02)
+
+
+### Features
+
+* migrate flat expressions to nested block structures ([64a0174](https://github.com/cathaysia/tree-sitter-jinja/commit/64a017477a64f89542992432f2e54672d79c9bb7)), closes [#27](https://github.com/cathaysia/tree-sitter-jinja/issues/27)
+
 ## [0.12.1](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.12.0...v0.12.1) (2026-05-06)
 
 
