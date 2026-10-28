@@ -5,6 +5,7 @@ set
 {%- set rowloop = loop -%}
 {% set ns = namespace(foo="Bar") %}
 {% set ns = namespace(foo="Bar",) %}
+{% set label = (prefix if prefix else 'none') ~ suffix %}
 {% set config = dict['module.function']({
     'os': {
         'key1': None,
@@ -79,6 +80,44 @@ set
                         (primary_expression
                           (literal
                             (string_literal))))))))))))))
+  (content)
+  (statement
+    (set_statement
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (identifier)))))
+      (binary_operator)
+      (expression
+        (binary_expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
+                  (tuple_literal
+                    (expression
+                      (expression
+                        (binary_expression
+                          (unary_expression
+                            (primary_expression
+                              (identifier)))))
+                      (ternary_expression
+                        (expression
+                          (binary_expression
+                            (unary_expression
+                              (primary_expression
+                                (identifier)))))
+                        (expression
+                          (binary_expression
+                            (unary_expression
+                              (primary_expression
+                                (literal
+                                  (string_literal)))))))))))))
+          (binary_operator)
+          (unary_expression
+            (primary_expression
+              (identifier)))))))
   (content)
   (statement
     (set_statement

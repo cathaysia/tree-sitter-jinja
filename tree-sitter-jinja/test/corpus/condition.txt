@@ -10,20 +10,25 @@ extends
   (content)
   (statement
     (extends_statement
-      (identifier)
-      (ternary_expression
-        (expression
-          (binary_expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier))))
-            (binary_operator)
-            (builtin_test)))
+      (expression
         (expression
           (binary_expression
             (unary_expression
               (primary_expression
-                (literal
-                  (string_literal)))))))))
+                (identifier)))))
+        (ternary_expression
+          (expression
+            (binary_expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (identifier))))
+              (binary_operator)
+              (builtin_test)))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal))))))))))
   (content))

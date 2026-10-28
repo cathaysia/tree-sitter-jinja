@@ -17,7 +17,12 @@ import
   (content)
   (statement
     (extends_statement
-      (string_literal)))
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (string_literal))))))))
   (content)
   (statement
     (import_statement

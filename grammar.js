@@ -54,7 +54,6 @@ module.exports = {
         commaSep1($.expression),
         alias('=', $.binary_operator),
         $.expression,
-        optional($.ternary_expression),
       ),
     set_block_statement: $ => seq('set', commaSep1($.expression)),
     endset_statement: $ => 'endset',
@@ -68,16 +67,7 @@ module.exports = {
     pluralize_statement: $ => seq('pluralize', optional($.identifier)),
 
     do_statement: $ => seq('do', $.expression),
-    ternary_expression: $ =>
-      seq('if', $.expression, optional(seq('else', $.expression))),
-    extends_statement: $ =>
-      prec.right(
-        seq(
-          'extends',
-          choice($.string_literal, $.identifier),
-          optional($.ternary_expression),
-        ),
-      ),
+    extends_statement: $ => seq('extends', $.expression),
     import_statement: $ =>
       seq(
         optional($.import_from),

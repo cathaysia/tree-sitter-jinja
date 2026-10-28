@@ -198,31 +198,32 @@ complex
     (content)
     (render_expression
       (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (primary_expression
-                (primary_expression
-                  (identifier))
-                (identifier))
-              (identifier)))))
-      (ternary_expression
-        (expression
-          (binary_expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (primary_expression
-                    (identifier))
-                  (identifier))))
-            (binary_operator)
-            (builtin_test)))
         (expression
           (binary_expression
             (unary_expression
               (primary_expression
-                (literal
-                  (string_literal))))))))
+                (primary_expression
+                  (primary_expression
+                    (identifier))
+                  (identifier))
+                (identifier)))))
+        (ternary_expression
+          (expression
+            (binary_expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (primary_expression
+                      (identifier))
+                    (identifier))))
+              (binary_operator)
+              (builtin_test)))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal)))))))))
     (content)
     (render_expression
       (expression
@@ -235,31 +236,32 @@ complex
     (content)
     (render_expression
       (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (primary_expression
-                (primary_expression
-                  (identifier))
-                (identifier))
-              (identifier)))))
-      (ternary_expression
-        (expression
-          (binary_expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (primary_expression
-                    (identifier))
-                  (identifier))))
-            (binary_operator)
-            (builtin_test)))
         (expression
           (binary_expression
             (unary_expression
               (primary_expression
-                (literal
-                  (string_literal))))))))
+                (primary_expression
+                  (primary_expression
+                    (identifier))
+                  (identifier))
+                (identifier)))))
+        (ternary_expression
+          (expression
+            (binary_expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (primary_expression
+                      (identifier))
+                    (identifier))))
+              (binary_operator)
+              (builtin_test)))
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal)))))))))
     (if_block
       (if_statement
         (expression

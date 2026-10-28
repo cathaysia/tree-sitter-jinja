@@ -50,7 +50,7 @@ module.exports = grammar({
     render_expression: $ =>
       seq(
         choice('{{', '{{-', '{{+'),
-        optional(seq($.expression, optional($.ternary_expression))),
+        optional($.expression),
         choice('}}', '-}}', '+}}'),
       ),
     statement: $ => directive($, gram.rules.statement($)),

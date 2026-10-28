@@ -16,7 +16,12 @@ import
 (source
   (line_statement
     (extends_statement
-      (string_literal)))
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (string_literal))))))))
   (line_statement
     (import_statement
       (import_from
