@@ -1,4 +1,4 @@
-const { commaSep, commaSep1, anySep1 } = require('./common.js');
+const { commaSep1, anySep1 } = require('./common.js');
 
 exports.rules = {
   expression: $ =>
@@ -7,7 +7,7 @@ exports.rules = {
         $.binary_expression,
         seq($.expression, '.', $.expression),
         seq($.expression, '[', $.expression, ']'),
-        seq($.expression, '(', commaSep($.arg), ')'),
+        seq($.expression, $._arguments),
       ),
     ),
   binary_expression: $ =>
@@ -104,7 +104,9 @@ exports.rules = {
       seq('(', $.expression, ')'),
     ),
 
-  function_call: $ => prec(1, seq($.identifier, '(', commaSep($.arg), ')')),
+  function_call: $ => prec(1, seq($.identifier, $._arguments)),
+  _arguments: $ =>
+    seq('(', optional(seq(commaSep1($.arg), optional(','))), ')'),
   arg: $ =>
     seq(
       optional(seq($.identifier, alias('=', $.binary_operator))),
