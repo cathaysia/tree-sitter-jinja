@@ -36,7 +36,7 @@ module.exports = {
     block_statement: $ => seq('block', $.identifier, optional('required')),
     endblock_statement: $ => 'endblock',
 
-    with_statement: $ => seq('with', repeat($.assignment_expression)),
+    with_statement: $ => seq('with', commaSep($.assignment_expression)),
     endwith_statement: $ => 'endwith',
 
     filter_statement: $ => seq('filter', $.expression),
