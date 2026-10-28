@@ -27,16 +27,12 @@ trans
         (identifier)
         (binary_operator)
         (expression
-          (expression
-            (binary_expression
-              (unary_expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
                 (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier))))))))
+                  (identifier))
+                (identifier)))))))
     (content)
     (render_expression
       (expression
@@ -66,30 +62,22 @@ This is {{ book_title }} by {{ author }}
         (identifier)
         (binary_operator)
         (expression
-          (expression
-            (binary_expression
-              (unary_expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
                 (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier)))))))
+                  (identifier))
+                (identifier))))))
       (assignment_expression
         (identifier)
         (binary_operator)
         (expression
-          (expression
-            (binary_expression
-              (unary_expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
                 (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier))))))))
+                  (identifier))
+                (identifier)))))))
     (content)
     (render_expression
       (expression
@@ -219,16 +207,12 @@ inline
                 (identifier)
                 (binary_operator)
                 (expression
-                  (expression
-                    (binary_expression
-                      (unary_expression
+                  (binary_expression
+                    (unary_expression
+                      (primary_expression
                         (primary_expression
-                          (identifier)))))
-                  (expression
-                    (binary_expression
-                      (unary_expression
-                        (primary_expression
-                          (identifier)))))))))))))
+                          (identifier))
+                        (identifier))))))))))))
   (content))
 
 =================

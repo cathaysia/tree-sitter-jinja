@@ -21,6 +21,7 @@ simple
 {% if value not in [] %}{% endif %}
 {% if value not in () %}{% endif %}
 {% if value not in data %}{% endif %}
+{% if values[0] in data %}{% endif %}
 
 
 
@@ -33,57 +34,49 @@ simple
   (if_block
     (if_statement
       (expression
-        (expression
+        (binary_expression
           (binary_expression
             (unary_expression
               (primary_expression
-                (identifier)))))
-        (expression
-          (binary_expression
-            (binary_expression
-              (unary_expression
                 (primary_expression
-                  (identifier))))
-            (binary_operator)
-            (builtin_test
-              (expression
-                (binary_expression
-                  (unary_expression
-                    (primary_expression
-                      (literal
-                        (number_literal
-                          (dec_literal))))))))))))
+                  (identifier))
+                (identifier))))
+          (binary_operator)
+          (builtin_test
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (literal
+                      (number_literal
+                        (dec_literal)))))))))))
     (endif_statement))
   (content)
   (if_block
     (if_statement
       (expression
-        (expression
+        (binary_expression
           (binary_expression
             (unary_expression
               (primary_expression
-                (identifier)))))
-        (expression
-          (binary_expression
-            (binary_expression
-              (unary_expression
                 (primary_expression
-                  (identifier))))
-            (binary_operator)
-            (builtin_test
-              (expression
-                (binary_expression
-                  (unary_expression
-                    (primary_expression
-                      (literal
-                        (tuple_literal
-                          (expression
-                            (binary_expression
-                              (unary_expression
-                                (primary_expression
-                                  (literal
-                                    (number_literal
-                                      (dec_literal))))))))))))))))))
+                  (identifier))
+                (identifier))))
+          (binary_operator)
+          (builtin_test
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (literal
+                      (tuple_literal
+                        (expression
+                          (binary_expression
+                            (unary_expression
+                              (primary_expression
+                                (literal
+                                  (number_literal
+                                    (dec_literal)))))))))))))))))
     (endif_statement))
   (content)
   (if_block
@@ -114,25 +107,21 @@ simple
   (if_block
     (if_statement
       (expression
-        (expression
+        (binary_expression
           (binary_expression
             (unary_expression
               (primary_expression
-                (identifier)))))
-        (expression
-          (binary_expression
-            (binary_expression
-              (unary_expression
                 (primary_expression
-                  (identifier))))
-            (binary_operator)
-            (builtin_test
-              (expression
-                (binary_expression
-                  (unary_expression
-                    (primary_expression
-                      (literal
-                        (boolean_literal)))))))))))
+                  (identifier))
+                (identifier))))
+          (binary_operator)
+          (builtin_test
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (literal
+                      (boolean_literal))))))))))
     (endif_statement))
   (content)
   (if_block
@@ -348,6 +337,28 @@ simple
               (primary_expression
                 (identifier))))
           (binary_operator)
+          (binary_operator)
+          (unary_expression
+            (primary_expression
+              (identifier))))))
+    (endif_statement))
+  (content)
+  (if_block
+    (if_statement
+      (expression
+        (binary_expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (primary_expression
+                  (identifier))
+                (expression
+                  (binary_expression
+                    (unary_expression
+                      (primary_expression
+                        (literal
+                          (number_literal
+                            (dec_literal))))))))))
           (binary_operator)
           (unary_expression
             (primary_expression

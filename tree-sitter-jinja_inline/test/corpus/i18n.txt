@@ -19,16 +19,12 @@ trans
         (identifier)
         (binary_operator)
         (expression
-          (expression
-            (binary_expression
-              (unary_expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
                 (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier))))))))
+                  (identifier))
+                (identifier)))))))
     (endtrans_statement)))
 
 ==============
@@ -47,30 +43,22 @@ block
         (identifier)
         (binary_operator)
         (expression
-          (expression
-            (binary_expression
-              (unary_expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
                 (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier)))))))
+                  (identifier))
+                (identifier))))))
       (assignment_expression
         (identifier)
         (binary_operator)
         (expression
-          (expression
-            (binary_expression
-              (unary_expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
                 (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier))))))))
+                  (identifier))
+                (identifier)))))))
     (endtrans_statement)))
 
 ==================
@@ -148,16 +136,12 @@ inline
                 (identifier)
                 (binary_operator)
                 (expression
-                  (expression
-                    (binary_expression
-                      (unary_expression
+                  (binary_expression
+                    (unary_expression
+                      (primary_expression
                         (primary_expression
-                          (identifier)))))
-                  (expression
-                    (binary_expression
-                      (unary_expression
-                        (primary_expression
-                          (identifier))))))))))))))
+                          (identifier))
+                        (identifier)))))))))))))
 
 =================
 gettext

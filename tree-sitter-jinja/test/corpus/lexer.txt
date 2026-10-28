@@ -484,34 +484,26 @@ attrs
   (content)
   (render_expression
     (expression
-      (expression
-        (expression
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier))))))
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (identifier))))))
-      (expression
-        (binary_expression
-          (unary_expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
             (primary_expression
-              (identifier)))))))
+              (primary_expression
+                (primary_expression
+                  (identifier))
+                (identifier))
+              (expression
+                (binary_expression
+                  (unary_expression
+                    (primary_expression
+                      (identifier))))))
+            (identifier))))))
   (content)
   (render_expression
     (expression
-      (expression
-        (binary_expression
-          (unary_expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
             (primary_expression
               (literal
                 (dict_literal
@@ -526,18 +518,14 @@ attrs
                       (unary_expression
                         (primary_expression
                           (literal
-                            (string_literal))))))))))))
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (identifier)))))))
+                            (string_literal)))))))))
+            (identifier))))))
   (content)
   (render_expression
     (expression
-      (expression
-        (binary_expression
-          (unary_expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
             (primary_expression
               (literal
                 (list_literal
@@ -561,12 +549,8 @@ attrs
                         (primary_expression
                           (literal
                             (number_literal
-                              (dec_literal)))))))))))))
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (identifier)))))))
+                              (dec_literal))))))))))
+            (identifier))))))
   (content))
 
 =============

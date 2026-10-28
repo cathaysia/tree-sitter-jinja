@@ -42,19 +42,15 @@ continue
     (if_block
       (if_statement
         (expression
-          (expression
+          (binary_expression
             (binary_expression
               (unary_expression
                 (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (binary_expression
-                (unary_expression
                   (primary_expression
-                    (identifier))))
-              (binary_operator)
-              (builtin_test)))))
+                    (identifier))
+                  (identifier))))
+            (binary_operator)
+            (builtin_test))))
       (statement)
       (endif_statement))
     (content)
@@ -172,16 +168,12 @@ continue
                 (identifier)))))))
     (render_expression
       (expression
-        (expression
-          (binary_expression
-            (unary_expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (primary_expression
-                (identifier)))))
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (identifier)))))))
+                (identifier))
+              (identifier))))))
     (content)
     (render_expression
       (expression
@@ -193,23 +185,19 @@ continue
   (content)
   (render_expression
     (expression
-      (expression
-        (binary_expression
-          (unary_expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
             (primary_expression
-              (identifier)))))
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (function_call
-                (identifier)
-                (arg
-                  (expression
-                    (binary_expression
-                      (unary_expression
-                        (primary_expression
-                          (identifier)))))))))))))
+              (identifier))
+            (function_call
+              (identifier)
+              (arg
+                (expression
+                  (binary_expression
+                    (unary_expression
+                      (primary_expression
+                        (identifier))))))))))))
   (content)
   (for_block
     (for_statement
@@ -226,17 +214,13 @@ continue
   (if_block
     (if_statement
       (expression
-        (expression
-          (binary_expression
-            (unary_expression
-              (unary_operator)
-              (unary_expression
-                (primary_expression
-                  (identifier))))))
-        (expression
-          (binary_expression
+        (binary_expression
+          (unary_expression
+            (unary_operator)
             (unary_expression
               (primary_expression
+                (primary_expression
+                  (identifier))
                 (identifier)))))))
     (endif_statement))
   (content)
@@ -260,23 +244,19 @@ continue
                                 (dec_literal))))))))))))))
       (ternary_expression
         (expression
-          (expression
+          (binary_expression
             (binary_expression
               (unary_expression
                 (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (binary_expression
-                (unary_expression
                   (primary_expression
-                    (identifier))))
-              (binary_operator)
-              (unary_expression
-                (primary_expression
-                  (literal
-                    (number_literal
-                      (dec_literal))))))))))
+                    (identifier))
+                  (identifier))))
+            (binary_operator)
+            (unary_expression
+              (primary_expression
+                (literal
+                  (number_literal
+                    (dec_literal)))))))))
     (content)
     (endfor_statement))
   (content)
@@ -377,33 +357,25 @@ continue
                 (literal
                   (list_literal
                     (expression
-                      (expression
-                        (binary_expression
-                          (unary_expression
+                      (binary_expression
+                        (unary_expression
+                          (primary_expression
                             (primary_expression
-                              (identifier)))))
-                      (expression
-                        (binary_expression
-                          (unary_expression
-                            (primary_expression
-                              (identifier)))))))))))))
+                              (identifier))
+                            (identifier))))))))))))
       (ternary_expression
         (expression
-          (expression
+          (binary_expression
             (binary_expression
               (unary_expression
                 (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (binary_expression
-                (unary_expression
                   (primary_expression
-                    (identifier))))
-              (binary_operator)
-              (unary_expression
-                (primary_expression
-                  (identifier))))))))
+                    (identifier))
+                  (identifier))))
+            (binary_operator)
+            (unary_expression
+              (primary_expression
+                (identifier)))))))
     (endfor_statement))
   (content)
   (comment)
@@ -417,16 +389,12 @@ continue
               (identifier)
               (arg
                 (expression
-                  (expression
-                    (binary_expression
-                      (unary_expression
+                  (binary_expression
+                    (unary_expression
+                      (primary_expression
                         (primary_expression
-                          (identifier)))))
-                  (expression
-                    (binary_expression
-                      (unary_expression
-                        (primary_expression
-                          (identifier)))))))))))))
+                          (identifier))
+                        (identifier))))))))))))
   (content))
 
 =========================
@@ -456,23 +424,19 @@ break
     (if_block
       (if_statement
         (expression
-          (expression
+          (binary_expression
             (binary_expression
               (unary_expression
                 (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (binary_expression
-                (unary_expression
                   (primary_expression
-                    (identifier))))
-              (binary_operator)
-              (unary_expression
-                (primary_expression
-                  (literal
-                    (number_literal
-                      (dec_literal)))))))))
+                    (identifier))
+                  (identifier))))
+            (binary_operator)
+            (unary_expression
+              (primary_expression
+                (literal
+                  (number_literal
+                    (dec_literal))))))))
       (statement)
       (endif_statement))
     (content)

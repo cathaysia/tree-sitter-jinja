@@ -1,15 +1,7 @@
 const { commaSep1, anySep1 } = require('./common.js');
 
 exports.rules = {
-  expression: $ =>
-    prec.left(
-      choice(
-        $.binary_expression,
-        seq($.expression, '.', $.expression),
-        seq($.expression, '[', $.expression, ']'),
-        seq($.expression, $._arguments),
-      ),
-    ),
+  expression: $ => prec.left($.binary_expression),
   binary_expression: $ =>
     choice(
       $.unary_expression,
@@ -102,6 +94,13 @@ exports.rules = {
       $.inline_trans,
       $.identifier,
       seq('(', $.expression, ')'),
+      seq(
+        $.primary_expression,
+        '.',
+        choice($.identifier, $.function_call, $.dec_literal),
+      ),
+      seq($.primary_expression, '[', $.expression, ']'),
+      seq($.primary_expression, $._arguments),
     ),
 
   function_call: $ => prec(1, seq($.identifier, $._arguments)),
