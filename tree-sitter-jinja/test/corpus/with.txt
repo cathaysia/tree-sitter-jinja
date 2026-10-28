@@ -5,6 +5,9 @@ with
 {% with x = 10 %}
 {% endwith %}
 
+{% with x = 10, y = 20 %}
+{% endwith %}
+
 {% with foo = 42 %}
     {{ foo }}
 {% endwith %}
@@ -20,6 +23,31 @@ with
   (content)
   (with_block
     (with_statement
+      (assignment_expression
+        (identifier)
+        (binary_operator)
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
+                  (number_literal
+                    (dec_literal)))))))))
+    (content)
+    (endwith_statement))
+  (content)
+  (with_block
+    (with_statement
+      (assignment_expression
+        (identifier)
+        (binary_operator)
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
+                  (number_literal
+                    (dec_literal))))))))
       (assignment_expression
         (identifier)
         (binary_operator)
