@@ -31,19 +31,15 @@ continue
   (if_block
     (if_statement
       (expression
-        (expression
+        (binary_expression
           (binary_expression
             (unary_expression
               (primary_expression
-                (identifier)))))
-        (expression
-          (binary_expression
-            (binary_expression
-              (unary_expression
                 (primary_expression
-                  (identifier))))
-            (binary_operator)
-            (builtin_test)))))
+                  (identifier))
+                (identifier))))
+          (binary_operator)
+          (builtin_test))))
     (line_statement)
     (endif_statement))
   (line_statement
@@ -122,23 +118,19 @@ break
   (if_block
     (if_statement
       (expression
-        (expression
+        (binary_expression
           (binary_expression
             (unary_expression
               (primary_expression
-                (identifier)))))
-        (expression
-          (binary_expression
-            (binary_expression
-              (unary_expression
                 (primary_expression
-                  (identifier))))
-            (binary_operator)
-            (unary_expression
-              (primary_expression
-                (literal
-                  (number_literal
-                    (dec_literal)))))))))
+                  (identifier))
+                (identifier))))
+          (binary_operator)
+          (unary_expression
+            (primary_expression
+              (literal
+                (number_literal
+                  (dec_literal))))))))
     (endif_statement))
   (line_statement)
   (line_statement

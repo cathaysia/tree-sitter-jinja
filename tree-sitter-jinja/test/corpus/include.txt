@@ -198,37 +198,25 @@ complex
     (content)
     (render_expression
       (expression
-        (expression
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier))))))
-        (expression
-          (binary_expression
-            (unary_expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (primary_expression
-                (identifier))))))
+                (primary_expression
+                  (identifier))
+                (identifier))
+              (identifier)))))
       (ternary_expression
         (expression
-          (expression
+          (binary_expression
             (binary_expression
               (unary_expression
                 (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (binary_expression
-                (unary_expression
                   (primary_expression
-                    (identifier))))
-              (binary_operator)
-              (builtin_test))))
+                    (identifier))
+                  (identifier))))
+            (binary_operator)
+            (builtin_test)))
         (expression
           (binary_expression
             (unary_expression
@@ -238,50 +226,34 @@ complex
     (content)
     (render_expression
       (expression
-        (expression
-          (binary_expression
-            (unary_expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (primary_expression
-                (identifier)))))
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (identifier)))))))
+                (identifier))
+              (identifier))))))
     (content)
     (render_expression
       (expression
-        (expression
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier))))))
-        (expression
-          (binary_expression
-            (unary_expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
               (primary_expression
-                (identifier))))))
+                (primary_expression
+                  (identifier))
+                (identifier))
+              (identifier)))))
       (ternary_expression
         (expression
-          (expression
+          (binary_expression
             (binary_expression
               (unary_expression
                 (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (binary_expression
-                (unary_expression
                   (primary_expression
-                    (identifier))))
-              (binary_operator)
-              (builtin_test))))
+                    (identifier))
+                  (identifier))))
+            (binary_operator)
+            (builtin_test)))
         (expression
           (binary_expression
             (unary_expression
@@ -291,16 +263,12 @@ complex
     (if_block
       (if_statement
         (expression
-          (expression
-            (binary_expression
-              (unary_expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
                 (primary_expression
-                  (identifier)))))
-          (expression
-            (binary_expression
-              (unary_expression
-                (primary_expression
-                  (identifier)))))))
+                  (identifier))
+                (identifier))))))
       (content)
       (render_expression
         (expression
@@ -311,16 +279,12 @@ complex
                   (identifier)
                   (arg
                     (expression
-                      (expression
-                        (binary_expression
-                          (unary_expression
+                      (binary_expression
+                        (unary_expression
+                          (primary_expression
                             (primary_expression
-                              (identifier)))))
-                      (expression
-                        (binary_expression
-                          (unary_expression
-                            (primary_expression
-                              (identifier)))))))))))))
+                              (identifier))
+                            (identifier))))))))))))
       (content)
       (endif_statement))
     (content)

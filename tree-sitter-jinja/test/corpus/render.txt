@@ -38,24 +38,20 @@ render
   (content)
   (render_expression
     (expression
-      (expression
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (identifier)))))
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (literal
-                  (number_literal
-                    (dec_literal))))))))
-      (expression
-        (binary_expression
-          (unary_expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
             (primary_expression
-              (identifier)))))))
+              (primary_expression
+                (identifier))
+              (expression
+                (binary_expression
+                  (unary_expression
+                    (primary_expression
+                      (literal
+                        (number_literal
+                          (dec_literal))))))))
+            (identifier))))))
   (content)
   (render_expression
     (expression
@@ -137,62 +133,62 @@ render
   (content)
   (render_expression
     (expression
-      (expression
-        (expression
-          (binary_expression
-            (unary_expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (primary_expression
               (primary_expression
-                (identifier)))))
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (literal
-                  (string_literal)))))))))
+                (identifier))
+              (expression
+                (binary_expression
+                  (unary_expression
+                    (primary_expression
+                      (literal
+                        (string_literal))))))))))))
   (content)
   (render_expression
     (expression
-      (expression
-        (expression
-          (binary_expression
-            (unary_expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (primary_expression
               (primary_expression
-                (identifier)))))
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (literal
-                  (string_literal)))))))
-      (arg
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (identifier))))))))
+                (identifier))
+              (expression
+                (binary_expression
+                  (unary_expression
+                    (primary_expression
+                      (literal
+                        (string_literal)))))))
+            (arg
+              (expression
+                (binary_expression
+                  (unary_expression
+                    (primary_expression
+                      (identifier)))))))))))
   (content)
   (render_expression
     (expression
-      (expression
-        (expression
-          (binary_expression
-            (unary_expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
+            (primary_expression
               (primary_expression
-                (identifier)))))
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (literal
-                  (string_literal)))))))
-      (arg
-        (identifier)
-        (binary_operator)
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (identifier))))))))
+                (identifier))
+              (expression
+                (binary_expression
+                  (unary_expression
+                    (primary_expression
+                      (literal
+                        (string_literal)))))))
+            (arg
+              (identifier)
+              (binary_operator)
+              (expression
+                (binary_expression
+                  (unary_expression
+                    (primary_expression
+                      (identifier)))))))))))
   (content)
   (if_block
     (if_statement

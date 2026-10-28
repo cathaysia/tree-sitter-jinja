@@ -12,23 +12,15 @@ call
   (content)
   (render_expression
     (expression
-      (expression
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (identifier)))))
-        (expression
-          (binary_expression
-            (unary_expression
-              (primary_expression
-                (identifier))))))
-      (expression
-        (binary_expression
-          (unary_expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
             (primary_expression
-              (function_call
-                (identifier))))))))
+              (primary_expression
+                (identifier))
+              (identifier))
+            (function_call
+              (identifier)))))))
   (content)
   (call_block
     (call_statement

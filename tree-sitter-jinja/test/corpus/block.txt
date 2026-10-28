@@ -15,17 +15,13 @@ block
     (endblock_statement))
   (render_expression
     (expression
-      (expression
-        (binary_expression
-          (unary_expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
             (primary_expression
-              (identifier)))))
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (function_call
-                (identifier))))))))
+              (identifier))
+            (function_call
+              (identifier)))))))
   (content))
 
 ===============
@@ -45,15 +41,11 @@ required block
     (endblock_statement))
   (render_expression
     (expression
-      (expression
-        (binary_expression
-          (unary_expression
+      (binary_expression
+        (unary_expression
+          (primary_expression
             (primary_expression
-              (identifier)))))
-      (expression
-        (binary_expression
-          (unary_expression
-            (primary_expression
-              (function_call
-                (identifier))))))))
+              (identifier))
+            (function_call
+              (identifier)))))))
   (content))
