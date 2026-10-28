@@ -4,6 +4,7 @@ render
 
 {{ }}
 {{ "foo" if false }}
+{{ "foo" if false else "bar" if true else "baz" }}
 {{ var[42].foo }}
 {{ async_func() + normal_func() }}
 {{ outer("FOO") }}
@@ -23,18 +24,55 @@ render
   (content)
   (render_expression
     (expression
-      (binary_expression
-        (unary_expression
-          (primary_expression
-            (literal
-              (string_literal))))))
-    (ternary_expression
       (expression
         (binary_expression
           (unary_expression
             (primary_expression
               (literal
-                (boolean_literal))))))))
+                (string_literal))))))
+      (ternary_expression
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
+                  (boolean_literal)))))))))
+  (content)
+  (render_expression
+    (expression
+      (expression
+        (binary_expression
+          (unary_expression
+            (primary_expression
+              (literal
+                (string_literal))))))
+      (ternary_expression
+        (expression
+          (binary_expression
+            (unary_expression
+              (primary_expression
+                (literal
+                  (boolean_literal))))))
+        (expression
+          (expression
+            (binary_expression
+              (unary_expression
+                (primary_expression
+                  (literal
+                    (string_literal))))))
+          (ternary_expression
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (literal
+                      (boolean_literal))))))
+            (expression
+              (binary_expression
+                (unary_expression
+                  (primary_expression
+                    (literal
+                      (string_literal)))))))))))
   (content)
   (render_expression
     (expression

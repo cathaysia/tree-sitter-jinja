@@ -1,7 +1,12 @@
 const { commaSep1, anySep1 } = require('./common.js');
 
 exports.rules = {
-  expression: $ => prec.left($.binary_expression),
+  expression: $ =>
+    prec.left(
+      choice($.binary_expression, seq($.expression, $.ternary_expression)),
+    ),
+  ternary_expression: $ =>
+    prec.right(seq('if', $.expression, optional(seq('else', $.expression)))),
   binary_expression: $ =>
     choice(
       $.unary_expression,
