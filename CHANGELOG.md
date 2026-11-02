@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.13.1](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.13.0...v0.13.1) (2026-11-02)
+
+
+### Bug Fixes
+
+* allow a trailing comma in call arguments ([f86620b](https://github.com/cathaysia/tree-sitter-jinja/commit/f86620b817cbf5b62130974cee92ffc68812da75))
+* apply attribute access, subscripts, and calls before operators ([f650bbe](https://github.com/cathaysia/tree-sitter-jinja/commit/f650bbec024b4876a8095ef5d3fc0455f8139867))
+* parse inline if expressions inside other expressions ([be8bd51](https://github.com/cathaysia/tree-sitter-jinja/commit/be8bd5159eb7337291f735b4b3bfafbb690fd0b4))
+* separate with targets by commas ([419e444](https://github.com/cathaysia/tree-sitter-jinja/commit/419e4447333e5216dba42e6cdacfef48b2016b38))
+
 ## [0.13.0](https://github.com/cathaysia/tree-sitter-jinja/compare/v0.12.1...v0.13.0) (2026-07-02)
 
 
